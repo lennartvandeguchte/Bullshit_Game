@@ -8,4 +8,9 @@
 
 import Foundation
 
-//TESTTT
+// This class inherits from the ACT-R core file Model.swift and is therefore the head file for regulating the the game and the cognitive model.
+
+class Bullshit: Model {
+    
+ 
+}
