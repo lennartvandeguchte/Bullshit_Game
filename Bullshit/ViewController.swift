@@ -8,7 +8,7 @@
 
 import UIKit
 
-// This class inherits from the UIViewController class and is therefore used to control the interface
+
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
