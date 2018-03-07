@@ -7,3 +7,27 @@
 //
 
 import Foundation
+
+
+class Deck {
+    
+    
+    var deck = [Card]()
+    var numberOfCards = 36
+    
+    init(){
+        // Create a deck of cards
+        for identifier in 1...numberOfCards{
+            let card = Card(identifier: identifier)
+            deck.append(card)
+        }
+        // Shuffle the deck of cards
+        var deck_shuffled = [Card]();
+        for _ in 0..<deck.count
+        {
+            let rand = Int(arc4random_uniform(UInt32(deck.count)))
+            deck_shuffled.append(deck[rand])
+            deck.remove(at: rand)
+        }
+    }
+}

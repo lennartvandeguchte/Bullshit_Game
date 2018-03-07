@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA35C9BC204FF2EC00DDEA21 /* MachineLearning.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA35C9BB204FF2EC00DDEA21 /* MachineLearning.swift */; };
 		AA436C26203D945F00F3DDF1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA436C25203D945F00F3DDF1 /* AppDelegate.swift */; };
 		AA436C28203D945F00F3DDF1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA436C27203D945F00F3DDF1 /* ViewController.swift */; };
 		AA436C2B203D945F00F3DDF1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA436C29203D945F00F3DDF1 /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AA35C9BB204FF2EC00DDEA21 /* MachineLearning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachineLearning.swift; sourceTree = "<group>"; };
 		AA436C22203D945F00F3DDF1 /* Bullshit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bullshit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA436C25203D945F00F3DDF1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AA436C27203D945F00F3DDF1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 				AAE8899C2046D1E0002758DE /* Game.swift */,
 				AAE889962046CFE0002758DE /* Deck.swift */,
 				AAE889982046CFEF002758DE /* Card.swift */,
+				AA35C9BB204FF2EC00DDEA21 /* MachineLearning.swift */,
 				AA436C29203D945F00F3DDF1 /* Main.storyboard */,
 				AA436C2C203D945F00F3DDF1 /* Assets.xcassets */,
 				AA436C2E203D945F00F3DDF1 /* LaunchScreen.storyboard */,
@@ -114,8 +117,8 @@
 				AAE889782046CD9C002758DE /* BufferAction.swift */,
 				AAE889792046CD9C002758DE /* BufferCondition.swift */,
 				AAE8897B2046CD9C002758DE /* Chunk.swift */,
-				AAE8897C2046CD9C002758DE /* Declarative.swift */,
 				AAE8897D2046CD9C002758DE /* Instantiation.swift */,
+				AAE8897C2046CD9C002758DE /* Declarative.swift */,
 				AAE8897E2046CD9C002758DE /* Model.swift */,
 				AAE8897F2046CD9C002758DE /* Parser.swift */,
 				AAE889802046CD9C002758DE /* Procedural.swift */,
@@ -207,6 +210,7 @@
 				AAE8898D2046CD9C002758DE /* Model.swift in Sources */,
 				AAE889992046CFEF002758DE /* Card.swift in Sources */,
 				AAE889912046CD9C002758DE /* SlotAction.swift in Sources */,
+				AA35C9BC204FF2EC00DDEA21 /* MachineLearning.swift in Sources */,
 				AAE8898B2046CD9C002758DE /* Declarative.swift in Sources */,
 				AAE889902046CD9C002758DE /* Production.swift in Sources */,
 				AAE8898E2046CD9C002758DE /* Parser.swift in Sources */,

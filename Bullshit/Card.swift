@@ -11,5 +11,28 @@ import Foundation
 struct Card  {
     
     
+    var isFaceUp = false
+    var isInPiramyd = false
+    var identifier: Int
+    var symbol: String
+    var value: Int
+    
+    // Initialize a card with a identifier, value and symbol
+    init(identifier: Int){
+        self.identifier = identifier
+        value = identifier % 9
+        switch identifier {
+        case 1...9:
+            symbol = "Clubs"
+        case 10...18:
+            symbol = "Spades"
+        case 19...27:
+            symbol = "Hearts"
+        case 28...36:
+            symbol = "Diamonds"
+        default:
+            symbol = "Clubs"
+        }
+    }
     
 }

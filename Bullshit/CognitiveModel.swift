@@ -10,7 +10,7 @@ import Foundation
 
 // This class inherits from the ACT-R core file Model.swift and is therefore the head file for regulating the cognitive model.
 
-class Bullshit: Model {
+class CognitiveModel: Model {
     
     
 }
