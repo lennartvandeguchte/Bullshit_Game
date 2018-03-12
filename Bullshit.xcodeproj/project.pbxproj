@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		42D30C042056B1F70058F795 /* ViewControllerStart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D30C032056B1F70058F795 /* ViewControllerStart.swift */; };
 		AA35C9BC204FF2EC00DDEA21 /* MachineLearning.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA35C9BB204FF2EC00DDEA21 /* MachineLearning.swift */; };
 		AA436C26203D945F00F3DDF1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA436C25203D945F00F3DDF1 /* AppDelegate.swift */; };
 		AA436C28203D945F00F3DDF1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA436C27203D945F00F3DDF1 /* ViewController.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		42D30C032056B1F70058F795 /* ViewControllerStart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerStart.swift; sourceTree = "<group>"; };
 		AA35C9BB204FF2EC00DDEA21 /* MachineLearning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachineLearning.swift; sourceTree = "<group>"; };
 		AA436C22203D945F00F3DDF1 /* Bullshit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bullshit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA436C25203D945F00F3DDF1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -75,6 +77,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		42D30BC22056A9E40058F795 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AA436C2C203D945F00F3DDF1 /* Assets.xcassets */,
+				AA436C2E203D945F00F3DDF1 /* LaunchScreen.storyboard */,
+				AA436C25203D945F00F3DDF1 /* AppDelegate.swift */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		AA436C19203D945F00F3DDF1 = {
 			isa = PBXGroup;
 			children = (
@@ -95,7 +107,6 @@
 			isa = PBXGroup;
 			children = (
 				AAE889772046CD9C002758DE /* Core ACT-R */,
-				AA436C27203D945F00F3DDF1 /* ViewController.swift */,
 				AAE8899A2046D1AD002758DE /* CognitiveModel.swift */,
 				AAE889A02046D307002758DE /* bullshit.actr */,
 				AAE8899C2046D1E0002758DE /* Game.swift */,
@@ -103,10 +114,10 @@
 				AAE889982046CFEF002758DE /* Card.swift */,
 				AA35C9BB204FF2EC00DDEA21 /* MachineLearning.swift */,
 				AA436C29203D945F00F3DDF1 /* Main.storyboard */,
-				AA436C2C203D945F00F3DDF1 /* Assets.xcassets */,
-				AA436C2E203D945F00F3DDF1 /* LaunchScreen.storyboard */,
+				42D30C032056B1F70058F795 /* ViewControllerStart.swift */,
+				AA436C27203D945F00F3DDF1 /* ViewController.swift */,
+				42D30BC22056A9E40058F795 /* Supporting Files */,
 				AA436C31203D945F00F3DDF1 /* Info.plist */,
-				AA436C25203D945F00F3DDF1 /* AppDelegate.swift */,
 			);
 			path = Bullshit;
 			sourceTree = "<group>";
@@ -226,6 +237,7 @@
 				AAE8899B2046D1AD002758DE /* CognitiveModel.swift in Sources */,
 				AAE889942046CD9C002758DE /* Temporal.swift in Sources */,
 				AA436C26203D945F00F3DDF1 /* AppDelegate.swift in Sources */,
+				42D30C042056B1F70058F795 /* ViewControllerStart.swift in Sources */,
 				AAE8898A2046CD9C002758DE /* Chunk.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

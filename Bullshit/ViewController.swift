@@ -23,6 +23,15 @@ class ViewController: UIViewController {
 
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    @IBOutlet var CardButtons: [UIButton]!
 
 }
 
