@@ -163,72 +163,98 @@
                                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5GU-MB-RZ2">
                                                 <rect key="frame" x="0.0" y="0.0" width="90" height="127.5"/>
                                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="1"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="90" id="CHc-ZN-7vl"/>
                                                     <constraint firstAttribute="height" constant="127.5" id="g8N-6E-zOh"/>
                                                 </constraints>
                                                 <state key="normal" image="back"/>
+                                                <connections>
+                                                    <action selector="touch_pyramid_card:" destination="321-XR-fvp" eventType="touchUpInside" id="vCO-Qq-rxR"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o8u-cC-zIJ">
                                                 <rect key="frame" x="105" y="0.0" width="90" height="127.5"/>
                                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="2"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="90" id="7rv-BW-RA9"/>
                                                     <constraint firstAttribute="height" constant="127.5" id="OPu-3U-OKs"/>
                                                 </constraints>
                                                 <state key="normal" image="back"/>
+                                                <connections>
+                                                    <action selector="touch_pyramid_card:" destination="321-XR-fvp" eventType="touchUpInside" id="TCp-2f-gpQ"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="koR-Tg-lHE">
                                                 <rect key="frame" x="210" y="0.0" width="90" height="127.5"/>
                                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="3"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="90" id="TPM-mP-eer"/>
                                                     <constraint firstAttribute="height" constant="127.5" id="qVo-t2-hRh"/>
                                                 </constraints>
                                                 <state key="normal" image="back"/>
+                                                <connections>
+                                                    <action selector="touch_pyramid_card:" destination="321-XR-fvp" eventType="touchUpInside" id="3lN-ke-Yaz"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Suj-6U-B3Q">
                                                 <rect key="frame" x="315" y="0.0" width="90" height="127.5"/>
                                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="4"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="90" id="7wQ-M1-bYJ"/>
                                                     <constraint firstAttribute="height" constant="127.5" id="JQS-eU-Te2"/>
                                                 </constraints>
                                                 <state key="normal" image="back"/>
+                                                <connections>
+                                                    <action selector="touch_pyramid_card:" destination="321-XR-fvp" eventType="touchUpInside" id="mss-8L-H01"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="PU5-n4-0A1">
                                         <rect key="frame" x="52.5" y="132.5" width="300" height="127.5"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hpu-T8-mMt">
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hpu-T8-mMt">
                                                 <rect key="frame" x="0.0" y="0.0" width="90" height="127.5"/>
                                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="127.5" id="SqL-Hg-dXa"/>
                                                     <constraint firstAttribute="width" constant="90" id="UiN-xT-Nfr"/>
                                                 </constraints>
-                                                <state key="normal" backgroundImage="back">
-                                                    <color key="titleShadowColor" red="0.92726927999999997" green="0.68120235200000001" blue="0.36648660900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                </state>
+                                                <state key="normal" image="back"/>
+                                                <connections>
+                                                    <action selector="touch_pyramid_card:" destination="321-XR-fvp" eventType="touchUpInside" id="kSP-a8-JRW"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dfc-02-uUP">
                                                 <rect key="frame" x="105" y="0.0" width="90" height="127.5"/>
                                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="6"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="127.5" id="4Vv-eI-xwj"/>
                                                     <constraint firstAttribute="width" constant="90" id="Taa-Un-Y6u"/>
                                                 </constraints>
                                                 <state key="normal" image="back"/>
+                                                <connections>
+                                                    <action selector="touch_pyramid_card:" destination="321-XR-fvp" eventType="touchUpInside" id="PlI-pe-G06"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lMe-Dv-LFo">
                                                 <rect key="frame" x="210" y="0.0" width="90" height="127.5"/>
                                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="7"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="90" id="MFA-s8-Vom"/>
                                                     <constraint firstAttribute="height" constant="127.5" id="eBA-hu-630"/>
                                                 </constraints>
                                                 <state key="normal" image="back"/>
+                                                <connections>
+                                                    <action selector="touch_pyramid_card:" destination="321-XR-fvp" eventType="touchUpInside" id="mu8-jD-Lvg"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -238,31 +264,43 @@
                                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RGs-e3-Fg3">
                                                 <rect key="frame" x="0.0" y="0.0" width="90" height="127.5"/>
                                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="8"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="127.5" id="CEF-7e-VCt"/>
                                                     <constraint firstAttribute="width" constant="90" id="jHH-x3-xEE"/>
                                                 </constraints>
                                                 <state key="normal" image="back"/>
+                                                <connections>
+                                                    <action selector="touch_pyramid_card:" destination="321-XR-fvp" eventType="touchUpInside" id="Pxm-iM-aBP"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SlT-eH-ZtI">
                                                 <rect key="frame" x="105" y="0.0" width="90" height="127.5"/>
                                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="9"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="127.5" id="G0a-Zo-IvM"/>
                                                     <constraint firstAttribute="width" constant="90" id="b8d-s2-vkc"/>
                                                 </constraints>
                                                 <state key="normal" image="back"/>
+                                                <connections>
+                                                    <action selector="touch_pyramid_card:" destination="321-XR-fvp" eventType="touchUpInside" id="uY7-V1-sVb"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QB9-0U-aZt">
                                         <rect key="frame" x="157.5" y="397.5" width="90" height="127.5"/>
                                         <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="10"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="90" id="ScG-Vr-wPh"/>
                                             <constraint firstAttribute="height" constant="127.5" id="iy9-xF-mZy"/>
                                         </constraints>
                                         <state key="normal" image="back"/>
+                                        <connections>
+                                            <action selector="touch_pyramid_card:" destination="321-XR-fvp" eventType="touchUpInside" id="n4i-8w-rxd"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>

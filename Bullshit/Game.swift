@@ -9,17 +9,15 @@
 import Foundation
 
 class Game {
-    
+    // Initialize variables
+    var playing_deck = Deck()
+    let cards_to_be_handed_out = 20
+    let cards_in_pyramid = 10
+    var cards_AI = [Card]()
+    var cards_player = [Card]()
+    var cards_pyramid = [Card]()
     
     init(){
-        // Initialize variables
-        var playing_deck = Deck()
-        let cards_to_be_handed_out = 20
-        let cards_in_pyramid = 10
-        var cards_AI = [Card]()
-        var cards_player = [Card]()
-        var cards_pyramid = [Card]()
-        
         
         // Test: print deck of cards
         for i in 0..<playing_deck.deck_shuffled.count{
