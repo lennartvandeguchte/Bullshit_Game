@@ -20,7 +20,7 @@ struct Card  {
     // Initialize a card with a identifier, value and symbol
     init(identifier: Int){
         self.identifier = identifier
-        value = identifier % 9
+        value = identifier % 10
         switch identifier {
         case 1...9:
             symbol = "Clubs"

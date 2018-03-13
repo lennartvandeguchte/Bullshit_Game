@@ -14,6 +14,7 @@ class Deck {
     
     var deck = [Card]()
     var numberOfCards = 36
+    var deck_shuffled = [Card]();
     
     init(){
         // Create a deck of cards
@@ -22,7 +23,6 @@ class Deck {
             deck.append(card)
         }
         // Shuffle the deck of cards
-        var deck_shuffled = [Card]();
         for _ in 0..<deck.count
         {
             let rand = Int(arc4random_uniform(UInt32(deck.count)))
