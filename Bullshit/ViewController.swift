@@ -12,9 +12,21 @@ import UIKit
 class ViewController: UIViewController{
     var game = Game()
     
+    @IBOutlet var player_cards_buttons: Array<UIButton>?
+    @IBOutlet weak var num_cards_AI: UILabel!
+    @IBOutlet weak var num_cards_player: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        for i in 0..<game.cards_player.count{
+            let card = game.cards_player[i]
+            let card_name = "\(card.value)_\(card.symbol)"
+            player_cards_buttons![i].setImage(UIImage(named: card_name)!, for: [])
+        }
+        
+        num_cards_AI.text = "Ai's Cards: \(game.cards_AI.count)"
+        num_cards_player.text = "Own Cards: \(game.cards_player.count)"
     }
     
     override func didReceiveMemoryWarning() {

@@ -430,6 +430,23 @@
                         <viewLayoutGuide key="safeArea" id="29R-Gh-RTW"/>
                     </view>
                     <navigationItem key="navigationItem" id="YdK-Pk-2Mq"/>
+                    <connections>
+                        <outlet property="num_cards_AI" destination="0jf-7M-z7W" id="c9G-d7-3Pm"/>
+                        <outlet property="num_cards_player" destination="kcP-YS-wYg" id="toA-g7-NgK"/>
+                        <outletCollection property="player_cards_buttons" destination="9sV-hY-LjC" collectionClass="NSMutableArray" id="Qt9-sj-lll"/>
+                        <outletCollection property="player_cards_buttons" destination="EZ9-cJ-HoV" collectionClass="NSMutableArray" id="jHc-a0-7ic"/>
+                        <outletCollection property="player_cards_buttons" destination="fVX-MA-9ES" collectionClass="NSMutableArray" id="AW3-s7-Tdc"/>
+                        <outletCollection property="player_cards_buttons" destination="fWL-nb-cNt" collectionClass="NSMutableArray" id="B8n-lB-YtF"/>
+                        <outletCollection property="player_cards_buttons" destination="e89-qY-JEc" collectionClass="NSMutableArray" id="2oE-PW-NSD"/>
+                        <outletCollection property="player_cards_buttons" destination="69Q-s2-bNv" collectionClass="NSMutableArray" id="1Nv-cE-B8L"/>
+                        <outletCollection property="player_cards_buttons" destination="mSR-JG-sdV" collectionClass="NSMutableArray" id="fT7-3M-Xwj"/>
+                        <outletCollection property="player_cards_buttons" destination="pLf-qp-TSQ" collectionClass="NSMutableArray" id="JOf-k7-t98"/>
+                        <outletCollection property="player_cards_buttons" destination="Tza-Jw-kdn" collectionClass="NSMutableArray" id="iim-sX-xCc"/>
+                        <outletCollection property="player_cards_buttons" destination="ofc-U0-nhu" collectionClass="NSMutableArray" id="9wb-O6-O6U"/>
+                        <outletCollection property="player_cards_buttons" destination="cdl-2K-3wb" collectionClass="NSMutableArray" id="Z1C-sf-hf0"/>
+                        <outletCollection property="player_cards_buttons" destination="iC5-u1-PBY" collectionClass="NSMutableArray" id="wJO-Dv-R94"/>
+                        <outletCollection property="player_cards_buttons" destination="Vew-kR-WsG" collectionClass="NSMutableArray" id="Sbk-7v-grB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KuH-hj-YIp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
