@@ -27,7 +27,7 @@
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="321-XR-fvp" kind="show" id="Ms4-wP-Q7N"/>
+                                    <segue destination="321-XR-fvp" kind="show" id="xVt-gL-eWL"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -393,6 +393,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="YdK-Pk-2Mq"/>
                     <connections>
+                        <outlet property="test" destination="QB9-0U-aZt" id="Plo-6v-YZD"/>
                         <outletCollection property="CardButtons" destination="Suj-6U-B3Q" collectionClass="NSMutableArray" id="ftG-mv-rVt"/>
                         <outletCollection property="CardButtons" destination="RGs-e3-Fg3" collectionClass="NSMutableArray" id="CtX-aA-opR"/>
                         <outletCollection property="CardButtons" destination="koR-Tg-lHE" collectionClass="NSMutableArray" id="NMo-iP-0Te"/>
