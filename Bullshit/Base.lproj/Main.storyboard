@@ -27,7 +27,7 @@
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="321-XR-fvp" kind="show" id="xVt-gL-eWL"/>
+                                    <segue destination="321-XR-fvp" kind="show" id="9NX-Rq-w55"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -392,19 +392,6 @@
                         <viewLayoutGuide key="safeArea" id="29R-Gh-RTW"/>
                     </view>
                     <navigationItem key="navigationItem" id="YdK-Pk-2Mq"/>
-                    <connections>
-                        <outlet property="test" destination="QB9-0U-aZt" id="Plo-6v-YZD"/>
-                        <outletCollection property="CardButtons" destination="Suj-6U-B3Q" collectionClass="NSMutableArray" id="ftG-mv-rVt"/>
-                        <outletCollection property="CardButtons" destination="RGs-e3-Fg3" collectionClass="NSMutableArray" id="CtX-aA-opR"/>
-                        <outletCollection property="CardButtons" destination="koR-Tg-lHE" collectionClass="NSMutableArray" id="NMo-iP-0Te"/>
-                        <outletCollection property="CardButtons" destination="hpu-T8-mMt" collectionClass="NSMutableArray" id="gEj-d4-Gv9"/>
-                        <outletCollection property="CardButtons" destination="QB9-0U-aZt" collectionClass="NSMutableArray" id="Nd2-U2-7rc"/>
-                        <outletCollection property="CardButtons" destination="o8u-cC-zIJ" collectionClass="NSMutableArray" id="whP-b3-Ke8"/>
-                        <outletCollection property="CardButtons" destination="dfc-02-uUP" collectionClass="NSMutableArray" id="BLk-Jt-MAT"/>
-                        <outletCollection property="CardButtons" destination="SlT-eH-ZtI" collectionClass="NSMutableArray" id="qpL-iv-yR4"/>
-                        <outletCollection property="CardButtons" destination="5GU-MB-RZ2" collectionClass="NSMutableArray" id="qwI-In-BEC"/>
-                        <outletCollection property="CardButtons" destination="lMe-Dv-LFo" collectionClass="NSMutableArray" id="N5p-9g-olI"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KuH-hj-YIp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
