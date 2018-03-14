@@ -14,21 +14,6 @@
 		AA436C26203D945F00F3DDF1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA436C25203D945F00F3DDF1 /* AppDelegate.swift */; };
 		AA436C2D203D945F00F3DDF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA436C2C203D945F00F3DDF1 /* Assets.xcassets */; };
 		AA436C30203D945F00F3DDF1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA436C2E203D945F00F3DDF1 /* LaunchScreen.storyboard */; };
-		AA4536F52057F4AD00E02D50 /* BufferAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4536E72057F4AD00E02D50 /* BufferAction.swift */; };
-		AA4536F62057F4AD00E02D50 /* BufferCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4536E82057F4AD00E02D50 /* BufferCondition.swift */; };
-		AA4536F72057F4AD00E02D50 /* Chunk.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4536E92057F4AD00E02D50 /* Chunk.swift */; };
-		AA4536F82057F4AD00E02D50 /* Declarative.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4536EA2057F4AD00E02D50 /* Declarative.swift */; };
-		AA4536F92057F4AD00E02D50 /* Instantiation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4536EB2057F4AD00E02D50 /* Instantiation.swift */; };
-		AA4536FA2057F4AD00E02D50 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4536EC2057F4AD00E02D50 /* Model.swift */; };
-		AA4536FB2057F4AD00E02D50 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4536ED2057F4AD00E02D50 /* Parser.swift */; };
-		AA4536FC2057F4AD00E02D50 /* Procedural.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4536EE2057F4AD00E02D50 /* Procedural.swift */; };
-		AA4536FD2057F4AD00E02D50 /* Production.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4536EF2057F4AD00E02D50 /* Production.swift */; };
-		AA4536FE2057F4AD00E02D50 /* SlotAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4536F02057F4AD00E02D50 /* SlotAction.swift */; };
-		AA4536FF2057F4AD00E02D50 /* SlotCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4536F12057F4AD00E02D50 /* SlotCondition.swift */; };
-		AA4537002057F4AD00E02D50 /* Support.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4536F22057F4AD00E02D50 /* Support.swift */; };
-		AA4537012057F4AD00E02D50 /* Temporal.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4536F32057F4AD00E02D50 /* Temporal.swift */; };
-		AA4537022057F4AD00E02D50 /* Tokenizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4536F42057F4AD00E02D50 /* Tokenizer.swift */; };
-		AA4537042057F4B600E02D50 /* bullshit.actr in Resources */ = {isa = PBXBuildFile; fileRef = AA4537032057F4B600E02D50 /* bullshit.actr */; };
 		AAE889972046CFE0002758DE /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE889962046CFE0002758DE /* Deck.swift */; };
 		AAE889992046CFEF002758DE /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE889982046CFEF002758DE /* Card.swift */; };
 		AAE8899B2046D1AD002758DE /* CognitiveModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE8899A2046D1AD002758DE /* CognitiveModel.swift */; };
@@ -45,21 +30,6 @@
 		AA436C2C203D945F00F3DDF1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AA436C2F203D945F00F3DDF1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AA436C31203D945F00F3DDF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AA4536E72057F4AD00E02D50 /* BufferAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BufferAction.swift; sourceTree = "<group>"; };
-		AA4536E82057F4AD00E02D50 /* BufferCondition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BufferCondition.swift; sourceTree = "<group>"; };
-		AA4536E92057F4AD00E02D50 /* Chunk.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chunk.swift; sourceTree = "<group>"; };
-		AA4536EA2057F4AD00E02D50 /* Declarative.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Declarative.swift; sourceTree = "<group>"; };
-		AA4536EB2057F4AD00E02D50 /* Instantiation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Instantiation.swift; sourceTree = "<group>"; };
-		AA4536EC2057F4AD00E02D50 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
-		AA4536ED2057F4AD00E02D50 /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
-		AA4536EE2057F4AD00E02D50 /* Procedural.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Procedural.swift; sourceTree = "<group>"; };
-		AA4536EF2057F4AD00E02D50 /* Production.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Production.swift; sourceTree = "<group>"; };
-		AA4536F02057F4AD00E02D50 /* SlotAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlotAction.swift; sourceTree = "<group>"; };
-		AA4536F12057F4AD00E02D50 /* SlotCondition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlotCondition.swift; sourceTree = "<group>"; };
-		AA4536F22057F4AD00E02D50 /* Support.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Support.swift; sourceTree = "<group>"; };
-		AA4536F32057F4AD00E02D50 /* Temporal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Temporal.swift; sourceTree = "<group>"; };
-		AA4536F42057F4AD00E02D50 /* Tokenizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tokenizer.swift; sourceTree = "<group>"; };
-		AA4537032057F4B600E02D50 /* bullshit.actr */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = bullshit.actr; path = Bullshit/bullshit.actr; sourceTree = SOURCE_ROOT; };
 		AAE889962046CFE0002758DE /* Deck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
 		AAE889982046CFEF002758DE /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		AAE8899A2046D1AD002758DE /* CognitiveModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CognitiveModel.swift; sourceTree = "<group>"; };
@@ -106,7 +76,6 @@
 		AA436C24203D945F00F3DDF1 /* Bullshit */ = {
 			isa = PBXGroup;
 			children = (
-				AA4536E62057F4AD00E02D50 /* Core ACT-R */,
 				AAE8899A2046D1AD002758DE /* CognitiveModel.swift */,
 				AAE8899C2046D1E0002758DE /* Game.swift */,
 				AAE889962046CFE0002758DE /* Deck.swift */,
@@ -119,28 +88,6 @@
 				AA436C31203D945F00F3DDF1 /* Info.plist */,
 			);
 			path = Bullshit;
-			sourceTree = "<group>";
-		};
-		AA4536E62057F4AD00E02D50 /* Core ACT-R */ = {
-			isa = PBXGroup;
-			children = (
-				AA4537032057F4B600E02D50 /* bullshit.actr */,
-				AA4536E72057F4AD00E02D50 /* BufferAction.swift */,
-				AA4536E82057F4AD00E02D50 /* BufferCondition.swift */,
-				AA4536E92057F4AD00E02D50 /* Chunk.swift */,
-				AA4536EA2057F4AD00E02D50 /* Declarative.swift */,
-				AA4536EB2057F4AD00E02D50 /* Instantiation.swift */,
-				AA4536EC2057F4AD00E02D50 /* Model.swift */,
-				AA4536ED2057F4AD00E02D50 /* Parser.swift */,
-				AA4536EE2057F4AD00E02D50 /* Procedural.swift */,
-				AA4536EF2057F4AD00E02D50 /* Production.swift */,
-				AA4536F02057F4AD00E02D50 /* SlotAction.swift */,
-				AA4536F12057F4AD00E02D50 /* SlotCondition.swift */,
-				AA4536F22057F4AD00E02D50 /* Support.swift */,
-				AA4536F32057F4AD00E02D50 /* Temporal.swift */,
-				AA4536F42057F4AD00E02D50 /* Tokenizer.swift */,
-			);
-			path = "Core ACT-R";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,7 +149,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA4537042057F4B600E02D50 /* bullshit.actr in Resources */,
 				AA436C30203D945F00F3DDF1 /* LaunchScreen.storyboard in Resources */,
 				AA436C2D203D945F00F3DDF1 /* Assets.xcassets in Resources */,
 				42152C4A2057E1BB002FB92B /* Main.storyboard in Resources */,
@@ -216,28 +162,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA4536FD2057F4AD00E02D50 /* Production.swift in Sources */,
-				AA4537002057F4AD00E02D50 /* Support.swift in Sources */,
 				AAE889972046CFE0002758DE /* Deck.swift in Sources */,
 				AAE889992046CFEF002758DE /* Card.swift in Sources */,
-				AA4537012057F4AD00E02D50 /* Temporal.swift in Sources */,
-				AA4536FE2057F4AD00E02D50 /* SlotAction.swift in Sources */,
-				AA4536FB2057F4AD00E02D50 /* Parser.swift in Sources */,
-				AA4537022057F4AD00E02D50 /* Tokenizer.swift in Sources */,
 				42152C4C2057E2A6002FB92B /* ViewController.swift in Sources */,
 				AA35C9BC204FF2EC00DDEA21 /* MachineLearning.swift in Sources */,
 				AAE8899D2046D1E0002758DE /* Game.swift in Sources */,
-				AA4536F62057F4AD00E02D50 /* BufferCondition.swift in Sources */,
 				AAE8899B2046D1AD002758DE /* CognitiveModel.swift in Sources */,
-				AA4536FA2057F4AD00E02D50 /* Model.swift in Sources */,
-				AA4536F72057F4AD00E02D50 /* Chunk.swift in Sources */,
-				AA4536FF2057F4AD00E02D50 /* SlotCondition.swift in Sources */,
-				AA4536F82057F4AD00E02D50 /* Declarative.swift in Sources */,
-				AA4536F92057F4AD00E02D50 /* Instantiation.swift in Sources */,
-				AA4536FC2057F4AD00E02D50 /* Procedural.swift in Sources */,
 				AA436C26203D945F00F3DDF1 /* AppDelegate.swift in Sources */,
 				42D30C042056B1F70058F795 /* ViewControllerStart.swift in Sources */,
-				AA4536F52057F4AD00E02D50 /* BufferAction.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

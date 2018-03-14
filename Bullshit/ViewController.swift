@@ -20,9 +20,11 @@ class ViewController: UIViewController{
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         for i in 0..<game.cards_player.count{
-            let card = game.cards_player[i]
+            var card = game.cards_player[i]
             let card_name = "\(card.value)_\(card.symbol)"
+            print(card_name)
             player_cards_buttons![i].setImage(UIImage(named: card_name)!, for: [])
+            card.isFaceUp = true
         }
         
         num_cards_AI.text = "Ai's Cards: \(game.cards_AI.count)"
