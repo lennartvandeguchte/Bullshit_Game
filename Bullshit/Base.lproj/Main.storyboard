@@ -27,7 +27,7 @@
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="321-XR-fvp" kind="show" id="Ms4-wP-Q7N"/>
+                                    <segue destination="321-XR-fvp" kind="push" id="Zhg-qs-Tet"/>
                                 </connections>
                             </button>
                         </subviews>
