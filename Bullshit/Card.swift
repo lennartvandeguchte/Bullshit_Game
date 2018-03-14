@@ -12,7 +12,7 @@ struct Card  {
     
     
     var isFaceUp = false
-    var isInPiramyd = false
+    var isInPyramid = false
     var identifier: Int
     var symbol: String
     var value: Int
@@ -20,18 +20,22 @@ struct Card  {
     // Initialize a card with a identifier, value and symbol
     init(identifier: Int){
         self.identifier = identifier
-        value = identifier % 10
         switch identifier {
         case 1...9:
-            symbol = "Clubs"
+            value = identifier+1
+            symbol = "club"
         case 10...18:
-            symbol = "Spades"
+            value = identifier-8
+            symbol = "spade"
         case 19...27:
-            symbol = "Hearts"
+            value = identifier-17
+            symbol = "heart"
         case 28...36:
-            symbol = "Diamonds"
+            value = identifier-26
+            symbol = "diamond"
         default:
-            symbol = "Clubs"
+            symbol = "club"
+            value = 0
         }
     }
     

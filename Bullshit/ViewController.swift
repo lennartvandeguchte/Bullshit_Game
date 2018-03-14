@@ -9,26 +9,48 @@
 import UIKit
 
 
-class ViewController: UIViewController {
+class ViewController: UIViewController{
+    var game = Game()
+    
+    @IBOutlet var player_cards_buttons: Array<UIButton>?
+    @IBOutlet weak var num_cards_AI: UILabel!
+    @IBOutlet weak var num_cards_player: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        var game = Game()
+        for i in 0..<game.cards_player.count{
+            let card = game.cards_player[i]
+            let card_name = "\(card.value)_\(card.symbol)"
+            player_cards_buttons![i].setImage(UIImage(named: card_name)!, for: [])
+        }
+        
+        num_cards_AI.text = "Ai's Cards: \(game.cards_AI.count)"
+        num_cards_player.text = "Own Cards: \(game.cards_player.count)"
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+
     
     
-    
-    
-    
-    
-    
-    
+    @IBAction func touch_pyramid_card(_ sender: UIButton) {
+        let card_identifier = Int(sender.accessibilityIdentifier!)
+        let card = game.cards_pyramid[card_identifier!-1]
+        print("\(card_identifier!)")
+        
+        if card.isFaceUp==false && card.isInPyramid==false{
+            let card_name = "\(card.value)_\(card.symbol)"
+            print(card_name)
+            sender.setImage(UIImage(named: card_name)!, for: [])
+        
+            game.cards_pyramid[card_identifier!-1].isFaceUp = true
+            game.cards_pyramid[card_identifier!-1].isInPyramid = true
+        }
+        
+    }
     
     
     

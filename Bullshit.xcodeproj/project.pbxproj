@@ -8,35 +8,35 @@
 
 /* Begin PBXBuildFile section */
 		42152C4A2057E1BB002FB92B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA436C29203D945F00F3DDF1 /* Main.storyboard */; };
-		42152C4E2057EDAC002FB92B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42152C4D2057EDAB002FB92B /* ViewController.swift */; };
+		42152C4C2057E2A6002FB92B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42152C4B2057E2A6002FB92B /* ViewController.swift */; };
 		42D30C042056B1F70058F795 /* ViewControllerStart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D30C032056B1F70058F795 /* ViewControllerStart.swift */; };
 		AA35C9BC204FF2EC00DDEA21 /* MachineLearning.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA35C9BB204FF2EC00DDEA21 /* MachineLearning.swift */; };
 		AA436C26203D945F00F3DDF1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA436C25203D945F00F3DDF1 /* AppDelegate.swift */; };
 		AA436C2D203D945F00F3DDF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA436C2C203D945F00F3DDF1 /* Assets.xcassets */; };
 		AA436C30203D945F00F3DDF1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA436C2E203D945F00F3DDF1 /* LaunchScreen.storyboard */; };
-		AAE889872046CD9C002758DE /* BufferAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE889782046CD9C002758DE /* BufferAction.swift */; };
-		AAE889882046CD9C002758DE /* BufferCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE889792046CD9C002758DE /* BufferCondition.swift */; };
-		AAE8898A2046CD9C002758DE /* Chunk.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE8897B2046CD9C002758DE /* Chunk.swift */; };
-		AAE8898B2046CD9C002758DE /* Declarative.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE8897C2046CD9C002758DE /* Declarative.swift */; };
-		AAE8898C2046CD9C002758DE /* Instantiation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE8897D2046CD9C002758DE /* Instantiation.swift */; };
-		AAE8898D2046CD9C002758DE /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE8897E2046CD9C002758DE /* Model.swift */; };
-		AAE8898E2046CD9C002758DE /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE8897F2046CD9C002758DE /* Parser.swift */; };
-		AAE8898F2046CD9C002758DE /* Procedural.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE889802046CD9C002758DE /* Procedural.swift */; };
-		AAE889902046CD9C002758DE /* Production.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE889812046CD9C002758DE /* Production.swift */; };
-		AAE889912046CD9C002758DE /* SlotAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE889822046CD9C002758DE /* SlotAction.swift */; };
-		AAE889922046CD9C002758DE /* SlotCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE889832046CD9C002758DE /* SlotCondition.swift */; };
-		AAE889932046CD9C002758DE /* Support.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE889842046CD9C002758DE /* Support.swift */; };
-		AAE889942046CD9C002758DE /* Temporal.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE889852046CD9C002758DE /* Temporal.swift */; };
-		AAE889952046CD9C002758DE /* Tokenizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE889862046CD9C002758DE /* Tokenizer.swift */; };
+		AA4536F52057F4AD00E02D50 /* BufferAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4536E72057F4AD00E02D50 /* BufferAction.swift */; };
+		AA4536F62057F4AD00E02D50 /* BufferCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4536E82057F4AD00E02D50 /* BufferCondition.swift */; };
+		AA4536F72057F4AD00E02D50 /* Chunk.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4536E92057F4AD00E02D50 /* Chunk.swift */; };
+		AA4536F82057F4AD00E02D50 /* Declarative.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4536EA2057F4AD00E02D50 /* Declarative.swift */; };
+		AA4536F92057F4AD00E02D50 /* Instantiation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4536EB2057F4AD00E02D50 /* Instantiation.swift */; };
+		AA4536FA2057F4AD00E02D50 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4536EC2057F4AD00E02D50 /* Model.swift */; };
+		AA4536FB2057F4AD00E02D50 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4536ED2057F4AD00E02D50 /* Parser.swift */; };
+		AA4536FC2057F4AD00E02D50 /* Procedural.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4536EE2057F4AD00E02D50 /* Procedural.swift */; };
+		AA4536FD2057F4AD00E02D50 /* Production.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4536EF2057F4AD00E02D50 /* Production.swift */; };
+		AA4536FE2057F4AD00E02D50 /* SlotAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4536F02057F4AD00E02D50 /* SlotAction.swift */; };
+		AA4536FF2057F4AD00E02D50 /* SlotCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4536F12057F4AD00E02D50 /* SlotCondition.swift */; };
+		AA4537002057F4AD00E02D50 /* Support.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4536F22057F4AD00E02D50 /* Support.swift */; };
+		AA4537012057F4AD00E02D50 /* Temporal.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4536F32057F4AD00E02D50 /* Temporal.swift */; };
+		AA4537022057F4AD00E02D50 /* Tokenizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA4536F42057F4AD00E02D50 /* Tokenizer.swift */; };
+		AA4537042057F4B600E02D50 /* bullshit.actr in Resources */ = {isa = PBXBuildFile; fileRef = AA4537032057F4B600E02D50 /* bullshit.actr */; };
 		AAE889972046CFE0002758DE /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE889962046CFE0002758DE /* Deck.swift */; };
 		AAE889992046CFEF002758DE /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE889982046CFEF002758DE /* Card.swift */; };
 		AAE8899B2046D1AD002758DE /* CognitiveModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE8899A2046D1AD002758DE /* CognitiveModel.swift */; };
 		AAE8899D2046D1E0002758DE /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE8899C2046D1E0002758DE /* Game.swift */; };
-		AAE889A12046D307002758DE /* bullshit.actr in Resources */ = {isa = PBXBuildFile; fileRef = AAE889A02046D307002758DE /* bullshit.actr */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		42152C4D2057EDAB002FB92B /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		42152C4B2057E2A6002FB92B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		42D30C032056B1F70058F795 /* ViewControllerStart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerStart.swift; sourceTree = "<group>"; };
 		AA35C9BB204FF2EC00DDEA21 /* MachineLearning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachineLearning.swift; sourceTree = "<group>"; };
 		AA436C22203D945F00F3DDF1 /* Bullshit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bullshit.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -45,25 +45,25 @@
 		AA436C2C203D945F00F3DDF1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AA436C2F203D945F00F3DDF1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AA436C31203D945F00F3DDF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AAE889782046CD9C002758DE /* BufferAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BufferAction.swift; sourceTree = "<group>"; };
-		AAE889792046CD9C002758DE /* BufferCondition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BufferCondition.swift; sourceTree = "<group>"; };
-		AAE8897B2046CD9C002758DE /* Chunk.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chunk.swift; sourceTree = "<group>"; };
-		AAE8897C2046CD9C002758DE /* Declarative.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Declarative.swift; sourceTree = "<group>"; };
-		AAE8897D2046CD9C002758DE /* Instantiation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Instantiation.swift; sourceTree = "<group>"; };
-		AAE8897E2046CD9C002758DE /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
-		AAE8897F2046CD9C002758DE /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
-		AAE889802046CD9C002758DE /* Procedural.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Procedural.swift; sourceTree = "<group>"; };
-		AAE889812046CD9C002758DE /* Production.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Production.swift; sourceTree = "<group>"; };
-		AAE889822046CD9C002758DE /* SlotAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlotAction.swift; sourceTree = "<group>"; };
-		AAE889832046CD9C002758DE /* SlotCondition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlotCondition.swift; sourceTree = "<group>"; };
-		AAE889842046CD9C002758DE /* Support.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Support.swift; sourceTree = "<group>"; };
-		AAE889852046CD9C002758DE /* Temporal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Temporal.swift; sourceTree = "<group>"; };
-		AAE889862046CD9C002758DE /* Tokenizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tokenizer.swift; sourceTree = "<group>"; };
+		AA4536E72057F4AD00E02D50 /* BufferAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BufferAction.swift; sourceTree = "<group>"; };
+		AA4536E82057F4AD00E02D50 /* BufferCondition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BufferCondition.swift; sourceTree = "<group>"; };
+		AA4536E92057F4AD00E02D50 /* Chunk.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chunk.swift; sourceTree = "<group>"; };
+		AA4536EA2057F4AD00E02D50 /* Declarative.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Declarative.swift; sourceTree = "<group>"; };
+		AA4536EB2057F4AD00E02D50 /* Instantiation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Instantiation.swift; sourceTree = "<group>"; };
+		AA4536EC2057F4AD00E02D50 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		AA4536ED2057F4AD00E02D50 /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
+		AA4536EE2057F4AD00E02D50 /* Procedural.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Procedural.swift; sourceTree = "<group>"; };
+		AA4536EF2057F4AD00E02D50 /* Production.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Production.swift; sourceTree = "<group>"; };
+		AA4536F02057F4AD00E02D50 /* SlotAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlotAction.swift; sourceTree = "<group>"; };
+		AA4536F12057F4AD00E02D50 /* SlotCondition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlotCondition.swift; sourceTree = "<group>"; };
+		AA4536F22057F4AD00E02D50 /* Support.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Support.swift; sourceTree = "<group>"; };
+		AA4536F32057F4AD00E02D50 /* Temporal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Temporal.swift; sourceTree = "<group>"; };
+		AA4536F42057F4AD00E02D50 /* Tokenizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tokenizer.swift; sourceTree = "<group>"; };
+		AA4537032057F4B600E02D50 /* bullshit.actr */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = bullshit.actr; path = Bullshit/bullshit.actr; sourceTree = SOURCE_ROOT; };
 		AAE889962046CFE0002758DE /* Deck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
 		AAE889982046CFEF002758DE /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		AAE8899A2046D1AD002758DE /* CognitiveModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CognitiveModel.swift; sourceTree = "<group>"; };
 		AAE8899C2046D1E0002758DE /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
-		AAE889A02046D307002758DE /* bullshit.actr */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = bullshit.actr; path = ../../../bullshit.actr; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,15 +106,14 @@
 		AA436C24203D945F00F3DDF1 /* Bullshit */ = {
 			isa = PBXGroup;
 			children = (
-				AAE889772046CD9C002758DE /* Core ACT-R */,
+				AA4536E62057F4AD00E02D50 /* Core ACT-R */,
 				AAE8899A2046D1AD002758DE /* CognitiveModel.swift */,
-				AAE889A02046D307002758DE /* bullshit.actr */,
 				AAE8899C2046D1E0002758DE /* Game.swift */,
 				AAE889962046CFE0002758DE /* Deck.swift */,
+				42152C4B2057E2A6002FB92B /* ViewController.swift */,
 				AAE889982046CFEF002758DE /* Card.swift */,
 				AA35C9BB204FF2EC00DDEA21 /* MachineLearning.swift */,
 				AA436C29203D945F00F3DDF1 /* Main.storyboard */,
-				42152C4D2057EDAB002FB92B /* ViewController.swift */,
 				42D30C032056B1F70058F795 /* ViewControllerStart.swift */,
 				42D30BC22056A9E40058F795 /* Supporting Files */,
 				AA436C31203D945F00F3DDF1 /* Info.plist */,
@@ -122,26 +121,26 @@
 			path = Bullshit;
 			sourceTree = "<group>";
 		};
-		AAE889772046CD9C002758DE /* Core ACT-R */ = {
+		AA4536E62057F4AD00E02D50 /* Core ACT-R */ = {
 			isa = PBXGroup;
 			children = (
-				AAE889782046CD9C002758DE /* BufferAction.swift */,
-				AAE889792046CD9C002758DE /* BufferCondition.swift */,
-				AAE8897B2046CD9C002758DE /* Chunk.swift */,
-				AAE8897D2046CD9C002758DE /* Instantiation.swift */,
-				AAE8897C2046CD9C002758DE /* Declarative.swift */,
-				AAE8897E2046CD9C002758DE /* Model.swift */,
-				AAE8897F2046CD9C002758DE /* Parser.swift */,
-				AAE889802046CD9C002758DE /* Procedural.swift */,
-				AAE889812046CD9C002758DE /* Production.swift */,
-				AAE889822046CD9C002758DE /* SlotAction.swift */,
-				AAE889832046CD9C002758DE /* SlotCondition.swift */,
-				AAE889842046CD9C002758DE /* Support.swift */,
-				AAE889852046CD9C002758DE /* Temporal.swift */,
-				AAE889862046CD9C002758DE /* Tokenizer.swift */,
+				AA4537032057F4B600E02D50 /* bullshit.actr */,
+				AA4536E72057F4AD00E02D50 /* BufferAction.swift */,
+				AA4536E82057F4AD00E02D50 /* BufferCondition.swift */,
+				AA4536E92057F4AD00E02D50 /* Chunk.swift */,
+				AA4536EA2057F4AD00E02D50 /* Declarative.swift */,
+				AA4536EB2057F4AD00E02D50 /* Instantiation.swift */,
+				AA4536EC2057F4AD00E02D50 /* Model.swift */,
+				AA4536ED2057F4AD00E02D50 /* Parser.swift */,
+				AA4536EE2057F4AD00E02D50 /* Procedural.swift */,
+				AA4536EF2057F4AD00E02D50 /* Production.swift */,
+				AA4536F02057F4AD00E02D50 /* SlotAction.swift */,
+				AA4536F12057F4AD00E02D50 /* SlotCondition.swift */,
+				AA4536F22057F4AD00E02D50 /* Support.swift */,
+				AA4536F32057F4AD00E02D50 /* Temporal.swift */,
+				AA4536F42057F4AD00E02D50 /* Tokenizer.swift */,
 			);
-			name = "Core ACT-R";
-			path = "../../../Core ACT-R";
+			path = "Core ACT-R";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,7 +202,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AAE889A12046D307002758DE /* bullshit.actr in Resources */,
+				AA4537042057F4B600E02D50 /* bullshit.actr in Resources */,
 				AA436C30203D945F00F3DDF1 /* LaunchScreen.storyboard in Resources */,
 				AA436C2D203D945F00F3DDF1 /* Assets.xcassets in Resources */,
 				42152C4A2057E1BB002FB92B /* Main.storyboard in Resources */,
@@ -217,28 +216,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA4536FD2057F4AD00E02D50 /* Production.swift in Sources */,
+				AA4537002057F4AD00E02D50 /* Support.swift in Sources */,
 				AAE889972046CFE0002758DE /* Deck.swift in Sources */,
-				AAE8898D2046CD9C002758DE /* Model.swift in Sources */,
 				AAE889992046CFEF002758DE /* Card.swift in Sources */,
-				AAE889912046CD9C002758DE /* SlotAction.swift in Sources */,
-				42152C4E2057EDAC002FB92B /* ViewController.swift in Sources */,
+				AA4537012057F4AD00E02D50 /* Temporal.swift in Sources */,
+				AA4536FE2057F4AD00E02D50 /* SlotAction.swift in Sources */,
+				AA4536FB2057F4AD00E02D50 /* Parser.swift in Sources */,
+				AA4537022057F4AD00E02D50 /* Tokenizer.swift in Sources */,
+				42152C4C2057E2A6002FB92B /* ViewController.swift in Sources */,
 				AA35C9BC204FF2EC00DDEA21 /* MachineLearning.swift in Sources */,
-				AAE8898B2046CD9C002758DE /* Declarative.swift in Sources */,
-				AAE889902046CD9C002758DE /* Production.swift in Sources */,
-				AAE8898E2046CD9C002758DE /* Parser.swift in Sources */,
-				AAE889922046CD9C002758DE /* SlotCondition.swift in Sources */,
-				AAE889882046CD9C002758DE /* BufferCondition.swift in Sources */,
-				AAE8898C2046CD9C002758DE /* Instantiation.swift in Sources */,
 				AAE8899D2046D1E0002758DE /* Game.swift in Sources */,
-				AAE889872046CD9C002758DE /* BufferAction.swift in Sources */,
-				AAE889932046CD9C002758DE /* Support.swift in Sources */,
-				AAE889952046CD9C002758DE /* Tokenizer.swift in Sources */,
-				AAE8898F2046CD9C002758DE /* Procedural.swift in Sources */,
+				AA4536F62057F4AD00E02D50 /* BufferCondition.swift in Sources */,
 				AAE8899B2046D1AD002758DE /* CognitiveModel.swift in Sources */,
-				AAE889942046CD9C002758DE /* Temporal.swift in Sources */,
+				AA4536FA2057F4AD00E02D50 /* Model.swift in Sources */,
+				AA4536F72057F4AD00E02D50 /* Chunk.swift in Sources */,
+				AA4536FF2057F4AD00E02D50 /* SlotCondition.swift in Sources */,
+				AA4536F82057F4AD00E02D50 /* Declarative.swift in Sources */,
+				AA4536F92057F4AD00E02D50 /* Instantiation.swift in Sources */,
+				AA4536FC2057F4AD00E02D50 /* Procedural.swift in Sources */,
 				AA436C26203D945F00F3DDF1 /* AppDelegate.swift in Sources */,
 				42D30C042056B1F70058F795 /* ViewControllerStart.swift in Sources */,
-				AAE8898A2046CD9C002758DE /* Chunk.swift in Sources */,
+				AA4536F52057F4AD00E02D50 /* BufferAction.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,8 +250,7 @@
 				AA436C2A203D945F00F3DDF1 /* Base */,
 			);
 			name = Main.storyboard;
-			path = Bullshit;
-			sourceTree = SOURCE_ROOT;
+			sourceTree = "<group>";
 		};
 		AA436C2E203D945F00F3DDF1 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
