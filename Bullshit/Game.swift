@@ -42,13 +42,13 @@ class Game {
             
             switch (i+1){
             case 1:
-                cards_pyramid[cards_pyramid.endIndex-1].index_pyramid = 1
-            case 2...3:
-                cards_pyramid[cards_pyramid.endIndex-1].index_pyramid = 2
-            case 4...6:
-                cards_pyramid[cards_pyramid.endIndex-1].index_pyramid = 3
-            case 7...10:
                 cards_pyramid[cards_pyramid.endIndex-1].index_pyramid = 4
+            case 2...3:
+                cards_pyramid[cards_pyramid.endIndex-1].index_pyramid = 3
+            case 4...6:
+                cards_pyramid[cards_pyramid.endIndex-1].index_pyramid = 2
+            case 7...10:
+                cards_pyramid[cards_pyramid.endIndex-1].index_pyramid = 1
             default:
                 cards_pyramid[cards_pyramid.endIndex-1].index_pyramid = 0
             }
