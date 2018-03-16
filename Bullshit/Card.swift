@@ -13,6 +13,7 @@ struct Card  {
     
     var isFaceUp = false
     var isInPyramid = false
+    var playersCardHighlighted = false
     var identifier: Int
     var symbol: String
     var value: Int
