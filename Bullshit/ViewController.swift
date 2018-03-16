@@ -15,6 +15,14 @@ class ViewController: UIViewController{
     @IBOutlet var player_cards_buttons: Array<UIButton>?
     @IBOutlet weak var num_cards_AI: UILabel!
     @IBOutlet weak var num_cards_player: UILabel!
+   
+    @IBAction func claimPopUp(_ sender: UIButton) {
+        let popOverVC = UIStoryboard(name: "Main", bundle:nil).instantiateViewController(withIdentifier: "claimPopUpID") as! claimPopUpViewController
+        self.addChildViewController(popOverVC)
+        popOverVC.view.frame = self.view.frame
+        self.view.addSubview(popOverVC.view)
+        popOverVC.didMove(toParentViewController: self)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -354,6 +354,16 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IWG-qr-WHH">
+                                <rect key="frame" x="536" y="730" width="166" height="89"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.20531521839729402" green="0.37253836962172227" blue="0.0032005916646561162" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Play"/>
+                                <connections>
+                                    <action selector="claimPopUp:" destination="321-XR-fvp" eventType="touchUpInside" id="hFG-j2-fWy"/>
+                                </connections>
+                            </button>
                             <stackView opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" spacing="-40" translatesAutoresizingMaskIntoConstraints="NO" id="vEV-Pn-Nqc" userLabel="Stack View AI Cards">
                                 <rect key="frame" x="39" y="38" width="690" height="127.5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -507,6 +517,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="YdK-Pk-2Mq"/>
                     <connections>
+                        <outlet property="claimPopUp" destination="IWG-qr-WHH" id="Ndf-AD-H4S"/>
                         <outlet property="num_cards_AI" destination="0jf-7M-z7W" id="c9G-d7-3Pm"/>
                         <outlet property="num_cards_player" destination="kcP-YS-wYg" id="toA-g7-NgK"/>
                         <outletCollection property="player_cards_buttons" destination="9sV-hY-LjC" collectionClass="NSMutableArray" id="Qt9-sj-lll"/>
@@ -527,6 +538,82 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KuH-hj-YIp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="503.90625" y="-306.4453125"/>
+        </scene>
+        <!--Claim Pop Up View Controller-->
+        <scene sceneID="Xjb-Gp-G6W">
+            <objects>
+                <viewController storyboardIdentifier="claimPopUpID" id="Gn7-3s-KMI" customClass="claimPopUpViewController" customModule="Bullshit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="T6v-iG-Tr1">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uLx-KH-1vC">
+                                <rect key="frame" x="287" y="212" width="350" height="242"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="44F-xr-rxK">
+                                <rect key="frame" x="229" y="307" width="311" height="410"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6IQ-na-QmG">
+                                        <rect key="frame" x="23" y="40" width="122" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Tell the truth"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bluff Claim:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qCf-o9-Mqo">
+                                        <rect key="frame" x="23" y="102" width="88" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EeE-Kx-Ta2">
+                                        <rect key="frame" x="23" y="352" width="75" height="29"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Cancel"/>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Number of cards: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Aq-OR-8Ke">
+                                        <rect key="frame" x="23" y="151" width="138" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.2053152184" green="0.37253836959999997" blue="0.003200591665" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="311" id="nBo-5E-Vi0"/>
+                                    <constraint firstAttribute="height" constant="410" id="xlX-ck-MdN"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="44F-xr-rxK" firstAttribute="centerY" secondItem="T6v-iG-Tr1" secondAttribute="centerY" id="2qr-lR-sdK"/>
+                            <constraint firstItem="44F-xr-rxK" firstAttribute="centerX" secondItem="T6v-iG-Tr1" secondAttribute="centerX" id="EbF-7k-lxX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gIA-96-GFh"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f3F-yS-gVz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1204.6875" y="-265.4296875"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="cOe-Z2-ffQ">
+            <objects>
+                <viewController id="AUJ-M2-udT" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GaA-zB-8ai">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="gl0-A0-1Rq"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="29R-X0-R1m" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
         </scene>
     </scenes>
     <resources>
