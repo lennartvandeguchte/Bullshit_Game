@@ -10,6 +10,7 @@
 		42152C4A2057E1BB002FB92B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA436C29203D945F00F3DDF1 /* Main.storyboard */; };
 		42152C4C2057E2A6002FB92B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42152C4B2057E2A6002FB92B /* ViewController.swift */; };
 		4259C503205BC29F00340E9D /* claimPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4259C502205BC29F00340E9D /* claimPopUpViewController.swift */; };
+		4259C507205BD4BC00340E9D /* bluffCallPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4259C506205BD4BC00340E9D /* bluffCallPopUpViewController.swift */; };
 		42D30C042056B1F70058F795 /* ViewControllerStart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D30C032056B1F70058F795 /* ViewControllerStart.swift */; };
 		AA35C9BC204FF2EC00DDEA21 /* MachineLearning.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA35C9BB204FF2EC00DDEA21 /* MachineLearning.swift */; };
 		AA436C26203D945F00F3DDF1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA436C25203D945F00F3DDF1 /* AppDelegate.swift */; };
@@ -39,6 +40,7 @@
 /* Begin PBXFileReference section */
 		42152C4B2057E2A6002FB92B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4259C502205BC29F00340E9D /* claimPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = claimPopUpViewController.swift; sourceTree = "<group>"; };
+		4259C506205BD4BC00340E9D /* bluffCallPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bluffCallPopUpViewController.swift; sourceTree = "<group>"; };
 		42D30C032056B1F70058F795 /* ViewControllerStart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerStart.swift; sourceTree = "<group>"; };
 		AA35C9BB204FF2EC00DDEA21 /* MachineLearning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachineLearning.swift; sourceTree = "<group>"; };
 		AA436C22203D945F00F3DDF1 /* Bullshit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bullshit.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -116,6 +118,7 @@
 				AAE889982046CFEF002758DE /* Card.swift */,
 				AA35C9BB204FF2EC00DDEA21 /* MachineLearning.swift */,
 				AA436C29203D945F00F3DDF1 /* Main.storyboard */,
+				4259C506205BD4BC00340E9D /* bluffCallPopUpViewController.swift */,
 				4259C502205BC29F00340E9D /* claimPopUpViewController.swift */,
 				42D30C032056B1F70058F795 /* ViewControllerStart.swift */,
 				42D30BC22056A9E40058F795 /* Supporting Files */,
