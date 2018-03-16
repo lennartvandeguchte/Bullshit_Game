@@ -8,14 +8,28 @@
 
 import UIKit
 
-class claimPopUpViewController: UIViewController {
+class claimPopUpViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
+    
+
+    @IBOutlet weak var numberOfCards: UILabel!
+    @IBOutlet weak var claimSelector: UIPickerView!
+    
+    var claimData: [String] = [String]()
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.view.backgroundColor = UIColor.black.withAlphaComponent(0.8)
         
         self.showAnimate()
+        
+        self.claimSelector.delegate = self
+        self.claimSelector.dataSource = self
+        
+        //create list of options for claim
+        claimData = ["+-1", "+-2", "+-3"]
 
         // Do any additional setup after loading the view.
     }
@@ -50,6 +64,23 @@ class claimPopUpViewController: UIViewController {
             }
         });
     }
+    
+    //number of columns for picker
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    //number of rows for picker
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return claimData.count
+    }
+    
+    // The data to return for the row and component (column) that's being passed in
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return claimData[row]
+    }
+    
+    
 
     
     /*
