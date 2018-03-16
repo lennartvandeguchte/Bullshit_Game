@@ -9,7 +9,7 @@
 import UIKit
 
 class claimPopUpViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
-
+    var game = Game()
     
 
     @IBOutlet weak var numberOfCards: UILabel!
@@ -29,7 +29,14 @@ class claimPopUpViewController: UIViewController, UIPickerViewDelegate, UIPicker
         self.claimSelector.dataSource = self
         
         //create list of options for claim
-        claimData = ["+-1", "+-2", "+-3"]
+        let value = current_pyramid_card.value
+        let index = current_pyramid_card.index_pyramid
+        
+        for i in (value-index)...(value+index){
+            if(i>=2 && i<=10){
+                claimData.append(String(i))
+            }
+        }
 
         // Do any additional setup after loading the view.
     }

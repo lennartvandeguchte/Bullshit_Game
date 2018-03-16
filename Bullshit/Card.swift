@@ -17,6 +17,7 @@ struct Card  {
     var identifier: Int
     var symbol: String
     var value: Int
+    var index_pyramid = 0
     
     // Initialize a card with a identifier, value and symbol
     init(identifier: Int){

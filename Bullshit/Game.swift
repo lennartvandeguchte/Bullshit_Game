@@ -16,6 +16,8 @@ class Game {
     var cards_AI = [Card]()
     var cards_player = [Card]()
     var cards_pyramid = [Card]()
+   
+    
     
     init(){
         
@@ -34,15 +36,31 @@ class Game {
         }
         
         // Cards that are used to build the pyramid
-        for _ in 0..<cards_in_pyramid{
+        for i in 0..<cards_in_pyramid{
             cards_pyramid.append(playing_deck.deck_shuffled[playing_deck.deck_shuffled.endIndex-1])
             playing_deck.deck_shuffled.remove(at: playing_deck.deck_shuffled.endIndex-1)
+            
+            switch (i+1){
+            case 1:
+                cards_pyramid[cards_pyramid.endIndex-1].index_pyramid = 1
+            case 2...3:
+                cards_pyramid[cards_pyramid.endIndex-1].index_pyramid = 2
+            case 4...6:
+                cards_pyramid[cards_pyramid.endIndex-1].index_pyramid = 3
+            case 7...10:
+                cards_pyramid[cards_pyramid.endIndex-1].index_pyramid = 4
+            default:
+                cards_pyramid[cards_pyramid.endIndex-1].index_pyramid = 0
+            }
+            
         }
         
         // Cards left over in the playing deck
         print("Cards in playing deck: ")
+        
         for i in 0..<playing_deck.deck_shuffled.count{
             print("\(playing_deck.deck_shuffled[i])")
+            
         }
      
     }

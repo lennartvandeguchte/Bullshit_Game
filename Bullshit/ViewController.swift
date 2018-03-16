@@ -8,6 +8,7 @@
 
 import UIKit
 
+var current_pyramid_card = Card(identifier: 1)
 
 class ViewController: UIViewController{
     var game = Game()
@@ -27,7 +28,7 @@ class ViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        model.loadModel(fileName: "bullshit.actr")
+        model.loadModel(fileName: "bullshit")
         // Do any additional setup after loading the view, typically from a nib.
         for i in 0..<game.cards_player.count{
             var card = game.cards_player[i]
@@ -50,11 +51,11 @@ class ViewController: UIViewController{
     
     @IBAction func touch_pyramid_card(_ sender: UIButton) {
         let card_identifier = Int(sender.accessibilityIdentifier!)
-        let card = game.cards_pyramid[card_identifier!-1]
+        current_pyramid_card = game.cards_pyramid[card_identifier!-1]
         print("\(card_identifier!)")
         
-        if card.isFaceUp==false && card.isInPyramid==false{
-            let card_name = "\(card.value)_\(card.symbol)"
+        if current_pyramid_card.isFaceUp==false && current_pyramid_card.isInPyramid==false{
+            let card_name = "\(current_pyramid_card.value)_\(current_pyramid_card.symbol)"
             print(card_name)
             sender.setImage(UIImage(named: card_name)!, for: [])
         
