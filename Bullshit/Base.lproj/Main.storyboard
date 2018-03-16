@@ -517,7 +517,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="YdK-Pk-2Mq"/>
                     <connections>
-                        <outlet property="claimPopUp" destination="IWG-qr-WHH" id="Ndf-AD-H4S"/>
                         <outlet property="num_cards_AI" destination="0jf-7M-z7W" id="c9G-d7-3Pm"/>
                         <outlet property="num_cards_player" destination="kcP-YS-wYg" id="toA-g7-NgK"/>
                         <outletCollection property="player_cards_buttons" destination="9sV-hY-LjC" collectionClass="NSMutableArray" id="Qt9-sj-lll"/>
@@ -547,11 +546,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uLx-KH-1vC">
-                                <rect key="frame" x="287" y="212" width="350" height="242"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="44F-xr-rxK">
                                 <rect key="frame" x="229" y="307" width="311" height="410"/>
                                 <subviews>
@@ -600,20 +594,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f3F-yS-gVz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1204.6875" y="-265.4296875"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="cOe-Z2-ffQ">
-            <objects>
-                <viewController id="AUJ-M2-udT" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="GaA-zB-8ai">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <viewLayoutGuide key="safeArea" id="gl0-A0-1Rq"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="29R-X0-R1m" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
         </scene>
     </scenes>
     <resources>
