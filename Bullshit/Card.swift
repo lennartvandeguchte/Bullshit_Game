@@ -13,11 +13,12 @@ struct Card  {
     
     var isFaceUp = false
     var isInPyramid = false
-    var playersCardHighlighted = false
     var identifier: Int
     var symbol: String
     var value: Int
     var index_pyramid = 0
+    var position_y = 0
+    var position_x = 0
     
     // Initialize a card with a identifier, value and symbol
     init(identifier: Int){

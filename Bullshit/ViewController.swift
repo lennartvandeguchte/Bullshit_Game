@@ -8,7 +8,7 @@
 
 import UIKit
 
-var current_pyramid_card = Card(identifier: 1)
+var current_pyramid_card: Card?
 
 class ViewController: UIViewController{
     var game = Game()
@@ -18,14 +18,7 @@ class ViewController: UIViewController{
     @IBOutlet weak var num_cards_AI: UILabel!
     @IBOutlet weak var num_cards_player: UILabel!
    
-    @IBAction func claimPopUp(_ sender: UIButton) {
-        let popOverVC = UIStoryboard(name: "Main", bundle:nil).instantiateViewController(withIdentifier: "claimPopUpID") as! claimPopUpViewController
-        self.addChildViewController(popOverVC)
-        popOverVC.view.frame = self.view.frame
-        self.view.addSubview(popOverVC.view)
-        popOverVC.didMove(toParentViewController: self)
-    }
-    
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         model.loadModel(fileName: "bullshit")
@@ -36,6 +29,7 @@ class ViewController: UIViewController{
             print(card_name)
             player_cards_buttons![i].setImage(UIImage(named: card_name)!, for: [])
             card.isFaceUp = true
+            player_cards_buttons![i].tag = i
         }
         
         num_cards_AI.text = "Ai's Cards: \(game.cards_AI.count)"
@@ -49,45 +43,63 @@ class ViewController: UIViewController{
 
 
     
+    @IBAction func select_players_card(_ sender: UIButton) {
+        if sender.isSelected == false {
+            sender.frame.origin.y = sender.frame.origin.y - 20
+            sender.isSelected = true
+        }else{
+            sender.frame.origin.y = sender.frame.origin.y + 20
+            sender.isSelected = false
+        }
+    }
+    
+    
     @IBAction func touch_pyramid_card(_ sender: UIButton) {
         let card_identifier = Int(sender.accessibilityIdentifier!)
         current_pyramid_card = game.cards_pyramid[card_identifier!-1]
-        print("\(card_identifier!)")
+        print("HEeee \(current_pyramid_card!) \(card_identifier!)")
         
-        if current_pyramid_card.isFaceUp==false && current_pyramid_card.isInPyramid==false{
-            let card_name = "\(current_pyramid_card.value)_\(current_pyramid_card.symbol)"
+        if current_pyramid_card?.isFaceUp==false && current_pyramid_card?.isInPyramid==false{
+            let card_name = "\(current_pyramid_card!.value)_\(current_pyramid_card!.symbol)"
             print(card_name)
             sender.setImage(UIImage(named: card_name)!, for: [])
         
             game.cards_pyramid[card_identifier!-1].isFaceUp = true
             game.cards_pyramid[card_identifier!-1].isInPyramid = true
+            current_pyramid_card = game.cards_pyramid[card_identifier!-1]
+            print("y: \(sender.frame.origin.y)")
+            current_pyramid_card!.position_y = Int(sender.frame.origin.y)
+            current_pyramid_card!.position_x = Int(sender.frame.origin.x)
+            print("Joeee \(current_pyramid_card!.position_y)")
+            
         }
-        
     }
     
-    
-    func players_turn(){
+    @IBAction func players_turn(_ sender: Any) {
+
         var highlighted_cards = [Card]()
-        for i in 0..<game.cards_player.count{
-            if game.cards_player[i].playersCardHighlighted == true {
+    
+        for i in 0..<player_cards_buttons!.count{
+            if player_cards_buttons![i].isSelected == true {
                 highlighted_cards.append(game.cards_player[i])
-                game.cards_player[i].playersCardHighlighted = false
+                player_cards_buttons![i].isSelected = false
+                print("\(highlighted_cards[highlighted_cards.endIndex-1].value)")
+                player_cards_buttons![i].frame.origin.y = CGFloat(current_pyramid_card!.position_y+10)
+                player_cards_buttons![i].frame.origin.x = CGFloat(current_pyramid_card!.position_x)
             }
-        }
+        } 
         
-        if highlighted_cards.isEmpty == false{
-            var card_value: Int
-            
-            // POP-UP MENU
-            
-            // highlighted cards have to be replaced from hand to pyramid
-            
-            // AI has to decide if it is bullshit or not.
-            
-        }else{
-            return
-        }
+        
+        let popOverVC = UIStoryboard(name: "Main", bundle:nil).instantiateViewController(withIdentifier: "claimPopUpID") as! claimPopUpViewController
+        popOverVC.numberOfCards_text = "Number of Cards Selected: \(highlighted_cards.count)"
+        self.addChildViewController(popOverVC)
+        popOverVC.view.frame = self.view.frame
+        self.view.addSubview(popOverVC.view)
+        popOverVC.didMove(toParentViewController: self)
+        
     }
+    
+    
     
     
     func AIs_turn(){

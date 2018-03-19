@@ -55,13 +55,12 @@ class Game {
             
         }
         
-        // Cards left over in the playing deck
-        print("Cards in playing deck: ")
-        
-        for i in 0..<playing_deck.deck_shuffled.count{
-            print("\(playing_deck.deck_shuffled[i])")
-            
-        }
+//        // Cards left over in the playing deck
+//        print("Cards in playing deck: ")
+//        for i in 0..<playing_deck.deck_shuffled.count{
+//            print("\(playing_deck.deck_shuffled[i])")
+//
+//        }
      
     }
     

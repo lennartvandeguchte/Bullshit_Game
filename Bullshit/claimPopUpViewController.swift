@@ -9,12 +9,11 @@
 import UIKit
 
 class claimPopUpViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
-    var game = Game()
-    
 
-    @IBOutlet weak var numberOfCards: UILabel!
+    @IBOutlet weak var numberOfCards: UILabel?
     @IBOutlet weak var claimSelector: UIPickerView!
     
+    var numberOfCards_text: String?
     var claimData: [String] = [String]()
 
     
@@ -24,13 +23,16 @@ class claimPopUpViewController: UIViewController, UIPickerViewDelegate, UIPicker
         self.view.backgroundColor = UIColor.black.withAlphaComponent(0.8)
         
         self.showAnimate()
-        
         self.claimSelector.delegate = self
         self.claimSelector.dataSource = self
         
+        
+        // Display number of selected cards
+        numberOfCards!.text = numberOfCards_text
+        
         //create list of options for claim
-        let value = current_pyramid_card.value
-        let index = current_pyramid_card.index_pyramid
+        let value = current_pyramid_card!.value
+        let index = current_pyramid_card!.index_pyramid
         
         for i in (value-index)...(value+index){
             if(i>=2 && i<=10){
@@ -41,6 +43,10 @@ class claimPopUpViewController: UIViewController, UIPickerViewDelegate, UIPicker
         // Do any additional setup after loading the view.
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -48,8 +54,10 @@ class claimPopUpViewController: UIViewController, UIPickerViewDelegate, UIPicker
     
     @IBAction func cancelClaimPopUp(_ sender: UIButton) {
         self.removeAnimate()
-        //self.view.removeFromSuperview()
+        
+        
     }
+    
     
     func showAnimate(){
         self.view.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
@@ -89,6 +97,10 @@ class claimPopUpViewController: UIViewController, UIPickerViewDelegate, UIPicker
     
     
 
+    @IBAction func claim(_ sender: UIButton) {
+        
+        
+    }
     
     /*
     // MARK: - Navigation
