@@ -10,7 +10,6 @@
 		42152C4A2057E1BB002FB92B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA436C29203D945F00F3DDF1 /* Main.storyboard */; };
 		42152C4C2057E2A6002FB92B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42152C4B2057E2A6002FB92B /* ViewController.swift */; };
 		4259C503205BC29F00340E9D /* claimPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4259C502205BC29F00340E9D /* claimPopUpViewController.swift */; };
-		4259C507205BD4BC00340E9D /* bluffCallPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4259C506205BD4BC00340E9D /* bluffCallPopUpViewController.swift */; };
 		42D30C042056B1F70058F795 /* ViewControllerStart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D30C032056B1F70058F795 /* ViewControllerStart.swift */; };
 		AA35C9BC204FF2EC00DDEA21 /* MachineLearning.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA35C9BB204FF2EC00DDEA21 /* MachineLearning.swift */; };
 		AA436C26203D945F00F3DDF1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA436C25203D945F00F3DDF1 /* AppDelegate.swift */; };
@@ -30,7 +29,6 @@
 		AA529EA8205BD06600D6CE03 /* Support.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA529E9A205BD06600D6CE03 /* Support.swift */; };
 		AA529EA9205BD06600D6CE03 /* Temporal.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA529E9B205BD06600D6CE03 /* Temporal.swift */; };
 		AA529EAA205BD06600D6CE03 /* Tokenizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA529E9C205BD06600D6CE03 /* Tokenizer.swift */; };
-		AA529EB0205BD58A00D6CE03 /* bullshit.actr in Resources */ = {isa = PBXBuildFile; fileRef = AA529EAF205BD58A00D6CE03 /* bullshit.actr */; };
 		AAE889972046CFE0002758DE /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE889962046CFE0002758DE /* Deck.swift */; };
 		AAE889992046CFEF002758DE /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE889982046CFEF002758DE /* Card.swift */; };
 		AAE8899B2046D1AD002758DE /* CognitiveModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE8899A2046D1AD002758DE /* CognitiveModel.swift */; };
@@ -42,6 +40,7 @@
 		4259C502205BC29F00340E9D /* claimPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = claimPopUpViewController.swift; sourceTree = "<group>"; };
 		4259C506205BD4BC00340E9D /* bluffCallPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bluffCallPopUpViewController.swift; sourceTree = "<group>"; };
 		42D30C032056B1F70058F795 /* ViewControllerStart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerStart.swift; sourceTree = "<group>"; };
+		5B9EBEA220626E830086AAA0 /* bullshit.actr */ = {isa = PBXFileReference; lastKnownFileType = text; path = bullshit.actr; sourceTree = "<group>"; };
 		AA35C9BB204FF2EC00DDEA21 /* MachineLearning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachineLearning.swift; sourceTree = "<group>"; };
 		AA436C22203D945F00F3DDF1 /* Bullshit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bullshit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA436C25203D945F00F3DDF1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -63,7 +62,6 @@
 		AA529E9A205BD06600D6CE03 /* Support.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Support.swift; sourceTree = "<group>"; };
 		AA529E9B205BD06600D6CE03 /* Temporal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Temporal.swift; sourceTree = "<group>"; };
 		AA529E9C205BD06600D6CE03 /* Tokenizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tokenizer.swift; sourceTree = "<group>"; };
-		AA529EAF205BD58A00D6CE03 /* bullshit.actr */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = bullshit.actr; path = ../bullshit.actr; sourceTree = "<group>"; };
 		AAE889962046CFE0002758DE /* Deck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
 		AAE889982046CFEF002758DE /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		AAE8899A2046D1AD002758DE /* CognitiveModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CognitiveModel.swift; sourceTree = "<group>"; };
@@ -130,7 +128,7 @@
 		AA529E8E205BD06600D6CE03 /* Core ACT-r */ = {
 			isa = PBXGroup;
 			children = (
-				AA529EAF205BD58A00D6CE03 /* bullshit.actr */,
+				5B9EBEA220626E830086AAA0 /* bullshit.actr */,
 				AA529E8F205BD06600D6CE03 /* BufferAction.swift */,
 				AA529E90205BD06600D6CE03 /* BufferCondition.swift */,
 				AA529E91205BD06600D6CE03 /* Chunk.swift */,
@@ -209,7 +207,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA529EB0205BD58A00D6CE03 /* bullshit.actr in Resources */,
 				AA436C30203D945F00F3DDF1 /* LaunchScreen.storyboard in Resources */,
 				AA436C2D203D945F00F3DDF1 /* Assets.xcassets in Resources */,
 				42152C4A2057E1BB002FB92B /* Main.storyboard in Resources */,
