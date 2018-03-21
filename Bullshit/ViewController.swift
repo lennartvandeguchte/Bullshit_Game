@@ -61,7 +61,7 @@ class ViewController: UIViewController{
         let card_identifier = Int(sender.accessibilityIdentifier!)
         current_pyramid_card = game.cards_pyramid[card_identifier!-1]
         print("Current pyramid card: \(current_pyramid_card!) \(card_identifier!)")
-        
+    
         if current_pyramid_card?.isFaceUp==false && current_pyramid_card?.isInPyramid==false{
             let card_name = "\(current_pyramid_card!.value)_\(current_pyramid_card!.symbol)"
             print(card_name)
@@ -70,8 +70,13 @@ class ViewController: UIViewController{
             game.cards_pyramid[card_identifier!-1].isFaceUp = true
             game.cards_pyramid[card_identifier!-1].isInPyramid = true
             current_pyramid_card = game.cards_pyramid[card_identifier!-1]
-            current_pyramid_card!.position_y = Int(sender.frame.origin.y)
-            current_pyramid_card!.position_x = Int(sender.frame.origin.x)
+            
+            //TODO: get positions of current pyramid card
+            let p = sender.convert(sender.center, to: self.view)
+            current_pyramid_card!.position_y = Int(p.y)
+            current_pyramid_card!.position_x = Int(p.x)
+            print(type(of: p.y))
+            print(p.x)
         }
     }
     
@@ -83,8 +88,15 @@ class ViewController: UIViewController{
                 highlighted_cards.append(game.cards_player[i])
                 player_cards_buttons![i].isSelected = false
                 print("\(highlighted_cards[highlighted_cards.endIndex-1].value)")
-                player_cards_buttons![i].frame.origin.y = CGFloat(current_pyramid_card!.position_y+10)
-                player_cards_buttons![i].frame.origin.x = CGFloat(current_pyramid_card!.position_x)
+                
+                //TODO: Move cards
+                print(current_pyramid_card!.position_x)
+                print(current_pyramid_card!.position_y)
+                print(self.view.frame.size)
+                player_cards_buttons![i].center = CGPoint(x: CGFloat(350), y: CGFloat(100))
+                
+                
+                print(player_cards_buttons![i].center)
             }
         } 
         
