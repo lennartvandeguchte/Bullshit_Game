@@ -11,10 +11,10 @@
 		42152C4C2057E2A6002FB92B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42152C4B2057E2A6002FB92B /* ViewController.swift */; };
 		4259C503205BC29F00340E9D /* claimPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4259C502205BC29F00340E9D /* claimPopUpViewController.swift */; };
 		42D30C042056B1F70058F795 /* ViewControllerStart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D30C032056B1F70058F795 /* ViewControllerStart.swift */; };
+		5B9EBEA520627F520086AAA0 /* bullshit.actr in Resources */ = {isa = PBXBuildFile; fileRef = 5B9EBEA420627F520086AAA0 /* bullshit.actr */; };
 		AA35C9BC204FF2EC00DDEA21 /* MachineLearning.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA35C9BB204FF2EC00DDEA21 /* MachineLearning.swift */; };
 		AA3BC47120626DC7005812D0 /* BufferAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3BC45F20626DC7005812D0 /* BufferAction.swift */; };
 		AA3BC47220626DC7005812D0 /* BufferCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3BC46020626DC7005812D0 /* BufferCondition.swift */; };
-		AA3BC47320626DC7005812D0 /* bullshit.actr in Resources */ = {isa = PBXBuildFile; fileRef = AA3BC46120626DC7005812D0 /* bullshit.actr */; };
 		AA3BC47420626DC7005812D0 /* Chunk.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3BC46220626DC7005812D0 /* Chunk.swift */; };
 		AA3BC47520626DC7005812D0 /* Declarative.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3BC46320626DC7005812D0 /* Declarative.swift */; };
 		AA3BC47620626DC7005812D0 /* Instantiation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3BC46420626DC7005812D0 /* Instantiation.swift */; };
@@ -33,20 +33,6 @@
 		AA436C26203D945F00F3DDF1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA436C25203D945F00F3DDF1 /* AppDelegate.swift */; };
 		AA436C2D203D945F00F3DDF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA436C2C203D945F00F3DDF1 /* Assets.xcassets */; };
 		AA436C30203D945F00F3DDF1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA436C2E203D945F00F3DDF1 /* LaunchScreen.storyboard */; };
-		AA529E9D205BD06600D6CE03 /* BufferAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA529E8F205BD06600D6CE03 /* BufferAction.swift */; };
-		AA529E9E205BD06600D6CE03 /* BufferCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA529E90205BD06600D6CE03 /* BufferCondition.swift */; };
-		AA529E9F205BD06600D6CE03 /* Chunk.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA529E91205BD06600D6CE03 /* Chunk.swift */; };
-		AA529EA0205BD06600D6CE03 /* Declarative.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA529E92205BD06600D6CE03 /* Declarative.swift */; };
-		AA529EA1205BD06600D6CE03 /* Instantiation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA529E93205BD06600D6CE03 /* Instantiation.swift */; };
-		AA529EA2205BD06600D6CE03 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA529E94205BD06600D6CE03 /* Model.swift */; };
-		AA529EA3205BD06600D6CE03 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA529E95205BD06600D6CE03 /* Parser.swift */; };
-		AA529EA4205BD06600D6CE03 /* Procedural.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA529E96205BD06600D6CE03 /* Procedural.swift */; };
-		AA529EA5205BD06600D6CE03 /* Production.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA529E97205BD06600D6CE03 /* Production.swift */; };
-		AA529EA6205BD06600D6CE03 /* SlotAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA529E98205BD06600D6CE03 /* SlotAction.swift */; };
-		AA529EA7205BD06600D6CE03 /* SlotCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA529E99205BD06600D6CE03 /* SlotCondition.swift */; };
-		AA529EA8205BD06600D6CE03 /* Support.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA529E9A205BD06600D6CE03 /* Support.swift */; };
-		AA529EA9205BD06600D6CE03 /* Temporal.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA529E9B205BD06600D6CE03 /* Temporal.swift */; };
-		AA529EAA205BD06600D6CE03 /* Tokenizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA529E9C205BD06600D6CE03 /* Tokenizer.swift */; };
 		AAE889972046CFE0002758DE /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE889962046CFE0002758DE /* Deck.swift */; };
 		AAE889992046CFEF002758DE /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE889982046CFEF002758DE /* Card.swift */; };
 		AAE8899B2046D1AD002758DE /* CognitiveModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE8899A2046D1AD002758DE /* CognitiveModel.swift */; };
@@ -58,11 +44,10 @@
 		4259C502205BC29F00340E9D /* claimPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = claimPopUpViewController.swift; sourceTree = "<group>"; };
 		4259C506205BD4BC00340E9D /* bluffCallPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bluffCallPopUpViewController.swift; sourceTree = "<group>"; };
 		42D30C032056B1F70058F795 /* ViewControllerStart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerStart.swift; sourceTree = "<group>"; };
-		5B9EBEA220626E830086AAA0 /* bullshit.actr */ = {isa = PBXFileReference; lastKnownFileType = text; path = bullshit.actr; sourceTree = "<group>"; };
+		5B9EBEA420627F520086AAA0 /* bullshit.actr */ = {isa = PBXFileReference; lastKnownFileType = text; path = bullshit.actr; sourceTree = "<group>"; };
 		AA35C9BB204FF2EC00DDEA21 /* MachineLearning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachineLearning.swift; sourceTree = "<group>"; };
-		AA3BC45F20626DC7005812D0 /* BufferAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BufferAction.swift; sourceTree = "<group>"; };
+		AA3BC45F20626DC7005812D0 /* BufferAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BufferAction.swift; path = "/Users/s2591367/Desktop/developer/Bullshit_Game/Bullshit/Core-actr/BufferAction.swift"; sourceTree = "<absolute>"; };
 		AA3BC46020626DC7005812D0 /* BufferCondition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BufferCondition.swift; sourceTree = "<group>"; };
-		AA3BC46120626DC7005812D0 /* bullshit.actr */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = bullshit.actr; sourceTree = "<group>"; };
 		AA3BC46220626DC7005812D0 /* Chunk.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chunk.swift; sourceTree = "<group>"; };
 		AA3BC46320626DC7005812D0 /* Declarative.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Declarative.swift; sourceTree = "<group>"; };
 		AA3BC46420626DC7005812D0 /* Instantiation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Instantiation.swift; sourceTree = "<group>"; };
@@ -84,20 +69,6 @@
 		AA436C2C203D945F00F3DDF1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AA436C2F203D945F00F3DDF1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AA436C31203D945F00F3DDF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AA529E8F205BD06600D6CE03 /* BufferAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BufferAction.swift; sourceTree = "<group>"; };
-		AA529E90205BD06600D6CE03 /* BufferCondition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BufferCondition.swift; sourceTree = "<group>"; };
-		AA529E91205BD06600D6CE03 /* Chunk.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chunk.swift; sourceTree = "<group>"; };
-		AA529E92205BD06600D6CE03 /* Declarative.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Declarative.swift; sourceTree = "<group>"; };
-		AA529E93205BD06600D6CE03 /* Instantiation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Instantiation.swift; sourceTree = "<group>"; };
-		AA529E94205BD06600D6CE03 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
-		AA529E95205BD06600D6CE03 /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
-		AA529E96205BD06600D6CE03 /* Procedural.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Procedural.swift; sourceTree = "<group>"; };
-		AA529E97205BD06600D6CE03 /* Production.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Production.swift; sourceTree = "<group>"; };
-		AA529E98205BD06600D6CE03 /* SlotAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlotAction.swift; sourceTree = "<group>"; };
-		AA529E99205BD06600D6CE03 /* SlotCondition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlotCondition.swift; sourceTree = "<group>"; };
-		AA529E9A205BD06600D6CE03 /* Support.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Support.swift; sourceTree = "<group>"; };
-		AA529E9B205BD06600D6CE03 /* Temporal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Temporal.swift; sourceTree = "<group>"; };
-		AA529E9C205BD06600D6CE03 /* Tokenizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tokenizer.swift; sourceTree = "<group>"; };
 		AAE889962046CFE0002758DE /* Deck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
 		AAE889982046CFEF002758DE /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		AAE8899A2046D1AD002758DE /* CognitiveModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CognitiveModel.swift; sourceTree = "<group>"; };
@@ -130,7 +101,7 @@
 			children = (
 				AA3BC45F20626DC7005812D0 /* BufferAction.swift */,
 				AA3BC46020626DC7005812D0 /* BufferCondition.swift */,
-				AA3BC46120626DC7005812D0 /* bullshit.actr */,
+				5B9EBEA420627F520086AAA0 /* bullshit.actr */,
 				AA3BC46220626DC7005812D0 /* Chunk.swift */,
 				AA3BC46320626DC7005812D0 /* Declarative.swift */,
 				AA3BC46420626DC7005812D0 /* Instantiation.swift */,
@@ -147,8 +118,9 @@
 				AA3BC46F20626DC7005812D0 /* time.actr */,
 				AA3BC47020626DC7005812D0 /* Tokenizer.swift */,
 			);
-			path = "Core-actr";
-			sourceTree = "<group>";
+			name = "Core-actr";
+			path = "Bullshit/Core-actr";
+			sourceTree = SOURCE_ROOT;
 		};
 		AA436C19203D945F00F3DDF1 = {
 			isa = PBXGroup;
@@ -184,29 +156,6 @@
 				AA436C31203D945F00F3DDF1 /* Info.plist */,
 			);
 			path = Bullshit;
-			sourceTree = "<group>";
-		};
-		AA529E8E205BD06600D6CE03 /* Core ACT-r */ = {
-			isa = PBXGroup;
-			children = (
-				5B9EBEA220626E830086AAA0 /* bullshit.actr */,
-				AA529E8F205BD06600D6CE03 /* BufferAction.swift */,
-				AA529E90205BD06600D6CE03 /* BufferCondition.swift */,
-				AA529E91205BD06600D6CE03 /* Chunk.swift */,
-				AA529E92205BD06600D6CE03 /* Declarative.swift */,
-				AA529E93205BD06600D6CE03 /* Instantiation.swift */,
-				AA529E94205BD06600D6CE03 /* Model.swift */,
-				AA529E95205BD06600D6CE03 /* Parser.swift */,
-				AA529E96205BD06600D6CE03 /* Procedural.swift */,
-				AA529E97205BD06600D6CE03 /* Production.swift */,
-				AA529E98205BD06600D6CE03 /* SlotAction.swift */,
-				AA529E99205BD06600D6CE03 /* SlotCondition.swift */,
-				AA529E9A205BD06600D6CE03 /* Support.swift */,
-				AA529E9B205BD06600D6CE03 /* Temporal.swift */,
-				AA529E9C205BD06600D6CE03 /* Tokenizer.swift */,
-			);
-			name = "Core ACT-r";
-			path = "../../../Core ACT-r";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,6 +219,7 @@
 			files = (
 				AA436C30203D945F00F3DDF1 /* LaunchScreen.storyboard in Resources */,
 				AA3BC48120626DC7005812D0 /* time.actr in Resources */,
+				5B9EBEA520627F520086AAA0 /* bullshit.actr in Resources */,
 				AA436C2D203D945F00F3DDF1 /* Assets.xcassets in Resources */,
 				42152C4A2057E1BB002FB92B /* Main.storyboard in Resources */,
 				AA3BC47C20626DC7005812D0 /* rps.actr in Resources */,
