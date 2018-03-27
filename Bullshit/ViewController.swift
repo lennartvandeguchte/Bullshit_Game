@@ -12,7 +12,7 @@ var current_pyramid_card: Card?
 
 class ViewController: UIViewController{
     var game = Game()
-    var model = CognitiveModel()
+    //var model = CognitiveModel()
     
     @IBOutlet var player_cards_buttons: Array<UIButton>?
     @IBOutlet weak var num_cards_AI: UILabel!
@@ -21,7 +21,7 @@ class ViewController: UIViewController{
    
     override func viewDidLoad() {
         super.viewDidLoad()
-        model.loadModel(fileName: "bullshit")
+        //model.loadModel(fileName: "bullshit")
         // Do any additional setup after loading the view, typically from a nib.
         for i in 0..<game.cards_player.count{
             var card = game.cards_player[i]
