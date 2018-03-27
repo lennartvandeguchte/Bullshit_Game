@@ -17,6 +17,7 @@ struct Card  {
     var symbol: String
     var value: Int
     var index_pyramid = 0
+    var tag_pyramid = 0
     var position_y = 0
     var position_x = 0
     

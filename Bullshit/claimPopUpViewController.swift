@@ -10,18 +10,20 @@ import UIKit
 
 class claimPopUpViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
+
+    var viewController: ViewController?
     @IBOutlet weak var numberOfCards: UILabel?
     @IBOutlet weak var claimSelector: UIPickerView!
     
     var numberOfCards_text: String?
     var claimData: [String] = [String]()
-
+    var claim_made: Bool?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.view.backgroundColor = UIColor.black.withAlphaComponent(0.8)
-        
+    
         self.showAnimate()
         self.claimSelector.delegate = self
         self.claimSelector.dataSource = self
@@ -54,10 +56,14 @@ class claimPopUpViewController: UIViewController, UIPickerViewDelegate, UIPicker
     
     @IBAction func cancelClaimPopUp(_ sender: UIButton) {
         self.removeAnimate()
-        
-        
     }
     
+    @IBAction func claim_made(_ sender: UIButton) {
+        claim_made = true
+        let selected_value = Int(claimData[self.claimSelector.selectedRow(inComponent: 0)])
+        viewController?.player_made_claim(claimed_value: selected_value!)
+        self.removeAnimate()
+    }
     
     func showAnimate(){
         self.view.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
@@ -97,11 +103,6 @@ class claimPopUpViewController: UIViewController, UIPickerViewDelegate, UIPicker
     
     
 
-    @IBAction func claim(_ sender: UIButton) {
-        
-        
-    }
-    
     /*
     // MARK: - Navigation
 
