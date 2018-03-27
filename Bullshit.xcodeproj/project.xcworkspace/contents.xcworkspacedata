@@ -1,64 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workspace
    version = "1.0">
-   <Group
-      location = "group:/Users/s2408287/Desktop/Bullshit/Bullshit/Bullshit/Core-actr"
-      name = "Core-actr">
-      <FileRef
-         location = "group:BufferAction.swift">
-      </FileRef>
-      <FileRef
-         location = "group:BufferCondition.swift">
-      </FileRef>
-      <FileRef
-         location = "group:bullshit.actr">
-      </FileRef>
-      <FileRef
-         location = "group:Chunk.swift">
-      </FileRef>
-      <FileRef
-         location = "group:Declarative.swift">
-      </FileRef>
-      <FileRef
-         location = "group:Instantiation.swift">
-      </FileRef>
-      <FileRef
-         location = "group:Model.swift">
-      </FileRef>
-      <FileRef
-         location = "group:Parser.swift">
-      </FileRef>
-      <FileRef
-         location = "group:Prisoner.swift">
-      </FileRef>
-      <FileRef
-         location = "group:Procedural.swift">
-      </FileRef>
-      <FileRef
-         location = "group:Production.swift">
-      </FileRef>
-      <FileRef
-         location = "group:rps.actr">
-      </FileRef>
-      <FileRef
-         location = "group:SlotAction.swift">
-      </FileRef>
-      <FileRef
-         location = "group:SlotCondition.swift">
-      </FileRef>
-      <FileRef
-         location = "group:Support.swift">
-      </FileRef>
-      <FileRef
-         location = "group:Temporal.swift">
-      </FileRef>
-      <FileRef
-         location = "group:time.actr">
-      </FileRef>
-      <FileRef
-         location = "group:Tokenizer.swift">
-      </FileRef>
-   </Group>
    <FileRef
       location = "self:">
    </FileRef>
