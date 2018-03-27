@@ -6,11 +6,15 @@
 //  Copyright © 2018 L.A. van de Guchte. All rights reserved.
 //
 
-//import Foundation
+import UIKit
 
 // This class inherits from the ACT-R core file Model.swift and is therefore the head file for regulating the cognitive model.
 
-//class CognitiveModel: Model {
+class CognitiveModel: Model {
+    var model: Game!
+    
+    //TODO: model texts
     
     
-//}
+    
+}

@@ -12,7 +12,7 @@ var current_pyramid_card: Card?
 
 class ViewController: UIViewController{
     var game = Game()
-    //var model = CognitiveModel()
+    var model = CognitiveModel()
     
     @IBOutlet var player_cards_buttons: Array<UIButton>?
     @IBOutlet weak var num_cards_AI: UILabel!
@@ -21,8 +21,10 @@ class ViewController: UIViewController{
    
     override func viewDidLoad() {
         super.viewDidLoad()
-        //model.loadModel(fileName: "bullshit")
+        model.loadModel(fileName: "bullshit")
+        
         // Do any additional setup after loading the view, typically from a nib.
+        // Show which cards the player has
         for i in 0..<game.cards_player.count{
             var card = game.cards_player[i]
             let card_name = "\(card.value)_\(card.symbol)"
@@ -32,6 +34,7 @@ class ViewController: UIViewController{
             player_cards_buttons![i].tag = i
         }
         
+        // Set the counters for number of cards AI and player
         num_cards_AI.text = "Ai's Cards: \(game.cards_AI.count)"
         num_cards_player.text = "Own Cards: \(game.cards_player.count)"
     }
@@ -42,7 +45,7 @@ class ViewController: UIViewController{
     }
 
 
-    
+    // Highlight the players card when selected
     @IBAction func select_players_card(_ sender: UIButton) {
         if sender.isSelected == false {
             sender.frame.origin.y = sender.frame.origin.y - 20
@@ -53,11 +56,11 @@ class ViewController: UIViewController{
         }
     }
     
-    
+    // Put pyramid card upside down when touch and indicate it as the current pyramid card to play with
     @IBAction func touch_pyramid_card(_ sender: UIButton) {
         let card_identifier = Int(sender.accessibilityIdentifier!)
         current_pyramid_card = game.cards_pyramid[card_identifier!-1]
-        print("HEeee \(current_pyramid_card!) \(card_identifier!)")
+        print("Current pyramid card: \(current_pyramid_card!) \(card_identifier!)")
         
         if current_pyramid_card?.isFaceUp==false && current_pyramid_card?.isInPyramid==false{
             let card_name = "\(current_pyramid_card!.value)_\(current_pyramid_card!.symbol)"
@@ -67,18 +70,14 @@ class ViewController: UIViewController{
             game.cards_pyramid[card_identifier!-1].isFaceUp = true
             game.cards_pyramid[card_identifier!-1].isInPyramid = true
             current_pyramid_card = game.cards_pyramid[card_identifier!-1]
-            print("y: \(sender.frame.origin.y)")
             current_pyramid_card!.position_y = Int(sender.frame.origin.y)
             current_pyramid_card!.position_x = Int(sender.frame.origin.x)
-            print("Joeee \(current_pyramid_card!.position_y)")
-            
         }
     }
     
+    // When cards are selected let the player decide which claim he/she wants to make
     @IBAction func players_turn(_ sender: Any) {
-
         var highlighted_cards = [Card]()
-    
         for i in 0..<player_cards_buttons!.count{
             if player_cards_buttons![i].isSelected == true {
                 highlighted_cards.append(game.cards_player[i])
@@ -89,7 +88,7 @@ class ViewController: UIViewController{
             }
         } 
         
-        
+        // Show pop up view
         let popOverVC = UIStoryboard(name: "Main", bundle:nil).instantiateViewController(withIdentifier: "claimPopUpID") as! claimPopUpViewController
         popOverVC.numberOfCards_text = "Number of Cards Selected: \(highlighted_cards.count)"
         self.addChildViewController(popOverVC)

@@ -1,0 +1,52 @@
+
+
+;;; Model of bullshit opponent
+;;;
+
+(add-dm
+(goal isa decision state start)
+)
+
+(p start-true
+=goal>
+isa decision
+state start
+===>
+=goal>
+model true
+)
+
+(p start-lie
+=goal>
+isa decision
+state start
+===>
+=goal>
+model false
+)
+
+(p decide-truth
+=goal>
+isa goal
+state start
+===>
+=goal>
+state true
++action>
+isa decision
+model true
+)
+
+(p decide-lie
+=goal>
+isa goal
+===>
+goal>
+state lie
++action>
+isa decision
+model false
+)
+
+
+(goal-focus goal)
