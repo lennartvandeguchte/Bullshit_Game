@@ -10,10 +10,10 @@
 		42152C4A2057E1BB002FB92B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA436C29203D945F00F3DDF1 /* Main.storyboard */; };
 		42152C4C2057E2A6002FB92B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42152C4B2057E2A6002FB92B /* ViewController.swift */; };
 		4259C503205BC29F00340E9D /* claimPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4259C502205BC29F00340E9D /* claimPopUpViewController.swift */; };
+		4259C509206A4CD900340E9D /* BufferAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4259C508206A4CD900340E9D /* BufferAction.swift */; };
 		42D30C042056B1F70058F795 /* ViewControllerStart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D30C032056B1F70058F795 /* ViewControllerStart.swift */; };
 		5B9EBEA520627F520086AAA0 /* bullshit.actr in Resources */ = {isa = PBXBuildFile; fileRef = 5B9EBEA420627F520086AAA0 /* bullshit.actr */; };
 		AA35C9BC204FF2EC00DDEA21 /* MachineLearning.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA35C9BB204FF2EC00DDEA21 /* MachineLearning.swift */; };
-		AA3BC47120626DC7005812D0 /* BufferAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3BC45F20626DC7005812D0 /* BufferAction.swift */; };
 		AA3BC47220626DC7005812D0 /* BufferCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3BC46020626DC7005812D0 /* BufferCondition.swift */; };
 		AA3BC47420626DC7005812D0 /* Chunk.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3BC46220626DC7005812D0 /* Chunk.swift */; };
 		AA3BC47520626DC7005812D0 /* Declarative.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3BC46320626DC7005812D0 /* Declarative.swift */; };
@@ -43,10 +43,10 @@
 		42152C4B2057E2A6002FB92B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4259C502205BC29F00340E9D /* claimPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = claimPopUpViewController.swift; sourceTree = "<group>"; };
 		4259C506205BD4BC00340E9D /* bluffCallPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bluffCallPopUpViewController.swift; sourceTree = "<group>"; };
+		4259C508206A4CD900340E9D /* BufferAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BufferAction.swift; sourceTree = "<group>"; };
 		42D30C032056B1F70058F795 /* ViewControllerStart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerStart.swift; sourceTree = "<group>"; };
 		5B9EBEA420627F520086AAA0 /* bullshit.actr */ = {isa = PBXFileReference; lastKnownFileType = text; path = bullshit.actr; sourceTree = "<group>"; };
 		AA35C9BB204FF2EC00DDEA21 /* MachineLearning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachineLearning.swift; sourceTree = "<group>"; };
-		AA3BC45F20626DC7005812D0 /* BufferAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BufferAction.swift; path = "/Users/s2591367/Desktop/developer/Bullshit_Game/Bullshit/Core-actr/BufferAction.swift"; sourceTree = "<absolute>"; };
 		AA3BC46020626DC7005812D0 /* BufferCondition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BufferCondition.swift; sourceTree = "<group>"; };
 		AA3BC46220626DC7005812D0 /* Chunk.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chunk.swift; sourceTree = "<group>"; };
 		AA3BC46320626DC7005812D0 /* Declarative.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Declarative.swift; sourceTree = "<group>"; };
@@ -99,7 +99,7 @@
 		AA3BC45E20626DC7005812D0 /* Core-actr */ = {
 			isa = PBXGroup;
 			children = (
-				AA3BC45F20626DC7005812D0 /* BufferAction.swift */,
+				4259C508206A4CD900340E9D /* BufferAction.swift */,
 				AA3BC46020626DC7005812D0 /* BufferCondition.swift */,
 				5B9EBEA420627F520086AAA0 /* bullshit.actr */,
 				AA3BC46220626DC7005812D0 /* Chunk.swift */,
@@ -238,6 +238,7 @@
 				AA3BC47B20626DC7005812D0 /* Production.swift in Sources */,
 				AAE889972046CFE0002758DE /* Deck.swift in Sources */,
 				4259C503205BC29F00340E9D /* claimPopUpViewController.swift in Sources */,
+				4259C509206A4CD900340E9D /* BufferAction.swift in Sources */,
 				AA3BC47920626DC7005812D0 /* Prisoner.swift in Sources */,
 				AAE889992046CFEF002758DE /* Card.swift in Sources */,
 				AA3BC47820626DC7005812D0 /* Parser.swift in Sources */,
@@ -253,7 +254,6 @@
 				AA3BC47520626DC7005812D0 /* Declarative.swift in Sources */,
 				AA436C26203D945F00F3DDF1 /* AppDelegate.swift in Sources */,
 				42D30C042056B1F70058F795 /* ViewControllerStart.swift in Sources */,
-				AA3BC47120626DC7005812D0 /* BufferAction.swift in Sources */,
 				AA3BC47420626DC7005812D0 /* Chunk.swift in Sources */,
 				AA3BC47E20626DC7005812D0 /* SlotCondition.swift in Sources */,
 				AA3BC47D20626DC7005812D0 /* SlotAction.swift in Sources */,
