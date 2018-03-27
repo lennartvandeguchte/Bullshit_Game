@@ -12,10 +12,11 @@ var current_pyramid_card: Card?
 var current_cards_on_table = [Card]()
 
 class ViewController: UIViewController{
+    /// Set variables ////////////////////////////////////////
     var game = Game()
     var model = CognitiveModel()
     
-
+    var current_count_button: UIButton?
     @IBOutlet var player_cards_buttons: Array<UIButton>?
     @IBOutlet var pyramid_cards_buttons: [UIButton]!
     
@@ -31,6 +32,7 @@ class ViewController: UIViewController{
     @IBOutlet weak var pyramid_2_view: UIStackView!
     
     var claimed_cards_player = [Int](repeating: 0, count: 10)
+    ////////////////////////////////////////////////////////////
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -130,6 +132,7 @@ class ViewController: UIViewController{
         
     }
     
+    /// Executed when a player has made a claim in the pop up window
     func player_made_claim(claimed_value: Int){
         current_cards_on_table = []
         var index: Array<Int>
@@ -170,10 +173,61 @@ class ViewController: UIViewController{
         game.AI_decide_if_bullshit(diff_num_cards: (game.cards_AI.count - game.cards_player.count), pyramid_level: current_pyramid_card!.tag_pyramid, amount_cards_known: amount_cards_known_by_AI , amount_cards_claimed: claimed_cards_player[claimed_value], claimed_value: claimed_value, claimed_amount: index.count)
     }
     
+    
+    /// Executed when the player has cancelled his claim
     func player_cancelled(){
         //player_cards_buttons![i].isSelected = false
     }
     
+
+    
+    func add_card_players_hand(number_of_cards: Int){
+    }
+    
+    func AIs_turn(){
+    }
+    
+    func true_bullshit(){
+        print("lalalala")
+        var counter = 1
+        for _ in 0..<current_cards_on_table.count{
+            game.cards_player.append(current_cards_on_table[current_cards_on_table.endIndex-1])
+            current_cards_on_table.remove(at: current_cards_on_table.endIndex-1)
+            counter += 1
+        }
+        
+
+        game.cards_player.append(current_pyramid_card!)
+        print(current_pyramid_card!.tag_pyramid)
+      
+        for i in 0..<pyramid_cards_buttons.count{
+            print(pyramid_cards_buttons[i].tag)
+            if pyramid_cards_buttons[i].tag == current_pyramid_card!.tag_pyramid{
+                pyramid_cards_buttons[i].isHidden = true
+                current_count_button!.isHidden = true
+                print(pyramid_cards_buttons[i].tag)
+            }else if current_pyramid_card!.tag_pyramid == 1{
+                pyramid_cards_buttons[9].isHidden = true
+                current_count_button!.isHidden = true
+            }
+        }
+        
+        add_card_players_hand(number_of_cards: counter)
+        
+    }
+    
+    func false_bullshit(){
+        
+    }
+    
+    /////// ADDITIONAL FUNCTIONS //////////////////////////////////////////////
+    
+    // Update the AI says text window
+    func update_AI_says(says: String){
+        AI_says.text = says
+    }
+    
+    /// Add an counter button to the pyramid card for which the claim is made
     func add_table_card_button(index: Int, amount: Int){
         let button = UIButton(type: .custom)
         button.frame = CGRect(x: current_pyramid_card!.position_x-35, y: current_pyramid_card!.position_y-35, width: 70, height: 70)
@@ -184,34 +238,6 @@ class ViewController: UIViewController{
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 50)
         view.addSubview(button)
         
+        self.current_count_button = button
     }
-    
-    
-    func AIs_turn(){
-        
-        
-    }
-    
-    func update_AI_says(says: String){
-        AI_says.text = says
-    }
-    
-    func true_bullshit(){
-        print("lalalala")
-        for _ in 0..<current_cards_on_table.count{
-            game.cards_player.append(current_cards_on_table[current_cards_on_table.endIndex-1])
-            current_cards_on_table.remove(at: current_cards_on_table.endIndex-1)
-        }
-        
-        game.cards_player.append(current_pyramid_card!)
-    
-        pyramid_cards_buttons[current_pyramid_card!.tag_pyramid].isHidden = true
-        
-    }
-    
-    func false_bullshit(){
-        
-    }
-    
-    
 }
