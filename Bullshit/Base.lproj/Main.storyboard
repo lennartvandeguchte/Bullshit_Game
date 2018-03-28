@@ -62,150 +62,223 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9sV-hY-LjC">
                                         <rect key="frame" x="0.0" y="0.0" width="90" height="127.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="90" id="sun-HU-9oD"/>
                                         </constraints>
                                         <state key="normal" image="back">
                                             <color key="titleShadowColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="select_players_card:" destination="321-XR-fvp" eventType="touchUpInside" id="BMu-Rm-Zjl"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EZ9-cJ-HoV">
                                         <rect key="frame" x="50" y="0.0" width="90" height="127.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="90" id="ot0-jY-m9g"/>
                                         </constraints>
                                         <state key="normal" image="back">
                                             <color key="titleShadowColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="select_players_card:" destination="321-XR-fvp" eventType="touchUpInside" id="BSf-3O-LvI"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fVX-MA-9ES">
                                         <rect key="frame" x="100" y="0.0" width="90" height="127.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="90" id="eYB-jy-Von"/>
                                         </constraints>
                                         <state key="normal" image="back">
                                             <color key="titleShadowColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="select_players_card:" destination="321-XR-fvp" eventType="touchUpInside" id="Pv1-q7-qlP"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fWL-nb-cNt">
                                         <rect key="frame" x="150" y="0.0" width="90" height="127.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="90" id="Cig-1K-3p0"/>
                                         </constraints>
                                         <state key="normal" image="back">
                                             <color key="titleShadowColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="select_players_card:" destination="321-XR-fvp" eventType="touchUpInside" id="C1R-Lq-hcQ"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e89-qY-JEc">
                                         <rect key="frame" x="200" y="0.0" width="90" height="127.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="90" id="v26-HX-DV8"/>
                                         </constraints>
                                         <state key="normal" image="back">
                                             <color key="titleShadowColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="ayer.cornerRadius">
+                                                <integer key="value" value="30"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="select_players_card:" destination="321-XR-fvp" eventType="touchUpInside" id="fqQ-aV-YtE"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="69Q-s2-bNv">
                                         <rect key="frame" x="250" y="0.0" width="90" height="127.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="90" id="ROh-gL-hZI"/>
                                         </constraints>
                                         <state key="normal" image="back">
                                             <color key="titleShadowColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="ayer.cornerRadius">
+                                                <integer key="value" value="30"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="select_players_card:" destination="321-XR-fvp" eventType="touchUpInside" id="QmC-x4-ocz"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mSR-JG-sdV">
                                         <rect key="frame" x="300" y="0.0" width="90" height="127.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="90" id="C01-kb-7Se"/>
                                         </constraints>
                                         <state key="normal" image="back">
                                             <color key="titleShadowColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="ayer.cornerRadius">
+                                                <integer key="value" value="30"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="select_players_card:" destination="321-XR-fvp" eventType="touchUpInside" id="I4A-Sn-X8w"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pLf-qp-TSQ">
                                         <rect key="frame" x="350" y="0.0" width="90" height="127.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="90" id="Pzt-F7-wke"/>
                                         </constraints>
                                         <state key="normal" image="back">
                                             <color key="titleShadowColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="ayer.cornerRadius">
+                                                <integer key="value" value="30"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="select_players_card:" destination="321-XR-fvp" eventType="touchUpInside" id="qLm-3v-sNe"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleAspectFit" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tza-Jw-kdn">
                                         <rect key="frame" x="400" y="0.0" width="90" height="127.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="90" id="r4T-pw-Qza"/>
                                         </constraints>
                                         <state key="normal" image="back">
                                             <color key="titleShadowColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="ayer.cornerRadius">
+                                                <integer key="value" value="30"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="select_players_card:" destination="321-XR-fvp" eventType="touchUpInside" id="HXK-4W-AgP"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ofc-U0-nhu">
                                         <rect key="frame" x="450" y="0.0" width="90" height="127.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="90" id="RcO-Aq-ebu"/>
                                         </constraints>
                                         <state key="normal" image="back">
                                             <color key="titleShadowColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="ayer.cornerRadius">
+                                                <integer key="value" value="30"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="select_players_card:" destination="321-XR-fvp" eventType="touchUpInside" id="Yek-fZ-Kyv"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cdl-2K-3wb">
                                         <rect key="frame" x="500" y="0.0" width="90" height="127.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="90" id="ntG-HZ-vCR"/>
                                         </constraints>
                                         <state key="normal" image="back">
                                             <color key="titleShadowColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="ayer.cornerRadius">
+                                                <integer key="value" value="30"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="select_players_card:" destination="321-XR-fvp" eventType="touchUpInside" id="bTU-Yh-PFU"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iC5-u1-PBY">
                                         <rect key="frame" x="550" y="0.0" width="90" height="127.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="90" id="qb0-rt-ZlK"/>
                                         </constraints>
                                         <state key="normal" image="back">
                                             <color key="titleShadowColor" red="0.46573141581788879" green="0.47034261795469956" blue="0.47034261795469956" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="ayer.cornerRadius">
+                                                <integer key="value" value="30"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="select_players_card:" destination="321-XR-fvp" eventType="touchUpInside" id="YHI-6x-NTb"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vew-kR-WsG">
                                         <rect key="frame" x="600" y="0.0" width="90" height="127.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="127.59999999999999" id="Y3y-pJ-eIZ"/>
                                             <constraint firstAttribute="width" constant="90" id="vqM-bw-EcT"/>
@@ -213,6 +286,11 @@
                                         <state key="normal" image="back">
                                             <color key="titleShadowColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="ayer.cornerRadius">
+                                                <integer key="value" value="30"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="select_players_card:" destination="321-XR-fvp" eventType="touchUpInside" id="AAo-h8-gVT"/>
                                         </connections>
@@ -246,6 +324,7 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ode-Ri-YOl">
                                         <rect key="frame" x="0.0" y="0.0" width="90" height="127.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="90" id="Sq4-XI-bGx"/>
                                         </constraints>
@@ -255,6 +334,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ttH-Uq-hgb">
                                         <rect key="frame" x="50" y="0.0" width="90" height="127.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="90" id="5gh-gn-pF8"/>
                                         </constraints>
@@ -264,6 +344,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="juh-IL-j09">
                                         <rect key="frame" x="100" y="0.0" width="90" height="127.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="90" id="3Nh-Kk-SBb"/>
                                         </constraints>
@@ -273,6 +354,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xcx-2F-fcB">
                                         <rect key="frame" x="150" y="0.0" width="90" height="127.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="90" id="o3p-4C-vKJ"/>
                                         </constraints>
@@ -282,6 +364,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bTw-1e-Jxm">
                                         <rect key="frame" x="200" y="0.0" width="90" height="127.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="90" id="zxC-38-4MI"/>
                                         </constraints>
@@ -291,6 +374,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mOf-9b-97t">
                                         <rect key="frame" x="250" y="0.0" width="90" height="127.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="90" id="lmr-ke-y6i"/>
                                         </constraints>
@@ -300,6 +384,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Rf-fK-k92">
                                         <rect key="frame" x="300" y="0.0" width="90" height="127.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="90" id="st9-pX-v5A"/>
                                         </constraints>
@@ -309,6 +394,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NJS-ke-yNa">
                                         <rect key="frame" x="350" y="0.0" width="90" height="127.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="90" id="RNT-8y-Gfx"/>
                                         </constraints>
@@ -318,6 +404,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleAspectFit" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hkm-Vr-JSN">
                                         <rect key="frame" x="400" y="0.0" width="90" height="127.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="90" id="AWv-ec-gjY"/>
                                         </constraints>
@@ -327,6 +414,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lhb-B8-xth">
                                         <rect key="frame" x="450" y="0.0" width="90" height="127.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="90" id="fq2-I5-CYI"/>
                                         </constraints>
@@ -336,6 +424,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="slv-Zs-43g">
                                         <rect key="frame" x="500" y="0.0" width="90" height="127.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="90" id="Sl8-f9-KMV"/>
                                         </constraints>
@@ -345,6 +434,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jCI-a0-ojX">
                                         <rect key="frame" x="550" y="0.0" width="90" height="127.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="90" id="9iQ-FD-CCZ"/>
                                         </constraints>
@@ -354,6 +444,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bio-Td-sln">
                                         <rect key="frame" x="600" y="0.0" width="90" height="127.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="127.59999999999999" id="FDS-pu-wlW"/>
                                             <constraint firstAttribute="width" constant="90" id="lnx-2h-RYe"/>
@@ -381,6 +472,7 @@
                                         <subviews>
                                             <button opaque="NO" tag="7" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5GU-MB-RZ2">
                                                 <rect key="frame" x="0.0" y="0.0" width="90" height="127.5"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <accessibility key="accessibilityConfiguration" identifier="7"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="90" id="CHc-ZN-7vl"/>
@@ -393,6 +485,7 @@
                                             </button>
                                             <button opaque="NO" tag="8" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o8u-cC-zIJ">
                                                 <rect key="frame" x="105" y="0.0" width="90" height="127.5"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <accessibility key="accessibilityConfiguration" identifier="8"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="90" id="7rv-BW-RA9"/>
@@ -405,6 +498,7 @@
                                             </button>
                                             <button opaque="NO" tag="9" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="koR-Tg-lHE">
                                                 <rect key="frame" x="210" y="0.0" width="90" height="127.5"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <accessibility key="accessibilityConfiguration" identifier="9"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="90" id="TPM-mP-eer"/>
@@ -417,6 +511,7 @@
                                             </button>
                                             <button opaque="NO" tag="10" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Suj-6U-B3Q">
                                                 <rect key="frame" x="315" y="0.0" width="90" height="127.5"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <accessibility key="accessibilityConfiguration" identifier="10"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="90" id="7wQ-M1-bYJ"/>
@@ -434,6 +529,7 @@
                                         <subviews>
                                             <button opaque="NO" tag="4" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hpu-T8-mMt">
                                                 <rect key="frame" x="0.0" y="0.0" width="90" height="127.5"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <accessibility key="accessibilityConfiguration" identifier="4"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="127.5" id="SqL-Hg-dXa"/>
@@ -446,6 +542,7 @@
                                             </button>
                                             <button opaque="NO" tag="5" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dfc-02-uUP">
                                                 <rect key="frame" x="105" y="0.0" width="90" height="127.5"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <accessibility key="accessibilityConfiguration" identifier="5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="127.5" id="4Vv-eI-xwj"/>
@@ -458,6 +555,7 @@
                                             </button>
                                             <button opaque="NO" tag="6" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lMe-Dv-LFo">
                                                 <rect key="frame" x="210" y="0.0" width="90" height="127.5"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <accessibility key="accessibilityConfiguration" identifier="6"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="90" id="MFA-s8-Vom"/>
@@ -475,6 +573,7 @@
                                         <subviews>
                                             <button opaque="NO" tag="2" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RGs-e3-Fg3">
                                                 <rect key="frame" x="0.0" y="0.0" width="90" height="127.5"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <accessibility key="accessibilityConfiguration" identifier="2"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="127.5" id="CEF-7e-VCt"/>
@@ -487,6 +586,7 @@
                                             </button>
                                             <button opaque="NO" tag="3" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SlT-eH-ZtI">
                                                 <rect key="frame" x="105" y="0.0" width="90" height="127.5"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <accessibility key="accessibilityConfiguration" identifier="3"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="127.5" id="G0a-Zo-IvM"/>
@@ -501,12 +601,18 @@
                                     </stackView>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QB9-0U-aZt">
                                         <rect key="frame" x="157.5" y="397.5" width="90" height="127.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <accessibility key="accessibilityConfiguration" identifier="1"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="90" id="ScG-Vr-wPh"/>
                                             <constraint firstAttribute="height" constant="127.5" id="iy9-xF-mZy"/>
                                         </constraints>
                                         <state key="normal" image="back"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="touch_pyramid_card:" destination="321-XR-fvp" eventType="touchUpInside" id="n4i-8w-rxd"/>
                                         </connections>
@@ -567,6 +673,19 @@
                         <outletCollection property="pyramid_cards_buttons" destination="RGs-e3-Fg3" collectionClass="NSMutableArray" id="nbx-pZ-CgG"/>
                         <outletCollection property="pyramid_cards_buttons" destination="SlT-eH-ZtI" collectionClass="NSMutableArray" id="jVc-R5-MUi"/>
                         <outletCollection property="pyramid_cards_buttons" destination="QB9-0U-aZt" collectionClass="NSMutableArray" id="lTW-ux-P76"/>
+                        <outletCollection property="AI_cards_buttons" destination="ode-Ri-YOl" collectionClass="NSMutableArray" id="4OL-8i-SjL"/>
+                        <outletCollection property="AI_cards_buttons" destination="ttH-Uq-hgb" collectionClass="NSMutableArray" id="d2J-od-1XA"/>
+                        <outletCollection property="AI_cards_buttons" destination="juh-IL-j09" collectionClass="NSMutableArray" id="ML0-45-Qcl"/>
+                        <outletCollection property="AI_cards_buttons" destination="xcx-2F-fcB" collectionClass="NSMutableArray" id="4Zm-EA-lyX"/>
+                        <outletCollection property="AI_cards_buttons" destination="bTw-1e-Jxm" collectionClass="NSMutableArray" id="rbm-WF-J8S"/>
+                        <outletCollection property="AI_cards_buttons" destination="mOf-9b-97t" collectionClass="NSMutableArray" id="tOU-tZ-46a"/>
+                        <outletCollection property="AI_cards_buttons" destination="2Rf-fK-k92" collectionClass="NSMutableArray" id="JSh-ci-uop"/>
+                        <outletCollection property="AI_cards_buttons" destination="lhb-B8-xth" collectionClass="NSMutableArray" id="TAu-6s-Dux"/>
+                        <outletCollection property="AI_cards_buttons" destination="slv-Zs-43g" collectionClass="NSMutableArray" id="VHw-ij-df3"/>
+                        <outletCollection property="AI_cards_buttons" destination="jCI-a0-ojX" collectionClass="NSMutableArray" id="fsV-oE-ppt"/>
+                        <outletCollection property="AI_cards_buttons" destination="Bio-Td-sln" collectionClass="NSMutableArray" id="7zE-LR-vPc"/>
+                        <outletCollection property="AI_cards_buttons" destination="NJS-ke-yNa" collectionClass="NSMutableArray" id="ZbG-nS-ge1"/>
+                        <outletCollection property="AI_cards_buttons" destination="hkm-Vr-JSN" collectionClass="NSMutableArray" id="Tjp-rC-SSV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KuH-hj-YIp" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -627,7 +746,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.2053152184" green="0.37253836959999997" blue="0.003200591665" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="1" alpha="0.79847051056338025" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="311" id="nBo-5E-Vi0"/>
                                     <constraint firstAttribute="height" constant="410" id="xlX-ck-MdN"/>
@@ -672,6 +791,11 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="Bluff!"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="bluffClaim:" destination="FQi-VU-jut" eventType="touchUpInside" id="RDy-Kk-5Ni"/>
                                         </connections>
@@ -681,6 +805,11 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.50196081400000003" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="I believe the claim"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="believeClaim:" destination="FQi-VU-jut" eventType="touchUpInside" id="5hI-e1-SVQ"/>
                                         </connections>
@@ -700,7 +829,12 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.2053152184" green="0.37253836959999997" blue="0.003200591665" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="1" alpha="0.79847051059999996" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
