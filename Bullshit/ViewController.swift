@@ -8,10 +8,13 @@
 
 import UIKit
 
+
 var current_pyramid_card: Card?
 var current_cards_on_table = [Card]()
 
 class ViewController: UIViewController{
+    
+    
     /// Set variables ////////////////////////////////////////
     var game = Game()
     var model = CognitiveModel()
@@ -19,6 +22,7 @@ class ViewController: UIViewController{
     var current_count_button: UIButton?
     @IBOutlet var player_cards_buttons: Array<UIButton>?
     @IBOutlet var pyramid_cards_buttons: [UIButton]!
+    @IBOutlet var AI_cards_buttons: Array<UIButton>?
     
     @IBOutlet weak var num_cards_AI: UILabel!
     @IBOutlet weak var num_cards_player: UILabel!
@@ -37,6 +41,23 @@ class ViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         //model.loadModel(fileName: "bullshit")
+        
+        for button in pyramid_cards_buttons{
+        button.layer.cornerRadius = 8;
+        button.clipsToBounds = true;
+        }
+        
+        
+        for button in player_cards_buttons!{
+            button.layer.cornerRadius = 8;
+            button.clipsToBounds = true;
+        }
+        
+        for button in AI_cards_buttons!{
+            button.layer.cornerRadius = 8;
+            button.clipsToBounds = true;
+        }
+        
         
         game.viewController = self
         AI_says.text = "AI Says:"
