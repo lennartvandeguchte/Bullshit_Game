@@ -539,6 +539,7 @@
                         <outlet property="main_view" destination="m7d-0q-g1H" id="lNk-qx-oSd"/>
                         <outlet property="num_cards_AI" destination="0jf-7M-z7W" id="c9G-d7-3Pm"/>
                         <outlet property="num_cards_player" destination="kcP-YS-wYg" id="toA-g7-NgK"/>
+                        <outlet property="players_cards_stackview" destination="dPA-ST-ckv" id="X1Z-ea-vEt"/>
                         <outlet property="pyramid_2_view" destination="Qhb-Jw-RUt" id="eus-Vi-N4l"/>
                         <outlet property="pyramid_3_view" destination="PU5-n4-0A1" id="HxO-ku-b84"/>
                         <outlet property="pyramid_4_view" destination="Fu1-to-3jO" id="Wp6-8J-P96"/>

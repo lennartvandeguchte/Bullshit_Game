@@ -31,9 +31,12 @@ class ViewController: UIViewController{
     @IBOutlet weak var pyramid_3_view: UIStackView!
     @IBOutlet weak var pyramid_2_view: UIStackView!
     
-    var claimed_cards_player = [Int](repeating: 0, count: 10)
-    ////////////////////////////////////////////////////////////
+    @IBOutlet weak var players_cards_stackview: UIStackView!
     
+    var claimed_cards_player = [Int](repeating: 0, count: 10)
+    
+    
+    /// --- LOAD VIEW -----/////////////////////////////////////////////////
     override func viewDidLoad() {
         super.viewDidLoad()
         //model.loadModel(fileName: "bullshit")
@@ -62,6 +65,7 @@ class ViewController: UIViewController{
     }
 
 
+    //////////---GAME FUNCTIONS ---//////////
     // Highlight the players card when selected
     @IBAction func select_players_card(_ sender: UIButton) {
         if sender.isSelected == false {
@@ -141,7 +145,7 @@ class ViewController: UIViewController{
         for i in 0..<player_cards_buttons!.count{
             if player_cards_buttons![i].isSelected == true {
                 index.append(i)
-                claimed_cards_player[claimed_value] += 1
+                claimed_cards_player[claimed_value-1] += 1
                 player_cards_buttons![i].isSelected = false
             }
         }
@@ -182,13 +186,20 @@ class ViewController: UIViewController{
 
     
     func add_card_players_hand(number_of_cards: Int){
+        for i in 0..<number_of_cards{
+            let button = player_cards_buttons?[player_cards_buttons!.endIndex-1]
+            //button?.frame = CGRect(x: i*20, y: 0, width: 70, height: 70)
+            button!.setImage(UIImage(named: "back")!, for: [])
+            player_cards_buttons?.append(button!)
+            players_cards_stackview.addSubview(button!)
+        }
+
     }
     
     func AIs_turn(){
     }
     
     func true_bullshit(){
-        print("lalalala")
         var counter = 1
         for _ in 0..<current_cards_on_table.count{
             game.cards_player.append(current_cards_on_table[current_cards_on_table.endIndex-1])
@@ -196,7 +207,7 @@ class ViewController: UIViewController{
             counter += 1
         }
         
-
+        
         game.cards_player.append(current_pyramid_card!)
         print(current_pyramid_card!.tag_pyramid)
       

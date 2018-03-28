@@ -17,8 +17,11 @@ class Game {
     var cards_player = [Card]()
     var cards_pyramid = [Card]()
     var cards_played_by_AI = [Card]()
+    var target = 1
     
+    var bullshit_threshold = 0.5
     var viewController: ViewController?
+    var ML = MachineLearning(start: true)
     
     init(){
         
@@ -56,6 +59,8 @@ class Game {
                 cards_pyramid[cards_pyramid.endIndex-1].index_pyramid = 0
             }
             
+            
+            
         }
         
 //        // Cards left over in the playing deck
@@ -70,29 +75,34 @@ class Game {
    
     func AI_decide_if_bullshit(diff_num_cards: Int, pyramid_level: Int, amount_cards_known: Int, amount_cards_claimed: Int, claimed_value: Int, claimed_amount: Int){
         print("AI decide if Bullshit")
+     
+       
         
-        var ML = MachineLearning(start: true)
         let input = [diff_num_cards, pyramid_level,amount_cards_known,amount_cards_claimed]
-        let target = 1
-        for _ in 0...10{
-            print(ML.getChance(input2: input));
-            ML.updateWeights(target: target);
-            ML.saveWeights()
-        }
-        ML = MachineLearning(start:false)
+        
         print("final:")
         print(ML.getChance(input2: input));
         
-        if(ML.getChance(input2: input) > 0.7){
+        if(ML.getChance(input2: input) > bullshit_threshold){
             viewController?.update_AI_says(says: "AI Says: Bullshit!")
-            AI_calls_bullshit(claimed_value: claimed_value, claimed_amount: claimed_amount)
+            if(check_if_bullshit(claimed_value: claimed_value, claimed_amount: claimed_amount) == true){
+                viewController?.true_bullshit()
+            }else{
+                viewController?.false_bullshit()
+            }
         }else{
             viewController?.update_AI_says(says: "AI Says: I believe you")
+            check_if_bullshit(claimed_value: claimed_value, claimed_amount: claimed_amount)
         }
+        
+        print(ML.getChance(input2: input));
+        ML.updateWeights(target: target);
+        
         
     }
     
-    func AI_calls_bullshit(claimed_value: Int, claimed_amount: Int) {
+    
+    func check_if_bullshit(claimed_value: Int, claimed_amount: Int) -> Bool{
         var counter = 0
         print(current_cards_on_table.count)
         for i in 0..<current_cards_on_table.count{
@@ -102,13 +112,20 @@ class Game {
         }
         
         if counter == claimed_amount{
-            viewController?.false_bullshit()
+            target = 0
+            print("Not Bullshit")
+            return false
         }else{
-            viewController?.true_bullshit()
+            target = 1
+            print("Bullshit")
+            return true
         }
     }
     
     
-    
-    
+    //ML.saveWeights()
+    /// Need to be changed if we want to use machine learning over multiple games
+//    if pyramid_level != 1{
+//    ML = MachineLearning(start:false)
+//    }
 }
