@@ -10,6 +10,7 @@ import Foundation
 
 class Game {
     // Initialize variables
+    var viewController: ViewController?
     var playing_deck = Deck()
     let cards_to_be_handed_out = 26
     let cards_in_pyramid = 10
@@ -17,14 +18,13 @@ class Game {
     var cards_player = [Card]()
     var cards_pyramid = [Card]()
     var cards_played_by_AI = [Card]()
-    var target = 1
     
-    var bullshit_threshold = 0.5
-    var viewController: ViewController?
-    var ML = MachineLearning(start: true)
+    // Machine learning parameters
+    var target = 1
+    let bullshit_threshold = 0.5
+    var ML = MachineLearning(start: true) // Needs to be changed if we want to play multiple games with the same ML
     
     init(){
-        
         // Test: print deck of cards
         for i in 0..<playing_deck.deck_shuffled.count{
             print("\(playing_deck.deck_shuffled[i])")
@@ -44,8 +44,6 @@ class Game {
             cards_pyramid.append(playing_deck.deck_shuffled[playing_deck.deck_shuffled.endIndex-1])
             playing_deck.deck_shuffled.remove(at: playing_deck.deck_shuffled.endIndex-1)
          
-            
-            
             switch (i+1){
             case 1:
                 cards_pyramid[cards_pyramid.endIndex-1].index_pyramid = 4
@@ -58,50 +56,34 @@ class Game {
             default:
                 cards_pyramid[cards_pyramid.endIndex-1].index_pyramid = 0
             }
-            
-            
-            
         }
-        
-//        // Cards left over in the playing deck
-//        print("Cards in playing deck: ")
-//        for i in 0..<playing_deck.deck_shuffled.count{
-//            print("\(playing_deck.deck_shuffled[i])")
-//
-//        }
-     
     }
     
-   
+   // Determine if AI calls bullshit or not by using a MLP
     func AI_decide_if_bullshit(diff_num_cards: Int, pyramid_level: Int, amount_cards_known: Int, amount_cards_claimed: Int, claimed_value: Int, claimed_amount: Int){
         print("AI decide if Bullshit")
-     
-       
-        
         let input = [diff_num_cards, pyramid_level,amount_cards_known,amount_cards_claimed]
         
-        print("final:")
+        print("MLP output:")
         print(ML.getChance(input2: input));
         
         if(ML.getChance(input2: input) > bullshit_threshold){
             viewController?.update_AI_says(says: "AI Says: Bullshit!")
             if(check_if_bullshit(claimed_value: claimed_value, claimed_amount: claimed_amount) == true){
-                viewController?.true_bullshit()
+                viewController?.true_bullshit_called_by_AI()
             }else{
-                viewController?.false_bullshit()
+                viewController?.false_bullshit_called_by_AI()
             }
         }else{
             viewController?.update_AI_says(says: "AI Says: I believe you")
             check_if_bullshit(claimed_value: claimed_value, claimed_amount: claimed_amount)
         }
         
-        print(ML.getChance(input2: input));
+        print("update weights MLP")
         ML.updateWeights(target: target);
-        
-        
     }
     
-    
+    // Determine if it is really bullshit or not
     func check_if_bullshit(claimed_value: Int, claimed_amount: Int) -> Bool{
         var counter = 0
         print(current_cards_on_table.count)

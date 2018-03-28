@@ -641,6 +641,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="YdK-Pk-2Mq"/>
                     <connections>
+                        <outlet property="AI_cards_stackview" destination="vEV-Pn-Nqc" id="ajm-au-9bn"/>
                         <outlet property="AI_says" destination="Ujj-xH-3fL" id="Fdw-xs-opq"/>
                         <outlet property="main_view" destination="m7d-0q-g1H" id="lNk-qx-oSd"/>
                         <outlet property="num_cards_AI" destination="0jf-7M-z7W" id="c9G-d7-3Pm"/>

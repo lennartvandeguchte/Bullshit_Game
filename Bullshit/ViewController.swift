@@ -15,7 +15,7 @@ var current_cards_on_table = [Card]()
 class ViewController: UIViewController{
     
     
-    /// Set variables ////////////////////////////////////////
+    /// ----Set variables----- ////////////////////////////////////////
     var game = Game()
     var model = CognitiveModel()
     
@@ -36,6 +36,7 @@ class ViewController: UIViewController{
     @IBOutlet weak var pyramid_2_view: UIStackView!
     
     @IBOutlet weak var players_cards_stackview: UIStackView!
+    @IBOutlet weak var AI_cards_stackview: UIStackView!
     
     var claimed_cards_player = [Int](repeating: 0, count: 10)
     
@@ -44,32 +45,26 @@ class ViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         //model.loadModel(fileName: "bullshit")
+        game.viewController = self
         
+        // Change buttons
         for button in pyramid_cards_buttons{
         button.layer.cornerRadius = 8;
         button.clipsToBounds = true;
         }
-        
-        
         for button in player_cards_buttons!{
             button.layer.cornerRadius = 8;
             button.clipsToBounds = true;
         }
-        
         for button in AI_cards_buttons!{
             button.layer.cornerRadius = 8;
             button.clipsToBounds = true;
         }
         
-        
-        game.viewController = self
-        AI_says.text = "AI Says:"
-        // Do any additional setup after loading the view, typically from a nib.
-        // Show which cards the player has
+        // Show the cards of the player
         for i in 0..<game.cards_player.count{
             var card = game.cards_player[i]
             let card_name = "\(card.value)_\(card.symbol)"
-            print(card_name)
             player_cards_buttons![i].setImage(UIImage(named: card_name)!, for: [])
             card.isFaceUp = true
             player_cards_buttons![i].tag = i
@@ -86,36 +81,25 @@ class ViewController: UIViewController{
     }
 
 
-    //////////---GAME FUNCTIONS ---//////////
-    // Highlight the players card when selected
-    @IBAction func select_players_card(_ sender: UIButton) {
-        if sender.isSelected == false {
-            sender.frame.origin.y = sender.frame.origin.y - 20
-            sender.isSelected = true
-        }else{
-            sender.frame.origin.y = sender.frame.origin.y + 20
-            sender.isSelected = false
-        }
-    }
+    //////////---START GAME ---//////////////////////////////////
     
     // Put pyramid card upside down when touch and indicate it as the current pyramid card to play with
     @IBAction func touch_pyramid_card(_ sender: UIButton) {
+        // Get identifier of touched card
         let card_identifier = Int(sender.accessibilityIdentifier!)
         game.cards_pyramid[card_identifier!-1].tag_pyramid = card_identifier!
         current_pyramid_card = game.cards_pyramid[card_identifier!-1]
       
-        print("Current pyramid card: \(current_pyramid_card!) \(card_identifier!)")
-    
+        // When a pyramid card is not yet touched, show the card
         if current_pyramid_card?.isFaceUp==false && current_pyramid_card?.isInPyramid==false{
             let card_name = "\(current_pyramid_card!.value)_\(current_pyramid_card!.symbol)"
-            print(card_name)
             sender.setImage(UIImage(named: card_name)!, for: [])
-        
+            
             game.cards_pyramid[card_identifier!-1].isFaceUp = true
             game.cards_pyramid[card_identifier!-1].isInPyramid = true
             current_pyramid_card = game.cards_pyramid[card_identifier!-1]
             
-            //TODO: get positions of current pyramid card
+            //Get positions of current pyramid card and save them
             let positions: CGPoint
             switch current_pyramid_card!.index_pyramid{
             case 1:
@@ -132,12 +116,23 @@ class ViewController: UIViewController{
         
             current_pyramid_card!.position_y = Int(positions.y)
             current_pyramid_card!.position_x = Int(positions.x)
-            print(positions.x)
-            print(positions.y)
         }
     }
     
-    // When cards are selected let the player decide which claim he/she wants to make
+    ///////////////---PLAYERS's TURN----/////////////////////////////////////////////////////
+    
+    // Highlight the players card when selected
+    @IBAction func select_players_card(_ sender: UIButton) {
+        if sender.isSelected == false {
+            sender.frame.origin.y = sender.frame.origin.y - 20
+            sender.isSelected = true
+        }else{
+            sender.frame.origin.y = sender.frame.origin.y + 20
+            sender.isSelected = false
+        }
+    }
+    
+    // When cards are selected let the player decide which claim he/she wants to make by using a pop-up view
     @IBAction func claim_popup(_ sender: Any) {
         var count_highlighted_cards = 0
         for i in 0..<player_cards_buttons!.count{
@@ -154,7 +149,11 @@ class ViewController: UIViewController{
         popOverVC.view.frame = self.view.frame
         self.view.addSubview(popOverVC.view)
         popOverVC.didMove(toParentViewController: self)
-        
+    }
+    
+    /// Executed when the player has cancelled his claim
+    func player_cancelled(){
+        //player_cards_buttons![i].isSelected = false
     }
     
     /// Executed when a player has made a claim in the pop up window
@@ -163,6 +162,7 @@ class ViewController: UIViewController{
         var index: Array<Int>
         index = []
         
+        // Count the amount of cards the player selected
         for i in 0..<player_cards_buttons!.count{
             if player_cards_buttons![i].isSelected == true {
                 index.append(i)
@@ -171,6 +171,7 @@ class ViewController: UIViewController{
             }
         }
         
+        // Remove the selected cards from players hand and update amount of cards of player
         for i in index{
             current_cards_on_table.append(game.cards_player[i])
             game.cards_player.remove(at: i)
@@ -182,6 +183,7 @@ class ViewController: UIViewController{
         //Show the amount of cards played on the table
         add_table_card_button(index: current_pyramid_card!.tag_pyramid, amount: index.count)
         
+        // Count the amount of same valued cards as the current pyramid card of which the AI knows
         var amount_cards_known_by_AI = 0
         for i in 0..<game.cards_AI.count{
             if game.cards_AI[i].value == current_pyramid_card!.value{
@@ -195,32 +197,22 @@ class ViewController: UIViewController{
             }
         }
         
-        game.AI_decide_if_bullshit(diff_num_cards: (game.cards_AI.count - game.cards_player.count), pyramid_level: current_pyramid_card!.tag_pyramid, amount_cards_known: amount_cards_known_by_AI , amount_cards_claimed: claimed_cards_player[claimed_value], claimed_value: claimed_value, claimed_amount: index.count)
+        // The AI decides if he calss bullshit or not
+        game.AI_decide_if_bullshit(diff_num_cards: (game.cards_AI.count - game.cards_player.count), pyramid_level: current_pyramid_card!.tag_pyramid, amount_cards_known: amount_cards_known_by_AI , amount_cards_claimed: claimed_cards_player[claimed_value-1], claimed_value: claimed_value, claimed_amount: index.count)
     }
     
     
-    /// Executed when the player has cancelled his claim
-    func player_cancelled(){
-        //player_cards_buttons![i].isSelected = false
-    }
-    
+    ////////---- AI's TURN----///////////////////////////////////////////////////////
 
-    
-    func add_card_players_hand(number_of_cards: Int){
-        for i in 0..<number_of_cards{
-            let button = player_cards_buttons?[player_cards_buttons!.endIndex-1]
-            //button?.frame = CGRect(x: i*20, y: 0, width: 70, height: 70)
-            button!.setImage(UIImage(named: "back")!, for: [])
-            player_cards_buttons?.append(button!)
-            players_cards_stackview.addSubview(button!)
-        }
-
-    }
+ 
     
     func AIs_turn(){
     }
     
-    func true_bullshit(){
+    
+    ////////----- BULLSHIT OR NOT -----//////////////////////////////////////////////////////
+    // Bullshit called by AI is true
+    func true_bullshit_called_by_AI(){
         var counter = 1
         for _ in 0..<current_cards_on_table.count{
             game.cards_player.append(current_cards_on_table[current_cards_on_table.endIndex-1])
@@ -248,9 +240,34 @@ class ViewController: UIViewController{
         
     }
     
-    func false_bullshit(){
+    // Bullshit called by AI is false
+    func false_bullshit_called_by_AI(){
+        var counter = 1
+        for _ in 0..<current_cards_on_table.count{
+            game.cards_AI.append(current_cards_on_table[current_cards_on_table.endIndex-1])
+            current_cards_on_table.remove(at: current_cards_on_table.endIndex-1)
+            counter += 1
+        }
         
+        game.cards_AI.append(current_pyramid_card!)
+        
+        for i in 0..<pyramid_cards_buttons.count{
+            print(pyramid_cards_buttons[i].tag)
+            if pyramid_cards_buttons[i].tag == current_pyramid_card!.tag_pyramid{
+                pyramid_cards_buttons[i].isHidden = true
+                current_count_button!.isHidden = true
+                print(pyramid_cards_buttons[i].tag)
+            }else if current_pyramid_card!.tag_pyramid == 1{
+                pyramid_cards_buttons[9].isHidden = true
+                current_count_button!.isHidden = true
+            }
+        }
+        
+        add_card_AI_hand(number_of_cards: counter)
     }
+    
+    
+    
     
     /////// ADDITIONAL FUNCTIONS //////////////////////////////////////////////
     
@@ -271,5 +288,63 @@ class ViewController: UIViewController{
         view.addSubview(button)
         
         self.current_count_button = button
+    }
+    
+    // Add cards to the players hand
+    func add_card_players_hand(number_of_cards: Int){
+        for i in 0..<number_of_cards{
+            let button = player_cards_buttons?[player_cards_buttons!.endIndex-1].duplicate(forControlEvents: [.touchUpInside])
+            let card_name = "\(game.cards_player[game.cards_player.endIndex-i-1].value)_\(game.cards_player[game.cards_player.endIndex-i-1].symbol)"
+            button!.setImage(UIImage(named: card_name)!, for: [])
+            button!.layer.cornerRadius = 8;
+            button!.clipsToBounds = true;
+            player_cards_buttons?.append(button!)
+            players_cards_stackview.addArrangedSubview(button!)
+        }
+        num_cards_player.text = "Own Cards: \(game.cards_player.count)"
+    }
+    
+    
+    // Add cards to the AI's hand
+    func add_card_AI_hand(number_of_cards: Int){
+        for _ in 0..<number_of_cards{
+            let button = AI_cards_buttons?[AI_cards_buttons!.endIndex-1].duplicate(forControlEvents: [.touchUpInside])
+            button!.setImage(UIImage(named: "back")!, for: [])
+            button!.layer.cornerRadius = 8;
+            button!.clipsToBounds = true;
+            AI_cards_buttons?.append(button!)
+            AI_cards_stackview.addArrangedSubview(button!)
+        }
+        num_cards_AI.text = "Own Cards: \(game.cards_AI.count)"
+    }
+    
+    
+}
+
+extension UIButton {
+    
+    /// Creates a duplicate of the terget UIButton
+    /// The caller specified the UIControlEvent types to copy across to the duplicate
+    ///
+    /// - Parameter controlEvents: UIControlEvent types to copy
+    /// - Returns: A UIButton duplicate of the original button
+    func duplicate(forControlEvents controlEvents: [UIControlEvents]) -> UIButton? {
+        
+        // Attempt to duplicate button by archiving and unarchiving the original UIButton
+        let archivedButton = NSKeyedArchiver.archivedData(withRootObject: self)
+        guard let buttonDuplicate = NSKeyedUnarchiver.unarchiveObject(with: archivedButton) as? UIButton else { return nil }
+        
+        // Copy targets and associated actions
+        self.allTargets.forEach { target in
+            
+            controlEvents.forEach { controlEvent in
+                
+                self.actions(forTarget: target, forControlEvent: controlEvent)?.forEach { action in
+                    buttonDuplicate.addTarget(target, action: Selector(action), for: controlEvent)
+                }
+            }
+        }
+        
+        return buttonDuplicate
     }
 }
