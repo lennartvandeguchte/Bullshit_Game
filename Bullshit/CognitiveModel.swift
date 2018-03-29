@@ -13,7 +13,31 @@ import UIKit
 class CognitiveModel: Model {
     var model: Game!
     
-    //TODO: model texts
+    func determineStrat () -> String {
+        
+        //Select strategy
+        
+        var stratArr = ["truth","bullshit","random"]
+        var strat = ""
+        
+        //TODO: Decrease bullshitprob per round
+        var bullshitprob = 70
+        
+        if Int(arc4random_uniform(100)) < bullshitprob {
+            strat = stratArr[0]
+        } else {
+            strat = stratArr[1]
+        }
+        
+        
+        
+        // Bullshitten met minimaal dan 2 kaarten??
+        // Bullshit met kaarten die volgens het spel kunnen
+        // Gespeelde kaarten opslaan
+        
+        return strat
+        
+    }
     
     
     
