@@ -43,7 +43,7 @@ class Game {
         for i in 0..<cards_in_pyramid{
             cards_pyramid.append(playing_deck.deck_shuffled[playing_deck.deck_shuffled.endIndex-1])
             playing_deck.deck_shuffled.remove(at: playing_deck.deck_shuffled.endIndex-1)
-         
+            cards_pyramid[i].tag_pyramid = i+1
             switch (i+1){
             case 1:
                 cards_pyramid[cards_pyramid.endIndex-1].index_pyramid = 4

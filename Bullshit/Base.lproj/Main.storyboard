@@ -664,16 +664,6 @@
                         <outletCollection property="player_cards_buttons" destination="iC5-u1-PBY" collectionClass="NSMutableArray" id="wJO-Dv-R94"/>
                         <outletCollection property="player_cards_buttons" destination="ofc-U0-nhu" collectionClass="NSMutableArray" id="9wb-O6-O6U"/>
                         <outletCollection property="player_cards_buttons" destination="Vew-kR-WsG" collectionClass="NSMutableArray" id="Sbk-7v-grB"/>
-                        <outletCollection property="pyramid_cards_buttons" destination="5GU-MB-RZ2" collectionClass="NSMutableArray" id="moN-za-BDC"/>
-                        <outletCollection property="pyramid_cards_buttons" destination="o8u-cC-zIJ" collectionClass="NSMutableArray" id="urU-mX-2Mn"/>
-                        <outletCollection property="pyramid_cards_buttons" destination="koR-Tg-lHE" collectionClass="NSMutableArray" id="oGX-6M-db4"/>
-                        <outletCollection property="pyramid_cards_buttons" destination="Suj-6U-B3Q" collectionClass="NSMutableArray" id="v9H-TJ-u9P"/>
-                        <outletCollection property="pyramid_cards_buttons" destination="hpu-T8-mMt" collectionClass="NSMutableArray" id="sgQ-bl-ilA"/>
-                        <outletCollection property="pyramid_cards_buttons" destination="dfc-02-uUP" collectionClass="NSMutableArray" id="qPp-to-IPl"/>
-                        <outletCollection property="pyramid_cards_buttons" destination="lMe-Dv-LFo" collectionClass="NSMutableArray" id="pBZ-bN-B4Q"/>
-                        <outletCollection property="pyramid_cards_buttons" destination="RGs-e3-Fg3" collectionClass="NSMutableArray" id="nbx-pZ-CgG"/>
-                        <outletCollection property="pyramid_cards_buttons" destination="SlT-eH-ZtI" collectionClass="NSMutableArray" id="jVc-R5-MUi"/>
-                        <outletCollection property="pyramid_cards_buttons" destination="QB9-0U-aZt" collectionClass="NSMutableArray" id="lTW-ux-P76"/>
                         <outletCollection property="AI_cards_buttons" destination="ode-Ri-YOl" collectionClass="NSMutableArray" id="4OL-8i-SjL"/>
                         <outletCollection property="AI_cards_buttons" destination="ttH-Uq-hgb" collectionClass="NSMutableArray" id="d2J-od-1XA"/>
                         <outletCollection property="AI_cards_buttons" destination="juh-IL-j09" collectionClass="NSMutableArray" id="ML0-45-Qcl"/>
@@ -687,6 +677,16 @@
                         <outletCollection property="AI_cards_buttons" destination="Bio-Td-sln" collectionClass="NSMutableArray" id="7zE-LR-vPc"/>
                         <outletCollection property="AI_cards_buttons" destination="NJS-ke-yNa" collectionClass="NSMutableArray" id="ZbG-nS-ge1"/>
                         <outletCollection property="AI_cards_buttons" destination="hkm-Vr-JSN" collectionClass="NSMutableArray" id="Tjp-rC-SSV"/>
+                        <outletCollection property="pyramid_cards_buttons" destination="QB9-0U-aZt" collectionClass="NSMutableArray" id="uK6-rL-tsm"/>
+                        <outletCollection property="pyramid_cards_buttons" destination="RGs-e3-Fg3" collectionClass="NSMutableArray" id="OvU-iN-s26"/>
+                        <outletCollection property="pyramid_cards_buttons" destination="SlT-eH-ZtI" collectionClass="NSMutableArray" id="XpJ-64-Bii"/>
+                        <outletCollection property="pyramid_cards_buttons" destination="hpu-T8-mMt" collectionClass="NSMutableArray" id="aDI-Dg-cgL"/>
+                        <outletCollection property="pyramid_cards_buttons" destination="dfc-02-uUP" collectionClass="NSMutableArray" id="aCo-Dd-ob2"/>
+                        <outletCollection property="pyramid_cards_buttons" destination="lMe-Dv-LFo" collectionClass="NSMutableArray" id="e2U-FB-GYX"/>
+                        <outletCollection property="pyramid_cards_buttons" destination="5GU-MB-RZ2" collectionClass="NSMutableArray" id="UWp-km-yj2"/>
+                        <outletCollection property="pyramid_cards_buttons" destination="o8u-cC-zIJ" collectionClass="NSMutableArray" id="bz5-gN-hQb"/>
+                        <outletCollection property="pyramid_cards_buttons" destination="koR-Tg-lHE" collectionClass="NSMutableArray" id="CHw-E4-mkK"/>
+                        <outletCollection property="pyramid_cards_buttons" destination="Suj-6U-B3Q" collectionClass="NSMutableArray" id="M7Q-uw-OzU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KuH-hj-YIp" userLabel="First Responder" sceneMemberID="firstResponder"/>

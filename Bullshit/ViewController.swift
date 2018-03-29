@@ -87,9 +87,11 @@ class ViewController: UIViewController{
     @IBAction func touch_pyramid_card(_ sender: UIButton) {
         // Get identifier of touched card
         let card_identifier = Int(sender.accessibilityIdentifier!)
-        game.cards_pyramid[card_identifier!-1].tag_pyramid = card_identifier!
+        //game.cards_pyramid[card_identifier!-1].tag_pyramid = card_identifier!
+        print("JOoooooo")
+        print(game.cards_pyramid[card_identifier!-1].tag_pyramid)
         current_pyramid_card = game.cards_pyramid[card_identifier!-1]
-      
+        
         // When a pyramid card is not yet touched, show the card
         if current_pyramid_card?.isFaceUp==false && current_pyramid_card?.isInPyramid==false{
             let card_name = "\(current_pyramid_card!.value)_\(current_pyramid_card!.symbol)"
@@ -174,11 +176,15 @@ class ViewController: UIViewController{
         // Remove the selected cards from players hand and update amount of cards of player
         for i in index{
             current_cards_on_table.append(game.cards_player[i])
+        }
+        
+        for i in index {
             game.cards_player.remove(at: i)
-            num_cards_player.text = "Own Cards: \(game.cards_player.count)"
             player_cards_buttons![i].removeFromSuperview()
             player_cards_buttons?.remove(at: i)
         }
+        
+        num_cards_player.text = "Own Cards: \(game.cards_player.count)"
         
         //Show the amount of cards played on the table
         add_table_card_button(index: current_pyramid_card!.tag_pyramid, amount: index.count)
@@ -199,16 +205,63 @@ class ViewController: UIViewController{
         
         // The AI decides if he calss bullshit or not
         game.AI_decide_if_bullshit(diff_num_cards: (game.cards_AI.count - game.cards_player.count), pyramid_level: current_pyramid_card!.tag_pyramid, amount_cards_known: amount_cards_known_by_AI , amount_cards_claimed: claimed_cards_player[claimed_value-1], claimed_value: claimed_value, claimed_amount: index.count)
+        
+        
+        AIs_turn()
     }
     
     
     ////////---- AI's TURN----///////////////////////////////////////////////////////
 
- 
-    
     func AIs_turn(){
-    }
     
+        if current_pyramid_card!.pyramid_card_gone == true && current_pyramid_card!.tag_pyramid != 10{
+            for i in 0..<pyramid_cards_buttons.count{
+                if pyramid_cards_buttons[i].tag == current_pyramid_card!.tag_pyramid+1{
+                    pyramid_cards_buttons[i].sendActions(for: .touchUpInside)
+                    break
+                }
+            }
+    
+        }
+        
+        var AIs_decision = "play_truth"
+        var count_hist_AI = [Int](repeating: 0, count: 10)
+        for i in 0..<game.cards_AI.count{
+            count_hist_AI[game.cards_AI[i].value-1] += 1
+            print(game.cards_AI[i].value)
+        }
+        print("count hist \(count_hist_AI)")
+        
+        if AIs_decision == "play_truth"{
+            let card_value_to_play = count_hist_AI.index(of: count_hist_AI.max()!)!+1
+            let amount_cards_to_play = count_hist_AI.max()!
+            print(card_value_to_play)
+            print(count_hist_AI.max()!)
+            
+            for i in 0..<amount_cards_to_play{
+                for j in 0..<game.cards_AI.count{
+                    if game.cards_AI[j].value == card_value_to_play{
+                        current_cards_on_table.append(game.cards_AI[j])
+                        game.cards_AI.remove(at: j)
+                        num_cards_AI.text = "AI's Cards: \(game.cards_AI.count)"
+                        AI_cards_buttons![i].removeFromSuperview()
+                        AI_cards_buttons?.remove(at: i)
+                        break
+                    }
+                }
+                print("counter \(i)")
+            }
+            
+            add_table_card_button(index: current_pyramid_card!.tag_pyramid, amount: amount_cards_to_play)
+            AI_says.text = "AI Says: I am playing \(amount_cards_to_play) \(card_value_to_play)'s"
+        }else if AIs_decision == "play_bullshit"{
+            
+        }else if AIs_decision == "play_random"{
+            
+        }
+    }
+        
     
     ////////----- BULLSHIT OR NOT -----//////////////////////////////////////////////////////
     // Bullshit called by AI is true
@@ -230,14 +283,11 @@ class ViewController: UIViewController{
                 pyramid_cards_buttons[i].isHidden = true
                 current_count_button!.isHidden = true
                 print(pyramid_cards_buttons[i].tag)
-            }else if current_pyramid_card!.tag_pyramid == 1{
-                pyramid_cards_buttons[9].isHidden = true
-                current_count_button!.isHidden = true
             }
         }
         
         add_card_players_hand(number_of_cards: counter)
-        
+        current_pyramid_card!.pyramid_card_gone = true
     }
     
     // Bullshit called by AI is false
@@ -264,6 +314,7 @@ class ViewController: UIViewController{
         }
         
         add_card_AI_hand(number_of_cards: counter)
+        current_pyramid_card!.pyramid_card_gone = true
     }
     
     
@@ -278,16 +329,27 @@ class ViewController: UIViewController{
     
     /// Add an counter button to the pyramid card for which the claim is made
     func add_table_card_button(index: Int, amount: Int){
-        let button = UIButton(type: .custom)
-        button.frame = CGRect(x: current_pyramid_card!.position_x-35, y: current_pyramid_card!.position_y-35, width: 70, height: 70)
-        button.layer.cornerRadius = 0.5 * button.bounds.size.width
-        button.clipsToBounds = true
-        button.backgroundColor = UIColor.black
-        button.setTitle("\(amount)", for: .normal)
-        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 50)
-        view.addSubview(button)
+      
+        var existing_button = self.view.viewWithTag(20+current_pyramid_card!.tag_pyramid) as? UIButton
+        print(existing_button)
+        if existing_button == nil{
+            
+            let button = UIButton(type: .custom)
+            button.frame = CGRect(x: current_pyramid_card!.position_x-35, y: current_pyramid_card!.position_y-35, width: 70, height: 70)
+            button.layer.cornerRadius = 0.5 * button.bounds.size.width
+            button.clipsToBounds = true
+            button.backgroundColor = UIColor.black
+            button.setTitle("\(amount)", for: .normal)
+            button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 50)
+            button.tag = 20+current_pyramid_card!.tag_pyramid
+            view.addSubview(button)
+            self.current_count_button = button
+        }else{
+            let current_amount = Int(existing_button!.currentTitle!)
+            existing_button!.setTitle("\(current_amount!+amount)", for: .normal)
+        }
         
-        self.current_count_button = button
+        
     }
     
     // Add cards to the players hand
