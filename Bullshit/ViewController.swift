@@ -81,7 +81,7 @@ class ViewController: UIViewController{
         num_cards_player.text = "Own Cards: \(game.cards_player.count)"
         
         // Randomize which player starts the game
-        if(Float(arc4random()) < 0.5){
+        if(Int(arc4random_uniform(10)) > 5){
             for i in 0..<pyramid_cards_buttons.count{
                 if pyramid_cards_buttons[i].tag == 1{
                     pyramid_cards_buttons[i].sendActions(for: .touchUpInside)
