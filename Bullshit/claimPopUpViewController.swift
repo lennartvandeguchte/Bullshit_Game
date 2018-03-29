@@ -61,8 +61,9 @@ class claimPopUpViewController: UIViewController, UIPickerViewDelegate, UIPicker
     @IBAction func claim_made(_ sender: UIButton) {
         claim_made = true
         let selected_value = Int(claimData[self.claimSelector.selectedRow(inComponent: 0)])
-        viewController?.player_made_claim(claimed_value: selected_value!)
         self.removeAnimate()
+        viewController?.player_made_claim(claimed_value: selected_value!)
+        
     }
     
     func showAnimate(){
