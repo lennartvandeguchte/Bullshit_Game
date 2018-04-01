@@ -25,6 +25,9 @@ class ViewController: UIViewController{
     @IBOutlet var pyramid_cards_buttons: [UIButton]!
     @IBOutlet var AI_cards_buttons: Array<UIButton>?
     
+    
+    @IBAction func claim_button(_ sender: UIButton) {
+    }
     @IBOutlet weak var call_bullshit: UIButton!
     
     @IBOutlet weak var num_cards_AI: UILabel!
@@ -239,7 +242,6 @@ class ViewController: UIViewController{
                     break
                 }
             }
-    
         }
         
         var AIs_decision = "play_random" // This needs to be changed to the decision of the cognitive model

@@ -7,9 +7,15 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="MarkerFeltWide.ttf">
+            <string>MarkerFelt-Wide</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller Start-->
         <scene sceneID="tne-QT-ifu">
@@ -23,13 +29,18 @@
                                 <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qr4-jk-Zux">
-                                <rect key="frame" x="276" y="467" width="217" height="91"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
-                                <state key="normal" backgroundImage="startbutton">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qr4-jk-Zux">
+                                <rect key="frame" x="326" y="474" width="117" height="77"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="50"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="321-XR-fvp" kind="show" id="9NX-Rq-w55"/>
                                 </connections>
@@ -37,6 +48,10 @@
                         </subviews>
                         <color key="backgroundColor" red="0.92726927999999997" green="0.68120235200000001" blue="0.36648660900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" red="0.92726927999999997" green="0.68120235200000001" blue="0.36648660900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="qr4-jk-Zux" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="h1q-5P-aYl"/>
+                            <constraint firstItem="qr4-jk-Zux" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="siG-b0-eU4"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="SeB-Hy-Weg"/>
                     </view>
                     <navigationItem key="navigationItem" id="KyZ-KQ-EDK"/>
@@ -54,605 +69,517 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="m7d-0q-g1H">
-                                <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" spacing="-40" translatesAutoresizingMaskIntoConstraints="NO" id="dPA-ST-ckv" userLabel="Stack View Player Cards">
-                                <rect key="frame" x="39" y="876" width="690" height="127.5"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <stackView opaque="NO" contentMode="redraw" axis="vertical" distribution="fillProportionally" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="shY-Hx-3S0" userLabel="Root Stack View">
+                                <rect key="frame" x="20" y="20" width="728" height="984"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9sV-hY-LjC">
-                                        <rect key="frame" x="0.0" y="0.0" width="90" height="127.5"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="90" id="sun-HU-9oD"/>
-                                        </constraints>
-                                        <state key="normal" image="back">
-                                            <color key="titleShadowColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="15"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="select_players_card:" destination="321-XR-fvp" eventType="touchUpInside" id="BMu-Rm-Zjl"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EZ9-cJ-HoV">
-                                        <rect key="frame" x="50" y="0.0" width="90" height="127.5"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="90" id="ot0-jY-m9g"/>
-                                        </constraints>
-                                        <state key="normal" image="back">
-                                            <color key="titleShadowColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="15"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="select_players_card:" destination="321-XR-fvp" eventType="touchUpInside" id="BSf-3O-LvI"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fVX-MA-9ES">
-                                        <rect key="frame" x="100" y="0.0" width="90" height="127.5"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="90" id="eYB-jy-Von"/>
-                                        </constraints>
-                                        <state key="normal" image="back">
-                                            <color key="titleShadowColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="15"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="select_players_card:" destination="321-XR-fvp" eventType="touchUpInside" id="Pv1-q7-qlP"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fWL-nb-cNt">
-                                        <rect key="frame" x="150" y="0.0" width="90" height="127.5"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="90" id="Cig-1K-3p0"/>
-                                        </constraints>
-                                        <state key="normal" image="back">
-                                            <color key="titleShadowColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="15"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="select_players_card:" destination="321-XR-fvp" eventType="touchUpInside" id="C1R-Lq-hcQ"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e89-qY-JEc">
-                                        <rect key="frame" x="200" y="0.0" width="90" height="127.5"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="90" id="v26-HX-DV8"/>
-                                        </constraints>
-                                        <state key="normal" image="back">
-                                            <color key="titleShadowColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="ayer.cornerRadius">
-                                                <integer key="value" value="30"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="select_players_card:" destination="321-XR-fvp" eventType="touchUpInside" id="fqQ-aV-YtE"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="69Q-s2-bNv">
-                                        <rect key="frame" x="250" y="0.0" width="90" height="127.5"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="90" id="ROh-gL-hZI"/>
-                                        </constraints>
-                                        <state key="normal" image="back">
-                                            <color key="titleShadowColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="ayer.cornerRadius">
-                                                <integer key="value" value="30"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="select_players_card:" destination="321-XR-fvp" eventType="touchUpInside" id="QmC-x4-ocz"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mSR-JG-sdV">
-                                        <rect key="frame" x="300" y="0.0" width="90" height="127.5"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="90" id="C01-kb-7Se"/>
-                                        </constraints>
-                                        <state key="normal" image="back">
-                                            <color key="titleShadowColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="ayer.cornerRadius">
-                                                <integer key="value" value="30"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="select_players_card:" destination="321-XR-fvp" eventType="touchUpInside" id="I4A-Sn-X8w"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pLf-qp-TSQ">
-                                        <rect key="frame" x="350" y="0.0" width="90" height="127.5"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="90" id="Pzt-F7-wke"/>
-                                        </constraints>
-                                        <state key="normal" image="back">
-                                            <color key="titleShadowColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="ayer.cornerRadius">
-                                                <integer key="value" value="30"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="select_players_card:" destination="321-XR-fvp" eventType="touchUpInside" id="qLm-3v-sNe"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleAspectFit" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tza-Jw-kdn">
-                                        <rect key="frame" x="400" y="0.0" width="90" height="127.5"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="90" id="r4T-pw-Qza"/>
-                                        </constraints>
-                                        <state key="normal" image="back">
-                                            <color key="titleShadowColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="ayer.cornerRadius">
-                                                <integer key="value" value="30"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="select_players_card:" destination="321-XR-fvp" eventType="touchUpInside" id="HXK-4W-AgP"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ofc-U0-nhu">
-                                        <rect key="frame" x="450" y="0.0" width="90" height="127.5"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="90" id="RcO-Aq-ebu"/>
-                                        </constraints>
-                                        <state key="normal" image="back">
-                                            <color key="titleShadowColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="ayer.cornerRadius">
-                                                <integer key="value" value="30"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="select_players_card:" destination="321-XR-fvp" eventType="touchUpInside" id="Yek-fZ-Kyv"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cdl-2K-3wb">
-                                        <rect key="frame" x="500" y="0.0" width="90" height="127.5"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="90" id="ntG-HZ-vCR"/>
-                                        </constraints>
-                                        <state key="normal" image="back">
-                                            <color key="titleShadowColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="ayer.cornerRadius">
-                                                <integer key="value" value="30"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="select_players_card:" destination="321-XR-fvp" eventType="touchUpInside" id="bTU-Yh-PFU"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iC5-u1-PBY">
-                                        <rect key="frame" x="550" y="0.0" width="90" height="127.5"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="90" id="qb0-rt-ZlK"/>
-                                        </constraints>
-                                        <state key="normal" image="back">
-                                            <color key="titleShadowColor" red="0.46573141581788879" green="0.47034261795469956" blue="0.47034261795469956" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="ayer.cornerRadius">
-                                                <integer key="value" value="30"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="select_players_card:" destination="321-XR-fvp" eventType="touchUpInside" id="YHI-6x-NTb"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vew-kR-WsG">
-                                        <rect key="frame" x="600" y="0.0" width="90" height="127.5"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="127.59999999999999" id="Y3y-pJ-eIZ"/>
-                                            <constraint firstAttribute="width" constant="90" id="vqM-bw-EcT"/>
-                                        </constraints>
-                                        <state key="normal" image="back">
-                                            <color key="titleShadowColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="ayer.cornerRadius">
-                                                <integer key="value" value="30"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="select_players_card:" destination="321-XR-fvp" eventType="touchUpInside" id="AAo-h8-gVT"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="AI's Cards: ...." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0jf-7M-z7W">
-                                <rect key="frame" x="554" y="174" width="175" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IWG-qr-WHH">
-                                <rect key="frame" x="536" y="746" width="166" height="73"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <state key="normal" backgroundImage="claimbutton"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="70"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="claim_popup:" destination="321-XR-fvp" eventType="touchUpInside" id="AFC-tH-zje"/>
-                                </connections>
-                            </button>
-                            <stackView opaque="NO" contentMode="scaleAspectFill" fixedFrame="YES" spacing="-40" translatesAutoresizingMaskIntoConstraints="NO" id="vEV-Pn-Nqc" userLabel="Stack View AI Cards">
-                                <rect key="frame" x="39" y="38" width="690" height="127.5"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ode-Ri-YOl">
-                                        <rect key="frame" x="0.0" y="0.0" width="90" height="127.5"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="90" id="Sq4-XI-bGx"/>
-                                        </constraints>
-                                        <state key="normal" image="back">
-                                            <color key="titleShadowColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ttH-Uq-hgb">
-                                        <rect key="frame" x="50" y="0.0" width="90" height="127.5"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="90" id="5gh-gn-pF8"/>
-                                        </constraints>
-                                        <state key="normal" image="back">
-                                            <color key="titleShadowColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="juh-IL-j09">
-                                        <rect key="frame" x="100" y="0.0" width="90" height="127.5"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="90" id="3Nh-Kk-SBb"/>
-                                        </constraints>
-                                        <state key="normal" image="back">
-                                            <color key="titleShadowColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xcx-2F-fcB">
-                                        <rect key="frame" x="150" y="0.0" width="90" height="127.5"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="90" id="o3p-4C-vKJ"/>
-                                        </constraints>
-                                        <state key="normal" image="back">
-                                            <color key="titleShadowColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bTw-1e-Jxm">
-                                        <rect key="frame" x="200" y="0.0" width="90" height="127.5"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="90" id="zxC-38-4MI"/>
-                                        </constraints>
-                                        <state key="normal" image="back">
-                                            <color key="titleShadowColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mOf-9b-97t">
-                                        <rect key="frame" x="250" y="0.0" width="90" height="127.5"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="90" id="lmr-ke-y6i"/>
-                                        </constraints>
-                                        <state key="normal" image="back">
-                                            <color key="titleShadowColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Rf-fK-k92">
-                                        <rect key="frame" x="300" y="0.0" width="90" height="127.5"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="90" id="st9-pX-v5A"/>
-                                        </constraints>
-                                        <state key="normal" image="back">
-                                            <color key="titleShadowColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NJS-ke-yNa">
-                                        <rect key="frame" x="350" y="0.0" width="90" height="127.5"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="90" id="RNT-8y-Gfx"/>
-                                        </constraints>
-                                        <state key="normal" image="back">
-                                            <color key="titleShadowColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleAspectFit" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hkm-Vr-JSN">
-                                        <rect key="frame" x="400" y="0.0" width="90" height="127.5"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="90" id="AWv-ec-gjY"/>
-                                        </constraints>
-                                        <state key="normal" image="back">
-                                            <color key="titleShadowColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lhb-B8-xth">
-                                        <rect key="frame" x="450" y="0.0" width="90" height="127.5"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="90" id="fq2-I5-CYI"/>
-                                        </constraints>
-                                        <state key="normal" image="back">
-                                            <color key="titleShadowColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="slv-Zs-43g">
-                                        <rect key="frame" x="500" y="0.0" width="90" height="127.5"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="90" id="Sl8-f9-KMV"/>
-                                        </constraints>
-                                        <state key="normal" image="back">
-                                            <color key="titleShadowColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jCI-a0-ojX">
-                                        <rect key="frame" x="550" y="0.0" width="90" height="127.5"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="90" id="9iQ-FD-CCZ"/>
-                                        </constraints>
-                                        <state key="normal" image="back">
-                                            <color key="titleShadowColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bio-Td-sln">
-                                        <rect key="frame" x="600" y="0.0" width="90" height="127.5"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="127.59999999999999" id="FDS-pu-wlW"/>
-                                            <constraint firstAttribute="width" constant="90" id="lnx-2h-RYe"/>
-                                        </constraints>
-                                        <state key="normal" image="back">
-                                            <color key="titleShadowColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                    </button>
-                                </subviews>
-                                <viewLayoutGuide key="safeArea" id="6Kk-vu-iJ7"/>
-                            </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Own Cards: 13" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kcP-YS-wYg">
-                                <rect key="frame" x="554" y="827" width="175" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="nhl-vU-MWg" userLabel="Stack View Pyramid">
-                                <rect key="frame" x="182" y="260" width="405" height="525"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" restorationIdentifier="pyramid_view_4" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Fu1-to-3jO">
-                                        <rect key="frame" x="0.0" y="0.0" width="405" height="127.5"/>
+                                    <stackView opaque="NO" contentMode="scaleAspectFill" distribution="fillEqually" alignment="center" spacing="-40" translatesAutoresizingMaskIntoConstraints="NO" id="vEV-Pn-Nqc" userLabel="Stack View AI Cards">
+                                        <rect key="frame" x="0.0" y="0.0" width="728" height="155.5"/>
                                         <subviews>
-                                            <button opaque="NO" tag="7" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5GU-MB-RZ2">
-                                                <rect key="frame" x="0.0" y="0.0" width="90" height="127.5"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <accessibility key="accessibilityConfiguration" identifier="7"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ode-Ri-YOl">
+                                                <rect key="frame" x="0.0" y="0.0" width="93" height="155.5"/>
+                                                <state key="normal" image="back">
+                                                    <color key="titleShadowColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ttH-Uq-hgb">
+                                                <rect key="frame" x="53" y="0.0" width="93" height="155.5"/>
+                                                <state key="normal" image="back">
+                                                    <color key="titleShadowColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="juh-IL-j09">
+                                                <rect key="frame" x="106" y="0.0" width="93" height="155.5"/>
+                                                <state key="normal" image="back">
+                                                    <color key="titleShadowColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xcx-2F-fcB">
+                                                <rect key="frame" x="159" y="0.0" width="92.5" height="155.5"/>
+                                                <state key="normal" image="back">
+                                                    <color key="titleShadowColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bTw-1e-Jxm">
+                                                <rect key="frame" x="211.5" y="0.0" width="93" height="155.5"/>
+                                                <state key="normal" image="back">
+                                                    <color key="titleShadowColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mOf-9b-97t">
+                                                <rect key="frame" x="264.5" y="0.0" width="93" height="155.5"/>
+                                                <state key="normal" image="back">
+                                                    <color key="titleShadowColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Rf-fK-k92">
+                                                <rect key="frame" x="317.5" y="0.0" width="93" height="155.5"/>
+                                                <state key="normal" image="back">
+                                                    <color key="titleShadowColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NJS-ke-yNa">
+                                                <rect key="frame" x="370.5" y="0.0" width="93" height="155.5"/>
+                                                <state key="normal" image="back">
+                                                    <color key="titleShadowColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hkm-Vr-JSN">
+                                                <rect key="frame" x="423.5" y="0.0" width="93" height="155.5"/>
+                                                <state key="normal" image="back">
+                                                    <color key="titleShadowColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lhb-B8-xth">
+                                                <rect key="frame" x="476.5" y="0.0" width="92.5" height="155.5"/>
+                                                <state key="normal" image="back">
+                                                    <color key="titleShadowColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="slv-Zs-43g">
+                                                <rect key="frame" x="529" y="0.0" width="93" height="155.5"/>
+                                                <state key="normal" image="back">
+                                                    <color key="titleShadowColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jCI-a0-ojX">
+                                                <rect key="frame" x="582" y="0.0" width="93" height="155.5"/>
+                                                <state key="normal" image="back">
+                                                    <color key="titleShadowColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bio-Td-sln">
+                                                <rect key="frame" x="635" y="0.0" width="93" height="155.5"/>
+                                                <state key="normal" image="back">
+                                                    <color key="titleShadowColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                        <viewLayoutGuide key="safeArea" id="6Kk-vu-iJ7"/>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleAspectFit" distribution="equalSpacing" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Wgf-sM-hJl" userLabel="Stack View Middle">
+                                        <rect key="frame" x="0.0" y="175.5" width="728" height="641.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="nhl-vU-MWg" userLabel="Stack View Pyramid">
+                                                <rect key="frame" x="0.0" y="0.0" width="410.5" height="638"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QB9-0U-aZt">
+                                                        <rect key="frame" x="159.5" y="0.0" width="91.5" height="155.5"/>
+                                                        <accessibility key="accessibilityConfiguration" identifier="1"/>
+                                                        <state key="normal" image="back"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                <integer key="value" value="20"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="touch_pyramid_card:" destination="321-XR-fvp" eventType="touchUpInside" id="n4i-8w-rxd"/>
+                                                        </connections>
+                                                    </button>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Qhb-Jw-RUt">
+                                                        <rect key="frame" x="106.5" y="160.5" width="197.5" height="156.5"/>
+                                                        <subviews>
+                                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RGs-e3-Fg3">
+                                                                <rect key="frame" x="0.0" y="0.0" width="91.5" height="156.5"/>
+                                                                <accessibility key="accessibilityConfiguration" identifier="2"/>
+                                                                <state key="normal" image="back"/>
+                                                                <connections>
+                                                                    <action selector="touch_pyramid_card:" destination="321-XR-fvp" eventType="touchUpInside" id="Pxm-iM-aBP"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SlT-eH-ZtI">
+                                                                <rect key="frame" x="106.5" y="0.0" width="91" height="156.5"/>
+                                                                <accessibility key="accessibilityConfiguration" identifier="3"/>
+                                                                <state key="normal" image="back"/>
+                                                                <connections>
+                                                                    <action selector="touch_pyramid_card:" destination="321-XR-fvp" eventType="touchUpInside" id="uY7-V1-sVb"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="PU5-n4-0A1">
+                                                        <rect key="frame" x="53" y="322" width="304.5" height="155.5"/>
+                                                        <subviews>
+                                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hpu-T8-mMt">
+                                                                <rect key="frame" x="0.0" y="0.0" width="91.5" height="155.5"/>
+                                                                <accessibility key="accessibilityConfiguration" identifier="4"/>
+                                                                <state key="normal" image="back"/>
+                                                                <connections>
+                                                                    <action selector="touch_pyramid_card:" destination="321-XR-fvp" eventType="touchUpInside" id="kSP-a8-JRW"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dfc-02-uUP">
+                                                                <rect key="frame" x="106.5" y="0.0" width="91.5" height="155.5"/>
+                                                                <accessibility key="accessibilityConfiguration" identifier="5"/>
+                                                                <state key="normal" image="back"/>
+                                                                <connections>
+                                                                    <action selector="touch_pyramid_card:" destination="321-XR-fvp" eventType="touchUpInside" id="PlI-pe-G06"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lMe-Dv-LFo">
+                                                                <rect key="frame" x="213" y="0.0" width="91.5" height="155.5"/>
+                                                                <accessibility key="accessibilityConfiguration" identifier="6"/>
+                                                                <state key="normal" image="back"/>
+                                                                <connections>
+                                                                    <action selector="touch_pyramid_card:" destination="321-XR-fvp" eventType="touchUpInside" id="mu8-jD-Lvg"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" restorationIdentifier="pyramid_view_4" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Fu1-to-3jO">
+                                                        <rect key="frame" x="0.0" y="482.5" width="410.5" height="155.5"/>
+                                                        <subviews>
+                                                            <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5GU-MB-RZ2">
+                                                                <rect key="frame" x="0.0" y="0.0" width="91.5" height="155.5"/>
+                                                                <accessibility key="accessibilityConfiguration" identifier="7"/>
+                                                                <state key="normal" image="back"/>
+                                                                <connections>
+                                                                    <action selector="touch_pyramid_card:" destination="321-XR-fvp" eventType="touchUpInside" id="vCO-Qq-rxR"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o8u-cC-zIJ">
+                                                                <rect key="frame" x="106.5" y="0.0" width="91.5" height="155.5"/>
+                                                                <accessibility key="accessibilityConfiguration" identifier="8"/>
+                                                                <state key="normal" image="back"/>
+                                                                <connections>
+                                                                    <action selector="touch_pyramid_card:" destination="321-XR-fvp" eventType="touchUpInside" id="TCp-2f-gpQ"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="koR-Tg-lHE">
+                                                                <rect key="frame" x="213" y="0.0" width="91" height="155.5"/>
+                                                                <accessibility key="accessibilityConfiguration" identifier="9"/>
+                                                                <state key="normal" image="back"/>
+                                                                <connections>
+                                                                    <action selector="touch_pyramid_card:" destination="321-XR-fvp" eventType="touchUpInside" id="3lN-ke-Yaz"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Suj-6U-B3Q">
+                                                                <rect key="frame" x="319" y="0.0" width="91.5" height="155.5"/>
+                                                                <accessibility key="accessibilityConfiguration" identifier="10"/>
+                                                                <state key="normal" image="back"/>
+                                                                <connections>
+                                                                    <action selector="touch_pyramid_card:" destination="321-XR-fvp" eventType="touchUpInside" id="mss-8L-H01"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="90" id="CHc-ZN-7vl"/>
-                                                    <constraint firstAttribute="height" constant="127.5" id="g8N-6E-zOh"/>
+                                                    <constraint firstItem="QB9-0U-aZt" firstAttribute="height" secondItem="Fu1-to-3jO" secondAttribute="height" id="C8N-PT-7jt"/>
+                                                    <constraint firstItem="Suj-6U-B3Q" firstAttribute="width" secondItem="QB9-0U-aZt" secondAttribute="width" id="MBR-2v-cNt"/>
+                                                    <constraint firstItem="Qhb-Jw-RUt" firstAttribute="height" secondItem="Fu1-to-3jO" secondAttribute="height" id="Uw8-fi-Ce8"/>
+                                                    <constraint firstItem="o8u-cC-zIJ" firstAttribute="width" secondItem="QB9-0U-aZt" secondAttribute="width" id="Z8Z-an-CDI"/>
+                                                    <constraint firstItem="hpu-T8-mMt" firstAttribute="width" secondItem="QB9-0U-aZt" secondAttribute="width" id="eNo-uT-RJb"/>
+                                                    <constraint firstItem="dfc-02-uUP" firstAttribute="width" secondItem="QB9-0U-aZt" secondAttribute="width" id="hmm-g0-t2Q"/>
+                                                    <constraint firstItem="PU5-n4-0A1" firstAttribute="height" secondItem="Fu1-to-3jO" secondAttribute="height" id="ib6-ah-F3b"/>
+                                                    <constraint firstItem="5GU-MB-RZ2" firstAttribute="width" secondItem="QB9-0U-aZt" secondAttribute="width" id="jqG-7E-CUy"/>
+                                                    <constraint firstItem="lMe-Dv-LFo" firstAttribute="width" secondItem="QB9-0U-aZt" secondAttribute="width" id="pIw-k8-u1B"/>
+                                                    <constraint firstItem="RGs-e3-Fg3" firstAttribute="width" secondItem="QB9-0U-aZt" secondAttribute="width" id="slR-1L-Gdl"/>
+                                                    <constraint firstItem="dfc-02-uUP" firstAttribute="width" secondItem="QB9-0U-aZt" secondAttribute="width" id="xUN-J4-4IT"/>
                                                 </constraints>
-                                                <state key="normal" image="back"/>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" alignment="bottom" spacing="360" translatesAutoresizingMaskIntoConstraints="NO" id="4io-zW-oMg">
+                                                <rect key="frame" x="420.5" y="0.0" width="307.5" height="638"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="3bt-3R-HU6">
+                                                        <rect key="frame" x="0.0" y="0.0" width="307.5" height="96"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AI's Cards: ...." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0jf-7M-z7W">
+                                                                <rect key="frame" x="0.0" y="0.0" width="307.5" height="29"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="AI Says: " borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ujj-xH-3fL">
+                                                                <rect key="frame" x="0.0" y="29" width="307.5" height="34"/>
+                                                                <nil key="textColor"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                            </textField>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="AI Says: " borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t1i-ML-A0u">
+                                                                <rect key="frame" x="0.0" y="63" width="307.5" height="33"/>
+                                                                <nil key="textColor"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                            </textField>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="FmR-eu-qXz">
+                                                        <rect key="frame" x="155" y="456" width="152.5" height="182"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uDz-Dd-lDz">
+                                                                <rect key="frame" x="0.0" y="0.0" width="152.5" height="64"/>
+                                                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="64" id="J2s-iB-8Bn"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="40"/>
+                                                                <size key="titleShadowOffset" width="9" height="0.0"/>
+                                                                <state key="normal" title="Bullshit!"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="10"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="player_called_bullshit:" destination="321-XR-fvp" eventType="touchUpInside" id="pOq-X7-kna"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IWG-qr-WHH">
+                                                                <rect key="frame" x="0.0" y="74" width="152.5" height="64"/>
+                                                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="64" id="e4B-zQ-z1a"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="40"/>
+                                                                <state key="normal" title="Claim">
+                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="10"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                                <connections>
+                                                                    <action selector="claim_popup:" destination="321-XR-fvp" eventType="touchUpInside" id="AFC-tH-zje"/>
+                                                                </connections>
+                                                            </button>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Own Cards: 13" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kcP-YS-wYg">
+                                                                <rect key="frame" x="0.0" y="148" width="152.5" height="34"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="FmR-eu-qXz" firstAttribute="top" secondItem="4io-zW-oMg" secondAttribute="top" constant="456" id="Fa8-yx-J9Q"/>
+                                                    <constraint firstItem="t1i-ML-A0u" firstAttribute="width" secondItem="4io-zW-oMg" secondAttribute="width" id="j0P-Gx-iVA"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="4io-zW-oMg" firstAttribute="width" secondItem="nhl-vU-MWg" secondAttribute="width" multiplier="0.75" id="5iB-zO-XwI"/>
+                                            <constraint firstItem="4io-zW-oMg" firstAttribute="height" secondItem="nhl-vU-MWg" secondAttribute="height" id="DKQ-Zc-ZP0"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleAspectFit" distribution="fillEqually" spacing="-40" translatesAutoresizingMaskIntoConstraints="NO" id="dPA-ST-ckv" userLabel="Stack View Player Cards">
+                                        <rect key="frame" x="20" y="837" width="688" height="147"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9sV-hY-LjC">
+                                                <rect key="frame" x="0.0" y="0.0" width="90" height="147"/>
+                                                <state key="normal" image="back">
+                                                    <color key="titleShadowColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="15"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <action selector="touch_pyramid_card:" destination="321-XR-fvp" eventType="touchUpInside" id="vCO-Qq-rxR"/>
+                                                    <action selector="select_players_card:" destination="321-XR-fvp" eventType="touchUpInside" id="BMu-Rm-Zjl"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" tag="8" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o8u-cC-zIJ">
-                                                <rect key="frame" x="105" y="0.0" width="90" height="127.5"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <accessibility key="accessibilityConfiguration" identifier="8"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="90" id="7rv-BW-RA9"/>
-                                                    <constraint firstAttribute="height" constant="127.5" id="OPu-3U-OKs"/>
-                                                </constraints>
-                                                <state key="normal" image="back"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EZ9-cJ-HoV">
+                                                <rect key="frame" x="50" y="0.0" width="89.5" height="147"/>
+                                                <state key="normal" image="back">
+                                                    <color key="titleShadowColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="15"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <action selector="touch_pyramid_card:" destination="321-XR-fvp" eventType="touchUpInside" id="TCp-2f-gpQ"/>
+                                                    <action selector="select_players_card:" destination="321-XR-fvp" eventType="touchUpInside" id="BSf-3O-LvI"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" tag="9" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="koR-Tg-lHE">
-                                                <rect key="frame" x="210" y="0.0" width="90" height="127.5"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <accessibility key="accessibilityConfiguration" identifier="9"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="90" id="TPM-mP-eer"/>
-                                                    <constraint firstAttribute="height" constant="127.5" id="qVo-t2-hRh"/>
-                                                </constraints>
-                                                <state key="normal" image="back"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fVX-MA-9ES">
+                                                <rect key="frame" x="99.5" y="0.0" width="90" height="147"/>
+                                                <state key="normal" image="back">
+                                                    <color key="titleShadowColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="15"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <action selector="touch_pyramid_card:" destination="321-XR-fvp" eventType="touchUpInside" id="3lN-ke-Yaz"/>
+                                                    <action selector="select_players_card:" destination="321-XR-fvp" eventType="touchUpInside" id="Pv1-q7-qlP"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" tag="10" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Suj-6U-B3Q">
-                                                <rect key="frame" x="315" y="0.0" width="90" height="127.5"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <accessibility key="accessibilityConfiguration" identifier="10"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="90" id="7wQ-M1-bYJ"/>
-                                                    <constraint firstAttribute="height" constant="127.5" id="JQS-eU-Te2"/>
-                                                </constraints>
-                                                <state key="normal" image="back"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fWL-nb-cNt">
+                                                <rect key="frame" x="149.5" y="0.0" width="90" height="147"/>
+                                                <state key="normal" image="back">
+                                                    <color key="titleShadowColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="15"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <action selector="touch_pyramid_card:" destination="321-XR-fvp" eventType="touchUpInside" id="mss-8L-H01"/>
+                                                    <action selector="select_players_card:" destination="321-XR-fvp" eventType="touchUpInside" id="C1R-Lq-hcQ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e89-qY-JEc">
+                                                <rect key="frame" x="199.5" y="0.0" width="89.5" height="147"/>
+                                                <state key="normal" image="back">
+                                                    <color key="titleShadowColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="ayer.cornerRadius">
+                                                        <integer key="value" value="30"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="select_players_card:" destination="321-XR-fvp" eventType="touchUpInside" id="fqQ-aV-YtE"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="69Q-s2-bNv">
+                                                <rect key="frame" x="249" y="0.0" width="90" height="147"/>
+                                                <state key="normal" image="back">
+                                                    <color key="titleShadowColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="ayer.cornerRadius">
+                                                        <integer key="value" value="30"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="select_players_card:" destination="321-XR-fvp" eventType="touchUpInside" id="QmC-x4-ocz"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mSR-JG-sdV">
+                                                <rect key="frame" x="299" y="0.0" width="90" height="147"/>
+                                                <state key="normal" image="back">
+                                                    <color key="titleShadowColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="ayer.cornerRadius">
+                                                        <integer key="value" value="30"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="select_players_card:" destination="321-XR-fvp" eventType="touchUpInside" id="I4A-Sn-X8w"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pLf-qp-TSQ">
+                                                <rect key="frame" x="349" y="0.0" width="90" height="147"/>
+                                                <state key="normal" image="back">
+                                                    <color key="titleShadowColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="ayer.cornerRadius">
+                                                        <integer key="value" value="30"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="select_players_card:" destination="321-XR-fvp" eventType="touchUpInside" id="qLm-3v-sNe"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tza-Jw-kdn">
+                                                <rect key="frame" x="399" y="0.0" width="89.5" height="147"/>
+                                                <state key="normal" image="back">
+                                                    <color key="titleShadowColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="ayer.cornerRadius">
+                                                        <integer key="value" value="30"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="select_players_card:" destination="321-XR-fvp" eventType="touchUpInside" id="HXK-4W-AgP"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ofc-U0-nhu">
+                                                <rect key="frame" x="448.5" y="0.0" width="90" height="147"/>
+                                                <state key="normal" image="back">
+                                                    <color key="titleShadowColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="ayer.cornerRadius">
+                                                        <integer key="value" value="30"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="select_players_card:" destination="321-XR-fvp" eventType="touchUpInside" id="Yek-fZ-Kyv"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cdl-2K-3wb">
+                                                <rect key="frame" x="498.5" y="0.0" width="90" height="147"/>
+                                                <state key="normal" image="back">
+                                                    <color key="titleShadowColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="ayer.cornerRadius">
+                                                        <integer key="value" value="30"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="select_players_card:" destination="321-XR-fvp" eventType="touchUpInside" id="bTU-Yh-PFU"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iC5-u1-PBY">
+                                                <rect key="frame" x="548.5" y="0.0" width="89.5" height="147"/>
+                                                <state key="normal" image="back">
+                                                    <color key="titleShadowColor" red="0.46573141581788879" green="0.47034261795469956" blue="0.47034261795469956" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="ayer.cornerRadius">
+                                                        <integer key="value" value="30"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="select_players_card:" destination="321-XR-fvp" eventType="touchUpInside" id="YHI-6x-NTb"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vew-kR-WsG">
+                                                <rect key="frame" x="598" y="0.0" width="90" height="147"/>
+                                                <state key="normal" image="back">
+                                                    <color key="titleShadowColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="ayer.cornerRadius">
+                                                        <integer key="value" value="30"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="select_players_card:" destination="321-XR-fvp" eventType="touchUpInside" id="AAo-h8-gVT"/>
                                                 </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="PU5-n4-0A1">
-                                        <rect key="frame" x="52.5" y="132.5" width="300" height="127.5"/>
-                                        <subviews>
-                                            <button opaque="NO" tag="4" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hpu-T8-mMt">
-                                                <rect key="frame" x="0.0" y="0.0" width="90" height="127.5"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <accessibility key="accessibilityConfiguration" identifier="4"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="127.5" id="SqL-Hg-dXa"/>
-                                                    <constraint firstAttribute="width" constant="90" id="UiN-xT-Nfr"/>
-                                                </constraints>
-                                                <state key="normal" image="back"/>
-                                                <connections>
-                                                    <action selector="touch_pyramid_card:" destination="321-XR-fvp" eventType="touchUpInside" id="kSP-a8-JRW"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" tag="5" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dfc-02-uUP">
-                                                <rect key="frame" x="105" y="0.0" width="90" height="127.5"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <accessibility key="accessibilityConfiguration" identifier="5"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="127.5" id="4Vv-eI-xwj"/>
-                                                    <constraint firstAttribute="width" constant="90" id="Taa-Un-Y6u"/>
-                                                </constraints>
-                                                <state key="normal" image="back"/>
-                                                <connections>
-                                                    <action selector="touch_pyramid_card:" destination="321-XR-fvp" eventType="touchUpInside" id="PlI-pe-G06"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" tag="6" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lMe-Dv-LFo">
-                                                <rect key="frame" x="210" y="0.0" width="90" height="127.5"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <accessibility key="accessibilityConfiguration" identifier="6"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="90" id="MFA-s8-Vom"/>
-                                                    <constraint firstAttribute="height" constant="127.5" id="eBA-hu-630"/>
-                                                </constraints>
-                                                <state key="normal" image="back"/>
-                                                <connections>
-                                                    <action selector="touch_pyramid_card:" destination="321-XR-fvp" eventType="touchUpInside" id="mu8-jD-Lvg"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Qhb-Jw-RUt">
-                                        <rect key="frame" x="105" y="265" width="195" height="127.5"/>
-                                        <subviews>
-                                            <button opaque="NO" tag="2" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RGs-e3-Fg3">
-                                                <rect key="frame" x="0.0" y="0.0" width="90" height="127.5"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <accessibility key="accessibilityConfiguration" identifier="2"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="127.5" id="CEF-7e-VCt"/>
-                                                    <constraint firstAttribute="width" constant="90" id="jHH-x3-xEE"/>
-                                                </constraints>
-                                                <state key="normal" image="back"/>
-                                                <connections>
-                                                    <action selector="touch_pyramid_card:" destination="321-XR-fvp" eventType="touchUpInside" id="Pxm-iM-aBP"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" tag="3" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SlT-eH-ZtI">
-                                                <rect key="frame" x="105" y="0.0" width="90" height="127.5"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <accessibility key="accessibilityConfiguration" identifier="3"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="127.5" id="G0a-Zo-IvM"/>
-                                                    <constraint firstAttribute="width" constant="90" id="b8d-s2-vkc"/>
-                                                </constraints>
-                                                <state key="normal" image="back"/>
-                                                <connections>
-                                                    <action selector="touch_pyramid_card:" destination="321-XR-fvp" eventType="touchUpInside" id="uY7-V1-sVb"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
-                                    <button opaque="NO" tag="1" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QB9-0U-aZt">
-                                        <rect key="frame" x="157.5" y="397.5" width="90" height="127.5"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <accessibility key="accessibilityConfiguration" identifier="1"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="90" id="ScG-Vr-wPh"/>
-                                            <constraint firstAttribute="height" constant="127.5" id="iy9-xF-mZy"/>
-                                        </constraints>
-                                        <state key="normal" image="back"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                <integer key="value" value="20"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="touch_pyramid_card:" destination="321-XR-fvp" eventType="touchUpInside" id="n4i-8w-rxd"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="dPA-ST-ckv" firstAttribute="leading" secondItem="shY-Hx-3S0" secondAttribute="leading" constant="20" symbolic="YES" id="7P8-UT-uvY"/>
+                                    <constraint firstItem="dPA-ST-ckv" firstAttribute="top" secondItem="shY-Hx-3S0" secondAttribute="top" constant="837" id="7SD-au-KBy"/>
+                                    <constraint firstItem="slv-Zs-43g" firstAttribute="height" secondItem="QB9-0U-aZt" secondAttribute="height" id="GIU-Wm-adV"/>
+                                    <constraint firstItem="Bio-Td-sln" firstAttribute="height" secondItem="QB9-0U-aZt" secondAttribute="height" id="LaR-l5-bSe"/>
+                                    <constraint firstItem="lhb-B8-xth" firstAttribute="height" secondItem="QB9-0U-aZt" secondAttribute="height" id="XwZ-mW-1b5"/>
+                                    <constraint firstItem="hkm-Vr-JSN" firstAttribute="height" secondItem="QB9-0U-aZt" secondAttribute="height" id="Zjy-Ds-msr"/>
+                                    <constraint firstItem="jCI-a0-ojX" firstAttribute="height" secondItem="QB9-0U-aZt" secondAttribute="height" id="j2a-ch-S9L"/>
+                                    <constraint firstItem="vEV-Pn-Nqc" firstAttribute="height" secondItem="QB9-0U-aZt" secondAttribute="height" id="kNa-lQ-hau"/>
+                                </constraints>
                             </stackView>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="AI Says: " borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ujj-xH-3fL">
-                                <rect key="frame" x="39" y="180" width="343" height="33"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uDz-Dd-lDz">
-                                <rect key="frame" x="39" y="746" width="193" height="73"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.57874745130000005" green="0.32151988149999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                <state key="normal" title="Bullshit!"/>
-                                <connections>
-                                    <action selector="player_called_bullshit:" destination="321-XR-fvp" eventType="touchUpInside" id="pOq-X7-kna"/>
-                                </connections>
-                            </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="AI Says: " borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t1i-ML-A0u">
-                                <rect key="frame" x="39" y="218" width="343" height="33"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="m7d-0q-g1H" firstAttribute="leading" secondItem="ARJ-Pu-KqU" secondAttribute="leadingMargin" id="3tf-Jc-dfH"/>
+                            <constraint firstItem="m7d-0q-g1H" firstAttribute="top" secondItem="ARJ-Pu-KqU" secondAttribute="top" id="1b7-3I-Zz3"/>
+                            <constraint firstItem="shY-Hx-3S0" firstAttribute="top" secondItem="29R-Gh-RTW" secondAttribute="top" id="23d-Jo-nnT"/>
                             <constraint firstItem="29R-Gh-RTW" firstAttribute="trailing" secondItem="m7d-0q-g1H" secondAttribute="trailing" id="AvM-5j-NU7"/>
-                            <constraint firstItem="m7d-0q-g1H" firstAttribute="top" secondItem="ARJ-Pu-KqU" secondAttribute="topMargin" id="LMn-G2-qDe"/>
+                            <constraint firstItem="shY-Hx-3S0" firstAttribute="centerX" secondItem="ARJ-Pu-KqU" secondAttribute="centerX" id="FlL-gg-F4v"/>
+                            <constraint firstItem="shY-Hx-3S0" firstAttribute="leading" secondItem="ARJ-Pu-KqU" secondAttribute="leading" constant="20" id="Gmk-td-wpr"/>
                             <constraint firstItem="m7d-0q-g1H" firstAttribute="top" secondItem="29R-Gh-RTW" secondAttribute="top" constant="-20" id="Uof-8A-whe"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="m7d-0q-g1H" secondAttribute="trailing" id="YRC-wm-o96"/>
+                            <constraint firstItem="shY-Hx-3S0" firstAttribute="centerY" secondItem="ARJ-Pu-KqU" secondAttribute="centerY" id="dHb-Xj-zkG"/>
                             <constraint firstItem="m7d-0q-g1H" firstAttribute="leading" secondItem="29R-Gh-RTW" secondAttribute="leading" id="e7c-Y6-jqo"/>
+                            <constraint firstAttribute="bottom" secondItem="shY-Hx-3S0" secondAttribute="bottom" constant="20" id="eEy-6a-pcK"/>
+                            <constraint firstAttribute="trailing" secondItem="shY-Hx-3S0" secondAttribute="trailing" constant="20" id="ePN-sX-8E1"/>
                             <constraint firstAttribute="bottomMargin" secondItem="m7d-0q-g1H" secondAttribute="bottom" id="hXM-zG-m2G"/>
-                            <constraint firstItem="m7d-0q-g1H" firstAttribute="top" secondItem="29R-Gh-RTW" secondAttribute="top" id="sDs-gn-iTx"/>
+                            <constraint firstItem="shY-Hx-3S0" firstAttribute="top" secondItem="ARJ-Pu-KqU" secondAttribute="top" constant="20" id="irc-ae-TI1"/>
+                            <constraint firstItem="shY-Hx-3S0" firstAttribute="top" secondItem="ARJ-Pu-KqU" secondAttribute="top" constant="20" id="oa9-ic-3Xl"/>
+                            <constraint firstItem="29R-Gh-RTW" firstAttribute="bottom" secondItem="shY-Hx-3S0" secondAttribute="bottom" constant="20" id="rV4-hc-B7r"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="29R-Gh-RTW"/>
                     </view>
@@ -670,42 +597,42 @@
                         <outlet property="pyramid_3_view" destination="PU5-n4-0A1" id="HxO-ku-b84"/>
                         <outlet property="pyramid_4_view" destination="Fu1-to-3jO" id="Wp6-8J-P96"/>
                         <outlet property="pyramid_stackView" destination="nhl-vU-MWg" id="m6W-1j-F51"/>
-                        <outletCollection property="player_cards_buttons" destination="9sV-hY-LjC" collectionClass="NSMutableArray" id="Qt9-sj-lll"/>
-                        <outletCollection property="player_cards_buttons" destination="EZ9-cJ-HoV" collectionClass="NSMutableArray" id="jHc-a0-7ic"/>
-                        <outletCollection property="player_cards_buttons" destination="fVX-MA-9ES" collectionClass="NSMutableArray" id="AW3-s7-Tdc"/>
-                        <outletCollection property="player_cards_buttons" destination="fWL-nb-cNt" collectionClass="NSMutableArray" id="B8n-lB-YtF"/>
-                        <outletCollection property="player_cards_buttons" destination="e89-qY-JEc" collectionClass="NSMutableArray" id="2oE-PW-NSD"/>
-                        <outletCollection property="player_cards_buttons" destination="69Q-s2-bNv" collectionClass="NSMutableArray" id="1Nv-cE-B8L"/>
-                        <outletCollection property="player_cards_buttons" destination="mSR-JG-sdV" collectionClass="NSMutableArray" id="fT7-3M-Xwj"/>
-                        <outletCollection property="player_cards_buttons" destination="pLf-qp-TSQ" collectionClass="NSMutableArray" id="JOf-k7-t98"/>
-                        <outletCollection property="player_cards_buttons" destination="Tza-Jw-kdn" collectionClass="NSMutableArray" id="iim-sX-xCc"/>
-                        <outletCollection property="player_cards_buttons" destination="cdl-2K-3wb" collectionClass="NSMutableArray" id="Z1C-sf-hf0"/>
-                        <outletCollection property="player_cards_buttons" destination="iC5-u1-PBY" collectionClass="NSMutableArray" id="wJO-Dv-R94"/>
-                        <outletCollection property="player_cards_buttons" destination="ofc-U0-nhu" collectionClass="NSMutableArray" id="9wb-O6-O6U"/>
-                        <outletCollection property="player_cards_buttons" destination="Vew-kR-WsG" collectionClass="NSMutableArray" id="Sbk-7v-grB"/>
+                        <outletCollection property="AI_cards_buttons" destination="jCI-a0-ojX" collectionClass="NSMutableArray" id="fsV-oE-ppt"/>
+                        <outletCollection property="AI_cards_buttons" destination="hkm-Vr-JSN" collectionClass="NSMutableArray" id="Tjp-rC-SSV"/>
                         <outletCollection property="AI_cards_buttons" destination="ode-Ri-YOl" collectionClass="NSMutableArray" id="4OL-8i-SjL"/>
-                        <outletCollection property="AI_cards_buttons" destination="ttH-Uq-hgb" collectionClass="NSMutableArray" id="d2J-od-1XA"/>
-                        <outletCollection property="AI_cards_buttons" destination="juh-IL-j09" collectionClass="NSMutableArray" id="ML0-45-Qcl"/>
                         <outletCollection property="AI_cards_buttons" destination="xcx-2F-fcB" collectionClass="NSMutableArray" id="4Zm-EA-lyX"/>
                         <outletCollection property="AI_cards_buttons" destination="bTw-1e-Jxm" collectionClass="NSMutableArray" id="rbm-WF-J8S"/>
+                        <outletCollection property="AI_cards_buttons" destination="Bio-Td-sln" collectionClass="NSMutableArray" id="7zE-LR-vPc"/>
                         <outletCollection property="AI_cards_buttons" destination="mOf-9b-97t" collectionClass="NSMutableArray" id="tOU-tZ-46a"/>
+                        <outletCollection property="AI_cards_buttons" destination="NJS-ke-yNa" collectionClass="NSMutableArray" id="ZbG-nS-ge1"/>
                         <outletCollection property="AI_cards_buttons" destination="2Rf-fK-k92" collectionClass="NSMutableArray" id="JSh-ci-uop"/>
+                        <outletCollection property="AI_cards_buttons" destination="ttH-Uq-hgb" collectionClass="NSMutableArray" id="d2J-od-1XA"/>
                         <outletCollection property="AI_cards_buttons" destination="lhb-B8-xth" collectionClass="NSMutableArray" id="TAu-6s-Dux"/>
                         <outletCollection property="AI_cards_buttons" destination="slv-Zs-43g" collectionClass="NSMutableArray" id="VHw-ij-df3"/>
-                        <outletCollection property="AI_cards_buttons" destination="jCI-a0-ojX" collectionClass="NSMutableArray" id="fsV-oE-ppt"/>
-                        <outletCollection property="AI_cards_buttons" destination="Bio-Td-sln" collectionClass="NSMutableArray" id="7zE-LR-vPc"/>
-                        <outletCollection property="AI_cards_buttons" destination="NJS-ke-yNa" collectionClass="NSMutableArray" id="ZbG-nS-ge1"/>
-                        <outletCollection property="AI_cards_buttons" destination="hkm-Vr-JSN" collectionClass="NSMutableArray" id="Tjp-rC-SSV"/>
-                        <outletCollection property="pyramid_cards_buttons" destination="QB9-0U-aZt" collectionClass="NSMutableArray" id="uK6-rL-tsm"/>
-                        <outletCollection property="pyramid_cards_buttons" destination="RGs-e3-Fg3" collectionClass="NSMutableArray" id="OvU-iN-s26"/>
+                        <outletCollection property="AI_cards_buttons" destination="juh-IL-j09" collectionClass="NSMutableArray" id="ML0-45-Qcl"/>
                         <outletCollection property="pyramid_cards_buttons" destination="SlT-eH-ZtI" collectionClass="NSMutableArray" id="XpJ-64-Bii"/>
-                        <outletCollection property="pyramid_cards_buttons" destination="hpu-T8-mMt" collectionClass="NSMutableArray" id="aDI-Dg-cgL"/>
-                        <outletCollection property="pyramid_cards_buttons" destination="dfc-02-uUP" collectionClass="NSMutableArray" id="aCo-Dd-ob2"/>
                         <outletCollection property="pyramid_cards_buttons" destination="lMe-Dv-LFo" collectionClass="NSMutableArray" id="e2U-FB-GYX"/>
+                        <outletCollection property="pyramid_cards_buttons" destination="koR-Tg-lHE" collectionClass="NSMutableArray" id="CHw-E4-mkK"/>
                         <outletCollection property="pyramid_cards_buttons" destination="5GU-MB-RZ2" collectionClass="NSMutableArray" id="UWp-km-yj2"/>
                         <outletCollection property="pyramid_cards_buttons" destination="o8u-cC-zIJ" collectionClass="NSMutableArray" id="bz5-gN-hQb"/>
-                        <outletCollection property="pyramid_cards_buttons" destination="koR-Tg-lHE" collectionClass="NSMutableArray" id="CHw-E4-mkK"/>
                         <outletCollection property="pyramid_cards_buttons" destination="Suj-6U-B3Q" collectionClass="NSMutableArray" id="M7Q-uw-OzU"/>
+                        <outletCollection property="pyramid_cards_buttons" destination="dfc-02-uUP" collectionClass="NSMutableArray" id="aCo-Dd-ob2"/>
+                        <outletCollection property="pyramid_cards_buttons" destination="RGs-e3-Fg3" collectionClass="NSMutableArray" id="OvU-iN-s26"/>
+                        <outletCollection property="pyramid_cards_buttons" destination="hpu-T8-mMt" collectionClass="NSMutableArray" id="aDI-Dg-cgL"/>
+                        <outletCollection property="pyramid_cards_buttons" destination="QB9-0U-aZt" collectionClass="NSMutableArray" id="uK6-rL-tsm"/>
+                        <outletCollection property="player_cards_buttons" destination="pLf-qp-TSQ" collectionClass="NSMutableArray" id="JOf-k7-t98"/>
+                        <outletCollection property="player_cards_buttons" destination="iC5-u1-PBY" collectionClass="NSMutableArray" id="wJO-Dv-R94"/>
+                        <outletCollection property="player_cards_buttons" destination="EZ9-cJ-HoV" collectionClass="NSMutableArray" id="jHc-a0-7ic"/>
+                        <outletCollection property="player_cards_buttons" destination="69Q-s2-bNv" collectionClass="NSMutableArray" id="1Nv-cE-B8L"/>
+                        <outletCollection property="player_cards_buttons" destination="ofc-U0-nhu" collectionClass="NSMutableArray" id="9wb-O6-O6U"/>
+                        <outletCollection property="player_cards_buttons" destination="mSR-JG-sdV" collectionClass="NSMutableArray" id="fT7-3M-Xwj"/>
+                        <outletCollection property="player_cards_buttons" destination="fVX-MA-9ES" collectionClass="NSMutableArray" id="AW3-s7-Tdc"/>
+                        <outletCollection property="player_cards_buttons" destination="Tza-Jw-kdn" collectionClass="NSMutableArray" id="iim-sX-xCc"/>
+                        <outletCollection property="player_cards_buttons" destination="cdl-2K-3wb" collectionClass="NSMutableArray" id="Z1C-sf-hf0"/>
+                        <outletCollection property="player_cards_buttons" destination="e89-qY-JEc" collectionClass="NSMutableArray" id="2oE-PW-NSD"/>
+                        <outletCollection property="player_cards_buttons" destination="9sV-hY-LjC" collectionClass="NSMutableArray" id="Qt9-sj-lll"/>
+                        <outletCollection property="player_cards_buttons" destination="fWL-nb-cNt" collectionClass="NSMutableArray" id="B8n-lB-YtF"/>
+                        <outletCollection property="player_cards_buttons" destination="Vew-kR-WsG" collectionClass="NSMutableArray" id="Sbk-7v-grB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KuH-hj-YIp" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -723,24 +650,13 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="44F-xr-rxK">
                                 <rect key="frame" x="229" y="307" width="311" height="410"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6IQ-na-QmG">
-                                        <rect key="frame" x="23" y="40" width="122" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
-                                        <state key="normal" title="Tell the truth"/>
-                                    </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bluff Claim:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qCf-o9-Mqo">
-                                        <rect key="frame" x="23" y="102" width="247" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EeE-Kx-Ta2">
                                         <rect key="frame" x="23" y="352" width="75" height="29"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <state key="normal" title="Cancel"/>
+                                        <color key="backgroundColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Cancel">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="cancelClaimPopUp:" destination="Gn7-3s-KMI" eventType="touchUpInside" id="lZQ-hb-xdz"/>
                                         </connections>
@@ -750,7 +666,7 @@
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                     </pickerView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Number of Cards:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wmh-DS-PaR">
-                                        <rect key="frame" x="23" y="144" width="247" height="21"/>
+                                        <rect key="frame" x="23" y="78" width="247" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -759,12 +675,21 @@
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9g3-nB-d9Q">
                                         <rect key="frame" x="186" y="352" width="84" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" red="0.37055522200000002" green="0.37056469920000001" blue="0.37055957319999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" title="Claim"/>
+                                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Claim">
+                                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="claim_made:" destination="Gn7-3s-KMI" eventType="touchUpInside" id="ISW-9J-YXW"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Card Claim:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qCf-o9-Mqo">
+                                        <rect key="frame" x="23" y="133" width="247" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="0.79847051056338025" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -792,7 +717,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f3F-yS-gVz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1204.6875" y="-265.4296875"/>
+            <point key="canvasLocation" x="1411" y="-251"/>
         </scene>
         <!--Bluff Call Pop Up View Controller-->
         <scene sceneID="eML-Is-dxE">
@@ -873,7 +798,5 @@
     <resources>
         <image name="back" width="120" height="170"/>
         <image name="background" width="667" height="621"/>
-        <image name="claimbutton" width="594" height="238"/>
-        <image name="startbutton" width="594" height="238"/>
     </resources>
 </document>
