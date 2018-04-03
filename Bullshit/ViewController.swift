@@ -233,6 +233,8 @@ class ViewController: UIViewController{
     
     
     ////////---- AI's TURN----///////////////////////////////////////////////////////
+    
+    // Store card amounts in the Cognitive model
 
     func AIs_turn(){
         var bullshit_card_value_AI: Int? = nil
@@ -266,7 +268,9 @@ class ViewController: UIViewController{
         
         var AIs_decision = "play_bullshit" // This needs to be changed to the decision of the cognitive model
         
-        if AIs_decision == "play_truth"{
+        let AIs_decision = model.decideStrat(current_card: current_pyramid_card!) // This needs to be changed to the decision of the cognitive model
+        
+        if AIs_decision == "play_truth" {
             let tmp_count_hist_AI = count_hist_AI[lower_boundary-1...upper_boundary-1]
             card_value_to_play = tmp_count_hist_AI.index(of: tmp_count_hist_AI.max()!)!+1
             amount_cards_to_play = tmp_count_hist_AI.max()!
