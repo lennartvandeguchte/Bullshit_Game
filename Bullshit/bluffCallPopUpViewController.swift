@@ -11,14 +11,17 @@ import UIKit
 class bluffCallPopUpViewController: UIViewController {
     var viewController: ViewController?
     
+    var winner_text: String?
     @IBOutlet weak var believe_claim: UIButton!
     @IBOutlet weak var call_bullshit: UIButton!
     
+    @IBOutlet weak var winner_label: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.view.backgroundColor = UIColor.black.withAlphaComponent(0.8)
-        
+    
+        winner_label.text = winner_text!
         self.showAnimate()
 
         // Do any additional setup after loading the view.
