@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		42152C4A2057E1BB002FB92B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA436C29203D945F00F3DDF1 /* Main.storyboard */; };
 		42152C4C2057E2A6002FB92B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42152C4B2057E2A6002FB92B /* ViewController.swift */; };
+		423847092073A80C004DC225 /* instructionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423847082073A80C004DC225 /* instructionsViewController.swift */; };
 		4259C503205BC29F00340E9D /* claimPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4259C502205BC29F00340E9D /* claimPopUpViewController.swift */; };
 		4259C509206A4CD900340E9D /* BufferAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4259C508206A4CD900340E9D /* BufferAction.swift */; };
 		42D30C042056B1F70058F795 /* ViewControllerStart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42D30C032056B1F70058F795 /* ViewControllerStart.swift */; };
@@ -42,6 +43,7 @@
 
 /* Begin PBXFileReference section */
 		42152C4B2057E2A6002FB92B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		423847082073A80C004DC225 /* instructionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = instructionsViewController.swift; sourceTree = "<group>"; };
 		4259C502205BC29F00340E9D /* claimPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = claimPopUpViewController.swift; sourceTree = "<group>"; };
 		4259C508206A4CD900340E9D /* BufferAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BufferAction.swift; sourceTree = "<group>"; };
 		42D30C032056B1F70058F795 /* ViewControllerStart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerStart.swift; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 				AAE889982046CFEF002758DE /* Card.swift */,
 				AA35C9BB204FF2EC00DDEA21 /* MachineLearning.swift */,
 				AA436C29203D945F00F3DDF1 /* Main.storyboard */,
+				423847082073A80C004DC225 /* instructionsViewController.swift */,
 				42152C4B2057E2A6002FB92B /* ViewController.swift */,
 				4259C502205BC29F00340E9D /* claimPopUpViewController.swift */,
 				AAE5C5E0206D218100A7C4F5 /* bluffCallPopUpViewController.swift */,
@@ -254,6 +257,7 @@
 				AA3BC48020626DC7005812D0 /* Temporal.swift in Sources */,
 				AA3BC47520626DC7005812D0 /* Declarative.swift in Sources */,
 				AA436C26203D945F00F3DDF1 /* AppDelegate.swift in Sources */,
+				423847092073A80C004DC225 /* instructionsViewController.swift in Sources */,
 				AAE5C5E1206D218100A7C4F5 /* bluffCallPopUpViewController.swift in Sources */,
 				42D30C042056B1F70058F795 /* ViewControllerStart.swift in Sources */,
 				AA3BC47420626DC7005812D0 /* Chunk.swift in Sources */,

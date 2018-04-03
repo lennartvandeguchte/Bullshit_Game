@@ -6,12 +6,17 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="GurmukhiMN.ttc">
+            <string>GurmukhiMN</string>
+            <string>GurmukhiMN-Bold</string>
+        </array>
         <array key="MarkerFeltThin.ttf">
             <string>MarkerFelt-Thin</string>
         </array>
@@ -33,11 +38,14 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qr4-jk-Zux">
-                                <rect key="frame" x="231" y="474" width="307" height="77"/>
+                                <rect key="frame" x="231" y="471.5" width="307" height="82"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="50"/>
+                                <fontDescription key="fontDescription" name="GurmukhiMN-Bold" family="Gurmukhi MN" pointSize="50"/>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <size key="titleShadowOffset" width="3" height="3"/>
                                 <state key="normal" title="Start">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -46,6 +54,35 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="321-XR-fvp" kind="show" id="9NX-Rq-w55"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bullshit!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uhq-2R-rnX">
+                                <rect key="frame" x="106" y="188" width="557" height="144"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="GurmukhiMN-Bold" family="Gurmukhi MN" pointSize="100"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <size key="shadowOffset" width="3" height="3"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1lW-RI-Qe3">
+                                <rect key="frame" x="272" y="559" width="225" height="59"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="GurmukhiMN" family="Gurmukhi MN" pointSize="36"/>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <size key="titleShadowOffset" width="2" height="2"/>
+                                <state key="normal" title="Instructions">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="leX-tw-Wfu" kind="show" id="x1C-FG-tZP"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -64,6 +101,69 @@
             </objects>
             <point key="canvasLocation" x="-162.5" y="-306.4453125"/>
         </scene>
+        <!--Instructions View Controller-->
+        <scene sceneID="Mvu-gg-7HH">
+            <objects>
+                <viewController id="leX-tw-Wfu" customClass="instructionsViewController" customModule="Bullshit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Yly-RU-40h">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="8aL-uo-5rx">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rb8-eA-0Iy">
+                                <rect key="frame" x="20" y="20" width="57" height="57"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Rb8-eA-0Iy" secondAttribute="height" multiplier="1:1" id="bGh-7p-aDB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GurmukhiMN-Bold" family="Gurmukhi MN" pointSize="50"/>
+                                <state key="normal" title="X">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="Mbe-n1-fZ0"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" lineBreakMode="tailTruncation" numberOfLines="50" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C5u-DD-QC6">
+                                <rect key="frame" x="20" y="116" width="728" height="888"/>
+                                <color key="backgroundColor" white="1" alpha="0.29999999999999999" colorSpace="calibratedWhite"/>
+                                <mutableString key="text">- When the game starts both you and your opponent wil have recieved 13 cards (the cards will have a value ranging from 2 tot 10) and there will be 10 face down cards in a pyramid shape in the center. 
+- When starting the game either you or the opponent will be randomly selected to start and be the first one to put down cards.
+- First the top card of the pyramid will be turned and both players can select cards from their hand, you can choose to play the truth (your claim will be the same as the cards that you selected), or you could choose to bluff.
+- But be warned, if your opponent calls your bluff you will have to take all cards back in your hand including the ones your opponent put down!
+- Of course you can also call your opponents bluff, but be careful, if your opponent played truthfully you will have to take all the cards!
+The range of cards that you can put down becomes smaller on every level of the pyramid, so try to get rid of as many cards as soon as possible.
+- In order to win you'll need to have fewer cards than your opponent after the final card of the pyramid. 
+
+Good luck and don't forget to Bullshit!</mutableString>
+                                <fontDescription key="fontDescription" name="GurmukhiMN" family="Gurmukhi MN" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Rb8-eA-0Iy" firstAttribute="leading" secondItem="C5u-DD-QC6" secondAttribute="leading" id="26c-kz-fAu"/>
+                            <constraint firstItem="Rb8-eA-0Iy" firstAttribute="top" secondItem="5nq-zJ-Ctf" secondAttribute="top" id="7Tf-Gf-wJv"/>
+                            <constraint firstItem="5nq-zJ-Ctf" firstAttribute="trailing" secondItem="Rb8-eA-0Iy" secondAttribute="trailing" constant="691" id="Dch-br-yhf"/>
+                            <constraint firstItem="C5u-DD-QC6" firstAttribute="top" secondItem="Rb8-eA-0Iy" secondAttribute="bottom" constant="39" id="UsX-Ag-UcG"/>
+                            <constraint firstItem="Rb8-eA-0Iy" firstAttribute="leading" secondItem="Yly-RU-40h" secondAttribute="leadingMargin" id="d94-L3-taf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="5nq-zJ-Ctf"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TLg-bj-K5K" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-163.28125" y="363.8671875"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="8Az-Qm-VUU">
             <objects>
@@ -78,12 +178,14 @@
                             <stackView opaque="NO" contentMode="redraw" axis="vertical" distribution="fillProportionally" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="shY-Hx-3S0" userLabel="Root Stack View">
                                 <rect key="frame" x="20" y="20" width="728" height="984"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lRI-2L-NqS">
-                                        <rect key="frame" x="0.0" y="0.0" width="152.5" height="26"/>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lRI-2L-NqS">
+                                        <rect key="frame" x="0.0" y="0.0" width="166.5" height="28.5"/>
                                         <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="24"/>
+                                        <fontDescription key="fontDescription" name="GurmukhiMN-Bold" family="Gurmukhi MN" pointSize="24"/>
+                                        <size key="titleShadowOffset" width="2" height="2"/>
                                         <state key="normal" title="Reset">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -95,82 +197,121 @@
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleAspectFill" distribution="fillEqually" alignment="center" spacing="-40" translatesAutoresizingMaskIntoConstraints="NO" id="vEV-Pn-Nqc" userLabel="Stack View AI Cards">
-                                        <rect key="frame" x="0.0" y="46" width="728" height="147"/>
+                                        <rect key="frame" x="0.0" y="48.5" width="722.5" height="147"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ode-Ri-YOl">
-                                                <rect key="frame" x="0.0" y="0.0" width="93" height="147"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="92.5" height="147"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="93" id="VzI-s8-JR1"/>
+                                                </constraints>
                                                 <state key="normal" image="back">
                                                     <color key="titleShadowColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ttH-Uq-hgb">
-                                                <rect key="frame" x="53" y="0.0" width="93" height="147"/>
+                                                <rect key="frame" x="52.5" y="0.0" width="92.5" height="147"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="93" id="OyB-ZU-Npr"/>
+                                                </constraints>
                                                 <state key="normal" image="back">
                                                     <color key="titleShadowColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="juh-IL-j09">
-                                                <rect key="frame" x="106" y="0.0" width="93" height="147"/>
+                                                <rect key="frame" x="105" y="0.0" width="92.5" height="147"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="93" id="lc8-qz-zuB"/>
+                                                </constraints>
                                                 <state key="normal" image="back">
                                                     <color key="titleShadowColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xcx-2F-fcB">
-                                                <rect key="frame" x="159" y="0.0" width="92.5" height="147"/>
+                                                <rect key="frame" x="157.5" y="0.0" width="92.5" height="147"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="92.5" id="RAW-G0-cc1"/>
+                                                </constraints>
                                                 <state key="normal" image="back">
                                                     <color key="titleShadowColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bTw-1e-Jxm">
-                                                <rect key="frame" x="211.5" y="0.0" width="93" height="147"/>
+                                                <rect key="frame" x="210" y="0.0" width="92.5" height="147"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="93" id="RFY-uA-NFy"/>
+                                                </constraints>
                                                 <state key="normal" image="back">
                                                     <color key="titleShadowColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mOf-9b-97t">
-                                                <rect key="frame" x="264.5" y="0.0" width="93" height="147"/>
+                                                <rect key="frame" x="262.5" y="0.0" width="92.5" height="147"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="93" id="9jB-AY-UCu"/>
+                                                </constraints>
                                                 <state key="normal" image="back">
                                                     <color key="titleShadowColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Rf-fK-k92">
-                                                <rect key="frame" x="317.5" y="0.0" width="93" height="147"/>
+                                                <rect key="frame" x="315" y="0.0" width="92.5" height="147"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="93" id="AHI-II-Xlm"/>
+                                                </constraints>
                                                 <state key="normal" image="back">
                                                     <color key="titleShadowColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NJS-ke-yNa">
-                                                <rect key="frame" x="370.5" y="0.0" width="93" height="147"/>
+                                                <rect key="frame" x="367.5" y="0.0" width="92.5" height="147"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="93" id="jFw-Ux-bg1"/>
+                                                </constraints>
                                                 <state key="normal" image="back">
                                                     <color key="titleShadowColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                             </button>
                                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hkm-Vr-JSN">
-                                                <rect key="frame" x="423.5" y="0.0" width="93" height="147"/>
+                                                <rect key="frame" x="420" y="0.0" width="92.5" height="147"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="93" id="P5K-kr-Wkf"/>
+                                                </constraints>
                                                 <state key="normal" image="back">
                                                     <color key="titleShadowColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lhb-B8-xth">
-                                                <rect key="frame" x="476.5" y="0.0" width="92.5" height="147"/>
+                                                <rect key="frame" x="472.5" y="0.0" width="92.5" height="147"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="92.5" id="kIC-09-Uui"/>
+                                                </constraints>
                                                 <state key="normal" image="back">
                                                     <color key="titleShadowColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="slv-Zs-43g">
-                                                <rect key="frame" x="529" y="0.0" width="93" height="147"/>
+                                                <rect key="frame" x="525" y="0.0" width="92.5" height="147"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="93" id="rog-RK-A7P"/>
+                                                </constraints>
                                                 <state key="normal" image="back">
                                                     <color key="titleShadowColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jCI-a0-ojX">
-                                                <rect key="frame" x="582" y="0.0" width="93" height="147"/>
+                                                <rect key="frame" x="577.5" y="0.0" width="92.5" height="147"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="93" id="hsO-pu-y01"/>
+                                                </constraints>
                                                 <state key="normal" image="back">
                                                     <color key="titleShadowColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bio-Td-sln">
-                                                <rect key="frame" x="635" y="0.0" width="93" height="147"/>
+                                                <rect key="frame" x="630" y="0.0" width="92.5" height="147"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="93" id="tXp-xs-gwf"/>
+                                                </constraints>
                                                 <state key="normal" image="back">
                                                     <color key="titleShadowColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
@@ -179,14 +320,17 @@
                                         <viewLayoutGuide key="safeArea" id="6Kk-vu-iJ7"/>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleAspectFit" distribution="equalSpacing" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Wgf-sM-hJl" userLabel="Stack View Middle">
-                                        <rect key="frame" x="0.0" y="213" width="728" height="604"/>
+                                        <rect key="frame" x="0.0" y="215.5" width="728" height="601.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="nhl-vU-MWg" userLabel="Stack View Pyramid">
-                                                <rect key="frame" x="0.0" y="0.0" width="410.5" height="604"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="404.5" height="601.5"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QB9-0U-aZt">
-                                                        <rect key="frame" x="159.5" y="0.0" width="91.5" height="147.5"/>
+                                                        <rect key="frame" x="157.5" y="0.0" width="89.5" height="147"/>
                                                         <accessibility key="accessibilityConfiguration" identifier="1"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="91.5" id="vqp-sz-VTD"/>
+                                                        </constraints>
                                                         <state key="normal" image="back"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -198,19 +342,25 @@
                                                         </connections>
                                                     </button>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Qhb-Jw-RUt">
-                                                        <rect key="frame" x="106.5" y="152.5" width="197.5" height="147.5"/>
+                                                        <rect key="frame" x="105" y="152" width="194.5" height="146.5"/>
                                                         <subviews>
                                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RGs-e3-Fg3">
-                                                                <rect key="frame" x="0.0" y="0.0" width="91.5" height="147.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="90" height="146.5"/>
                                                                 <accessibility key="accessibilityConfiguration" identifier="2"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="91.5" id="qd4-FB-vqM"/>
+                                                                </constraints>
                                                                 <state key="normal" image="back"/>
                                                                 <connections>
                                                                     <action selector="touch_pyramid_card:" destination="321-XR-fvp" eventType="touchUpInside" id="Pxm-iM-aBP"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SlT-eH-ZtI">
-                                                                <rect key="frame" x="106.5" y="0.0" width="91" height="147.5"/>
+                                                                <rect key="frame" x="105" y="0.0" width="89.5" height="146.5"/>
                                                                 <accessibility key="accessibilityConfiguration" identifier="3"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="91" id="nMm-o4-BHi"/>
+                                                                </constraints>
                                                                 <state key="normal" image="back"/>
                                                                 <connections>
                                                                     <action selector="touch_pyramid_card:" destination="321-XR-fvp" eventType="touchUpInside" id="uY7-V1-sVb"/>
@@ -219,27 +369,36 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="PU5-n4-0A1">
-                                                        <rect key="frame" x="53" y="305" width="304.5" height="147"/>
+                                                        <rect key="frame" x="53" y="303.5" width="298.5" height="146.5"/>
                                                         <subviews>
                                                             <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hpu-T8-mMt">
-                                                                <rect key="frame" x="0.0" y="0.0" width="91.5" height="147"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="89.5" height="146.5"/>
                                                                 <accessibility key="accessibilityConfiguration" identifier="4"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="92" id="5eA-ue-qBF"/>
+                                                                </constraints>
                                                                 <state key="normal" image="back"/>
                                                                 <connections>
                                                                     <action selector="touch_pyramid_card:" destination="321-XR-fvp" eventType="touchUpInside" id="kSP-a8-JRW"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dfc-02-uUP">
-                                                                <rect key="frame" x="106.5" y="0.0" width="91.5" height="147"/>
+                                                                <rect key="frame" x="104.5" y="0.0" width="89.5" height="146.5"/>
                                                                 <accessibility key="accessibilityConfiguration" identifier="5"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="91.5" id="w49-S3-Qnv"/>
+                                                                </constraints>
                                                                 <state key="normal" image="back"/>
                                                                 <connections>
                                                                     <action selector="touch_pyramid_card:" destination="321-XR-fvp" eventType="touchUpInside" id="PlI-pe-G06"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lMe-Dv-LFo">
-                                                                <rect key="frame" x="213" y="0.0" width="91.5" height="147"/>
+                                                                <rect key="frame" x="209" y="0.0" width="89.5" height="146.5"/>
                                                                 <accessibility key="accessibilityConfiguration" identifier="6"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="92" id="JwV-d8-4ou"/>
+                                                                </constraints>
                                                                 <state key="normal" image="back"/>
                                                                 <connections>
                                                                     <action selector="touch_pyramid_card:" destination="321-XR-fvp" eventType="touchUpInside" id="mu8-jD-Lvg"/>
@@ -248,35 +407,47 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" restorationIdentifier="pyramid_view_4" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Fu1-to-3jO">
-                                                        <rect key="frame" x="0.0" y="457" width="410.5" height="147"/>
+                                                        <rect key="frame" x="0.0" y="455" width="404.5" height="146.5"/>
                                                         <subviews>
                                                             <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5GU-MB-RZ2">
-                                                                <rect key="frame" x="0.0" y="0.0" width="91.5" height="147"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="90" height="146.5"/>
                                                                 <accessibility key="accessibilityConfiguration" identifier="7"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="91.5" id="HwU-mp-pb2"/>
+                                                                </constraints>
                                                                 <state key="normal" image="back"/>
                                                                 <connections>
                                                                     <action selector="touch_pyramid_card:" destination="321-XR-fvp" eventType="touchUpInside" id="vCO-Qq-rxR"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o8u-cC-zIJ">
-                                                                <rect key="frame" x="106.5" y="0.0" width="91.5" height="147"/>
+                                                                <rect key="frame" x="105" y="0.0" width="90" height="146.5"/>
                                                                 <accessibility key="accessibilityConfiguration" identifier="8"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="91.5" id="ar1-yZ-9ab"/>
+                                                                </constraints>
                                                                 <state key="normal" image="back"/>
                                                                 <connections>
                                                                     <action selector="touch_pyramid_card:" destination="321-XR-fvp" eventType="touchUpInside" id="TCp-2f-gpQ"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="koR-Tg-lHE">
-                                                                <rect key="frame" x="213" y="0.0" width="91" height="147"/>
+                                                                <rect key="frame" x="210" y="0.0" width="89.5" height="146.5"/>
                                                                 <accessibility key="accessibilityConfiguration" identifier="9"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="91" id="ton-j1-1yu"/>
+                                                                </constraints>
                                                                 <state key="normal" image="back"/>
                                                                 <connections>
                                                                     <action selector="touch_pyramid_card:" destination="321-XR-fvp" eventType="touchUpInside" id="3lN-ke-Yaz"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Suj-6U-B3Q">
-                                                                <rect key="frame" x="319" y="0.0" width="91.5" height="147"/>
+                                                                <rect key="frame" x="314.5" y="0.0" width="90" height="146.5"/>
                                                                 <accessibility key="accessibilityConfiguration" identifier="10"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="91.5" id="hDQ-q2-alh"/>
+                                                                </constraints>
                                                                 <state key="normal" image="back"/>
                                                                 <connections>
                                                                     <action selector="touch_pyramid_card:" destination="321-XR-fvp" eventType="touchUpInside" id="mss-8L-H01"/>
@@ -299,50 +470,60 @@
                                                     <constraint firstItem="dfc-02-uUP" firstAttribute="width" secondItem="QB9-0U-aZt" secondAttribute="width" id="xUN-J4-4IT"/>
                                                 </constraints>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="fillProportionally" alignment="bottom" spacing="360" translatesAutoresizingMaskIntoConstraints="NO" id="4io-zW-oMg">
-                                                <rect key="frame" x="420.5" y="0.0" width="307.5" height="604"/>
+                                            <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="equalSpacing" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="4io-zW-oMg">
+                                                <rect key="frame" x="414.5" y="0.0" width="303.5" height="601.5"/>
                                                 <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="3bt-3R-HU6">
-                                                        <rect key="frame" x="0.0" y="0.0" width="307.5" height="96"/>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="3bt-3R-HU6">
+                                                        <rect key="frame" x="158" y="0.0" width="145.5" height="102"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AI's Cards: ...." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0jf-7M-z7W">
-                                                                <rect key="frame" x="0.0" y="0.0" width="307.5" height="26.5"/>
-                                                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="24"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AI's Cards: ...." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="0jf-7M-z7W">
+                                                                <rect key="frame" x="0.0" y="0.0" width="145.5" height="34"/>
+                                                                <color key="backgroundColor" white="1" alpha="0.29999999999999999" colorSpace="calibratedWhite"/>
+                                                                <fontDescription key="fontDescription" name="GurmukhiMN" family="Gurmukhi MN" pointSize="24"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="AI Says: " borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ujj-xH-3fL">
-                                                                <rect key="frame" x="0.0" y="26.5" width="307.5" height="36.5"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AI says:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="xLK-lg-dmV">
+                                                                <rect key="frame" x="0.0" y="34" width="145.5" height="34"/>
+                                                                <color key="backgroundColor" white="1" alpha="0.29999999999999999" colorSpace="calibratedWhite"/>
+                                                                <fontDescription key="fontDescription" name="GurmukhiMN" family="Gurmukhi MN" pointSize="24"/>
                                                                 <nil key="textColor"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                                                <textInputTraits key="textInputTraits"/>
-                                                            </textField>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="AI Says: " borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t1i-ML-A0u">
-                                                                <rect key="frame" x="0.0" y="63" width="307.5" height="33"/>
+                                                                <nil key="highlightedColor"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="10"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AI plays:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Oe4-ce-4jC">
+                                                                <rect key="frame" x="0.0" y="68" width="145.5" height="34"/>
+                                                                <color key="backgroundColor" white="1" alpha="0.29999999999999999" colorSpace="calibratedWhite"/>
+                                                                <fontDescription key="fontDescription" name="GurmukhiMN" family="Gurmukhi MN" pointSize="24"/>
                                                                 <nil key="textColor"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                                                <textInputTraits key="textInputTraits"/>
-                                                            </textField>
+                                                                <nil key="highlightedColor"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                        <integer key="value" value="10"/>
+                                                                    </userDefinedRuntimeAttribute>
+                                                                </userDefinedRuntimeAttributes>
+                                                            </label>
                                                         </subviews>
+                                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="FmR-eu-qXz">
-                                                        <rect key="frame" x="155" y="456" width="152.5" height="148"/>
+                                                        <rect key="frame" x="137" y="419.5" width="166.5" height="182"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Own Cards: 13" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kcP-YS-wYg">
-                                                                <rect key="frame" x="0.0" y="0.0" width="152.5" height="0.0"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                                                <nil key="textColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uDz-Dd-lDz">
-                                                                <rect key="frame" x="0.0" y="10" width="152.5" height="64"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="166.5" height="64"/>
                                                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="64" id="J2s-iB-8Bn"/>
                                                                 </constraints>
-                                                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="40"/>
-                                                                <size key="titleShadowOffset" width="9" height="0.0"/>
-                                                                <state key="normal" title="Bullshit!"/>
+                                                                <fontDescription key="fontDescription" name="GurmukhiMN-Bold" family="Gurmukhi MN" pointSize="40"/>
+                                                                <size key="titleShadowOffset" width="3" height="3"/>
+                                                                <state key="normal" title="Bullshit!">
+                                                                    <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                                </state>
                                                                 <userDefinedRuntimeAttributes>
                                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                                         <integer key="value" value="10"/>
@@ -353,14 +534,16 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IWG-qr-WHH">
-                                                                <rect key="frame" x="0.0" y="84" width="152.5" height="64"/>
+                                                                <rect key="frame" x="0.0" y="74" width="166.5" height="64"/>
                                                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="64" id="e4B-zQ-z1a"/>
                                                                 </constraints>
-                                                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="40"/>
+                                                                <fontDescription key="fontDescription" name="GurmukhiMN-Bold" family="Gurmukhi MN" pointSize="40"/>
+                                                                <size key="titleShadowOffset" width="3" height="3"/>
                                                                 <state key="normal" title="Claim">
                                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                 </state>
                                                                 <userDefinedRuntimeAttributes>
                                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -371,25 +554,37 @@
                                                                     <action selector="claim_popup:" destination="321-XR-fvp" eventType="touchUpInside" id="AFC-tH-zje"/>
                                                                 </connections>
                                                             </button>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="Own Cards: 13" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kcP-YS-wYg">
+                                                                <rect key="frame" x="0.0" y="148" width="166.5" height="34"/>
+                                                                <color key="backgroundColor" white="1" alpha="0.29999999999999999" colorSpace="calibratedWhite"/>
+                                                                <fontDescription key="fontDescription" name="GurmukhiMN" family="Gurmukhi MN" pointSize="24"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
                                                         </subviews>
                                                     </stackView>
                                                 </subviews>
-                                                <constraints>
-                                                    <constraint firstItem="FmR-eu-qXz" firstAttribute="top" secondItem="4io-zW-oMg" secondAttribute="top" constant="456" id="Fa8-yx-J9Q"/>
-                                                    <constraint firstItem="t1i-ML-A0u" firstAttribute="width" secondItem="4io-zW-oMg" secondAttribute="width" id="j0P-Gx-iVA"/>
-                                                </constraints>
                                             </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jBM-RF-2Hd">
+                                                <rect key="frame" x="728" y="0.0" width="0.0" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <constraints>
                                             <constraint firstItem="4io-zW-oMg" firstAttribute="width" secondItem="nhl-vU-MWg" secondAttribute="width" multiplier="0.75" id="5iB-zO-XwI"/>
                                             <constraint firstItem="4io-zW-oMg" firstAttribute="height" secondItem="nhl-vU-MWg" secondAttribute="height" id="DKQ-Zc-ZP0"/>
                                         </constraints>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleAspectFit" distribution="fillEqually" spacing="-40" translatesAutoresizingMaskIntoConstraints="NO" id="dPA-ST-ckv" userLabel="Stack View Player Cards">
-                                        <rect key="frame" x="0.0" y="837" width="728" height="147"/>
+                                    <stackView opaque="NO" contentMode="scaleAspectFit" distribution="fillEqually" alignment="center" spacing="-40" translatesAutoresizingMaskIntoConstraints="NO" id="dPA-ST-ckv" userLabel="Stack View Player Cards">
+                                        <rect key="frame" x="0.0" y="837" width="722.5" height="147"/>
                                         <subviews>
                                             <button autoresizesSubviews="NO" opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9sV-hY-LjC">
-                                                <rect key="frame" x="0.0" y="0.0" width="93" height="147"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="92.5" height="147"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="93" id="EiH-BW-1kE"/>
+                                                </constraints>
                                                 <state key="normal" image="back">
                                                     <color key="titleShadowColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
@@ -403,7 +598,10 @@
                                                 </connections>
                                             </button>
                                             <button autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EZ9-cJ-HoV">
-                                                <rect key="frame" x="53" y="0.0" width="93" height="147"/>
+                                                <rect key="frame" x="52.5" y="0.0" width="92.5" height="147"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="93" id="utx-yA-i7e"/>
+                                                </constraints>
                                                 <state key="normal" image="back">
                                                     <color key="titleShadowColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
@@ -417,7 +615,10 @@
                                                 </connections>
                                             </button>
                                             <button autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fVX-MA-9ES">
-                                                <rect key="frame" x="106" y="0.0" width="93" height="147"/>
+                                                <rect key="frame" x="105" y="0.0" width="92.5" height="147"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="93" id="6fB-qP-Se1"/>
+                                                </constraints>
                                                 <state key="normal" image="back">
                                                     <color key="titleShadowColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
@@ -431,7 +632,10 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fWL-nb-cNt">
-                                                <rect key="frame" x="159" y="0.0" width="92.5" height="147"/>
+                                                <rect key="frame" x="157.5" y="0.0" width="92.5" height="147"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="92.5" id="hO7-k0-LBV"/>
+                                                </constraints>
                                                 <state key="normal" image="back">
                                                     <color key="titleShadowColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
@@ -445,7 +649,10 @@
                                                 </connections>
                                             </button>
                                             <button autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e89-qY-JEc">
-                                                <rect key="frame" x="211.5" y="0.0" width="93" height="147"/>
+                                                <rect key="frame" x="210" y="0.0" width="92.5" height="147"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="93" id="KW3-WJ-0y0"/>
+                                                </constraints>
                                                 <state key="normal" image="back">
                                                     <color key="titleShadowColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
@@ -459,7 +666,10 @@
                                                 </connections>
                                             </button>
                                             <button autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="69Q-s2-bNv">
-                                                <rect key="frame" x="264.5" y="0.0" width="93" height="147"/>
+                                                <rect key="frame" x="262.5" y="0.0" width="92.5" height="147"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="93" id="HCa-o2-DmC"/>
+                                                </constraints>
                                                 <state key="normal" image="back">
                                                     <color key="titleShadowColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
@@ -473,7 +683,10 @@
                                                 </connections>
                                             </button>
                                             <button autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mSR-JG-sdV">
-                                                <rect key="frame" x="317.5" y="0.0" width="93" height="147"/>
+                                                <rect key="frame" x="315" y="0.0" width="92.5" height="147"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="93" id="ch8-hD-QER"/>
+                                                </constraints>
                                                 <state key="normal" image="back">
                                                     <color key="titleShadowColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
@@ -487,7 +700,10 @@
                                                 </connections>
                                             </button>
                                             <button autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pLf-qp-TSQ">
-                                                <rect key="frame" x="370.5" y="0.0" width="93" height="147"/>
+                                                <rect key="frame" x="367.5" y="0.0" width="92.5" height="147"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="93" id="IUL-Bt-iPc"/>
+                                                </constraints>
                                                 <state key="normal" image="back">
                                                     <color key="titleShadowColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
@@ -501,7 +717,10 @@
                                                 </connections>
                                             </button>
                                             <button autoresizesSubviews="NO" opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tza-Jw-kdn">
-                                                <rect key="frame" x="423.5" y="0.0" width="93" height="147"/>
+                                                <rect key="frame" x="420" y="0.0" width="92.5" height="147"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="93" id="eBi-Qj-HuJ"/>
+                                                </constraints>
                                                 <state key="normal" image="back">
                                                     <color key="titleShadowColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
@@ -515,7 +734,10 @@
                                                 </connections>
                                             </button>
                                             <button autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ofc-U0-nhu">
-                                                <rect key="frame" x="476.5" y="0.0" width="92.5" height="147"/>
+                                                <rect key="frame" x="472.5" y="0.0" width="92.5" height="147"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="92.5" id="MwI-zD-1hy"/>
+                                                </constraints>
                                                 <state key="normal" image="back">
                                                     <color key="titleShadowColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
@@ -529,7 +751,10 @@
                                                 </connections>
                                             </button>
                                             <button autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cdl-2K-3wb">
-                                                <rect key="frame" x="529" y="0.0" width="93" height="147"/>
+                                                <rect key="frame" x="525" y="0.0" width="92.5" height="147"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="93" id="eCX-Bi-ock"/>
+                                                </constraints>
                                                 <state key="normal" image="back">
                                                     <color key="titleShadowColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
@@ -543,7 +768,10 @@
                                                 </connections>
                                             </button>
                                             <button autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iC5-u1-PBY">
-                                                <rect key="frame" x="582" y="0.0" width="93" height="147"/>
+                                                <rect key="frame" x="577.5" y="0.0" width="92.5" height="147"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="93" id="7Lv-hT-JgY"/>
+                                                </constraints>
                                                 <state key="normal" image="back">
                                                     <color key="titleShadowColor" red="0.46573141581788879" green="0.47034261795469956" blue="0.47034261795469956" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
@@ -557,7 +785,10 @@
                                                 </connections>
                                             </button>
                                             <button autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vew-kR-WsG">
-                                                <rect key="frame" x="635" y="0.0" width="93" height="147"/>
+                                                <rect key="frame" x="630" y="0.0" width="92.5" height="147"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="93" id="yRC-eM-DVk"/>
+                                                </constraints>
                                                 <state key="normal" image="back">
                                                     <color key="titleShadowColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
@@ -574,6 +805,7 @@
                                     </stackView>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="vEV-Pn-Nqc" firstAttribute="height" secondItem="dPA-ST-ckv" secondAttribute="height" id="1iH-zG-cK5"/>
                                     <constraint firstItem="dPA-ST-ckv" firstAttribute="top" secondItem="shY-Hx-3S0" secondAttribute="top" constant="837" id="7SD-au-KBy"/>
                                     <constraint firstItem="slv-Zs-43g" firstAttribute="height" secondItem="QB9-0U-aZt" secondAttribute="height" id="GIU-Wm-adV"/>
                                     <constraint firstItem="Bio-Td-sln" firstAttribute="height" secondItem="QB9-0U-aZt" secondAttribute="height" id="LaR-l5-bSe"/>
@@ -606,8 +838,8 @@
                     <navigationItem key="navigationItem" id="YdK-Pk-2Mq"/>
                     <connections>
                         <outlet property="AI_cards_stackview" destination="vEV-Pn-Nqc" id="ajm-au-9bn"/>
-                        <outlet property="AI_plays" destination="t1i-ML-A0u" id="tBt-D9-mOQ"/>
-                        <outlet property="AI_says" destination="Ujj-xH-3fL" id="Fdw-xs-opq"/>
+                        <outlet property="AI_plays" destination="Oe4-ce-4jC" id="qax-0T-lgs"/>
+                        <outlet property="AI_says" destination="xLK-lg-dmV" id="xwd-4c-y7l"/>
                         <outlet property="call_bullshit" destination="uDz-Dd-lDz" id="TjL-wD-Tjk"/>
                         <outlet property="main_view" destination="m7d-0q-g1H" id="lNk-qx-oSd"/>
                         <outlet property="num_cards_AI" destination="0jf-7M-z7W" id="c9G-d7-3Pm"/>
@@ -846,6 +1078,6 @@
         <image name="background" width="667" height="621"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="qbb-Sg-6aG"/>
+        <segue reference="Mbe-n1-fZ0"/>
     </inferredMetricsTieBreakers>
 </document>
