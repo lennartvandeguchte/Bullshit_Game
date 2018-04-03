@@ -32,8 +32,8 @@ class ViewController: UIViewController{
     
     @IBOutlet weak var num_cards_AI: UILabel!
     @IBOutlet weak var num_cards_player: UILabel!
-    @IBOutlet weak var AI_says: UITextField!
-    @IBOutlet weak var AI_plays: UITextField!
+    @IBOutlet weak var AI_says: UILabel!
+    @IBOutlet weak var AI_plays: UILabel!
     
     @IBOutlet weak var pyramid_stackView: UIStackView!
     
@@ -80,8 +80,8 @@ class ViewController: UIViewController{
         }
         
         // Set the counters for number of cards AI and player
-        num_cards_AI.text = "Ai's Cards: \(game.cards_AI.count)"
-        num_cards_player.text = "Own Cards: \(game.cards_player.count)"
+        num_cards_AI.text = "AI's Cards: \(game.cards_AI.count)"
+        num_cards_player.text = "Your Cards: \(game.cards_player.count)"
         
         // Randomize which player starts the game
         if(Int(arc4random_uniform(UInt32(10))) > 5){
@@ -266,7 +266,6 @@ class ViewController: UIViewController{
         }
         print("count hist \(count_hist_AI)")
         
-        var AIs_decision = "play_bullshit" // This needs to be changed to the decision of the cognitive model
         
         let AIs_decision = model.decideStrat(current_card: current_pyramid_card!) // This needs to be changed to the decision of the cognitive model
         
