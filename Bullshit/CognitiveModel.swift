@@ -11,9 +11,74 @@ import UIKit
 // This class inherits from the ACT-R core file Model.swift and is therefore the head file for regulating the cognitive model.
 
 class CognitiveModel: Model {
-    var model: Game!
+    var game = Game()
     
-    //TODO: model texts
+    func moreCardsThanPlayer () -> Int {
+        if game.cards_player.count < game.cards_AI.count {
+            return 1
+        } else if game.cards_player.count == game.cards_AI.count {
+            return 0
+        } else {
+            return -1
+        }
+    }
+    
+    // AI decide whether it will lie or play the truth
+    func decideStrat (current_card: Card) -> String {
+        
+        // Let AI play more random in the beginning than in the end.
+        let randomprob = 70
+        let randomDecision = randomprob - (7*current_card.tag_pyramid)
+        let randVal = arc4random_uniform(100)
+        
+        if  randomDecision > randVal {
+            print("playing random! \(current_card.index_pyramid)")
+            return "play_random"
+        }
+        
+        var AI_cards = game.cards_AI;
+        var count_hist_AI = [Int](repeating: 0, count: 10)
+        for i in 0..<AI_cards.count {
+            count_hist_AI[AI_cards[i].value-1] += 1
+            print(AI_cards[i].value)
+        }
+        //Make tmp_histogram that contains the frequencies of playable cards
+        var lower_boundary = current_card.value-current_card.index_pyramid
+        if lower_boundary < 1 { lower_boundary=1 }
+        var upper_boundary = current_card.value+current_card.index_pyramid
+        if upper_boundary > 10 { upper_boundary=10 }
+        
+        //Check if tmp_histogram is empty
+        let tmp_count_hist_AI = count_hist_AI[ lower_boundary-1...upper_boundary-1 ]
+        var tmp_empty = false
+        
+        print(tmp_count_hist_AI)
+        
+        for val in tmp_count_hist_AI {
+            if val != 0 {
+                tmp_empty = false
+            }
+        }
+        
+        print("tmp_empty: \(tmp_empty)")
+        
+        // If tmp_empty, play bullshit
+        if tmp_empty {
+            return "play_bullshit"
+        } else {
+            return "play_truth"
+        }
+        
+        
+        
+        //TODO: Decrease bullshitprob per round, bullshit method
+        
+        
+        // Bullshitten met minimaal dan 2 kaarten??
+        // Bullshit met kaarten die volgens het spel kunnen
+        // Gespeelde kaarten opslaan
+        
+    }
     
     
     
