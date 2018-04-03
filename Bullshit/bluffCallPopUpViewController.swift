@@ -9,7 +9,11 @@
 import UIKit
 
 class bluffCallPopUpViewController: UIViewController {
-
+    var viewController: ViewController?
+    
+    @IBOutlet weak var believe_claim: UIButton!
+    @IBOutlet weak var call_bullshit: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

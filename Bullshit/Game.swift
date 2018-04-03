@@ -43,7 +43,7 @@ class Game {
         for i in 0..<cards_in_pyramid{
             cards_pyramid.append(playing_deck.deck_shuffled[playing_deck.deck_shuffled.endIndex-1])
             playing_deck.deck_shuffled.remove(at: playing_deck.deck_shuffled.endIndex-1)
-         
+            cards_pyramid[i].tag_pyramid = i+1
             switch (i+1){
             case 1:
                 cards_pyramid[cards_pyramid.endIndex-1].index_pyramid = 4
@@ -57,6 +57,8 @@ class Game {
                 cards_pyramid[cards_pyramid.endIndex-1].index_pyramid = 0
             }
         }
+        
+        
     }
     
    // Determine if AI calls bullshit or not by using a MLP
@@ -70,9 +72,9 @@ class Game {
         if(ML.getChance(input2: input) > bullshit_threshold){
             viewController?.update_AI_says(says: "AI Says: Bullshit!")
             if(check_if_bullshit(claimed_value: claimed_value, claimed_amount: claimed_amount) == true){
-                viewController?.true_bullshit_called_by_AI()
+                viewController?.true_bullshit_called(player_or_AI: "AI")
             }else{
-                viewController?.false_bullshit_called_by_AI()
+                viewController?.false_bullshit_called(player_or_AI: "AI")
             }
         }else{
             viewController?.update_AI_says(says: "AI Says: I believe you")
@@ -86,14 +88,22 @@ class Game {
     // Determine if it is really bullshit or not
     func check_if_bullshit(claimed_value: Int, claimed_amount: Int) -> Bool{
         var counter = 0
+        var counter_2 = 0
+        var lower_boundary = current_pyramid_card!.value-current_pyramid_card!.index_pyramid
+        if lower_boundary < 1{lower_boundary = 1}
+        var upper_boundary = current_pyramid_card!.value+current_pyramid_card!.index_pyramid
+        if upper_boundary > 10{upper_boundary=10}
         print(current_cards_on_table.count)
-        for i in 0..<current_cards_on_table.count{
-            if current_cards_on_table[i].value == claimed_value{
+        for i in 0..<claimed_amount{
+            if current_cards_on_table[current_cards_on_table.endIndex-1-i].value == claimed_value{
                 counter += 1
+            }
+            if (current_cards_on_table[current_cards_on_table.endIndex-1].value == current_cards_on_table[current_cards_on_table.endIndex-1-i].value) {
+                counter_2 += 1
             }
         }
         
-        if counter == claimed_amount{
+        if counter == claimed_amount && counter_2 == claimed_amount && claimed_value >= lower_boundary && claimed_value <= upper_boundary{
             target = 0
             print("Not Bullshit")
             return false

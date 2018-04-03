@@ -33,6 +33,7 @@
 		AA436C26203D945F00F3DDF1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA436C25203D945F00F3DDF1 /* AppDelegate.swift */; };
 		AA436C2D203D945F00F3DDF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA436C2C203D945F00F3DDF1 /* Assets.xcassets */; };
 		AA436C30203D945F00F3DDF1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA436C2E203D945F00F3DDF1 /* LaunchScreen.storyboard */; };
+		AAE5C5E1206D218100A7C4F5 /* bluffCallPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE5C5E0206D218100A7C4F5 /* bluffCallPopUpViewController.swift */; };
 		AAE889972046CFE0002758DE /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE889962046CFE0002758DE /* Deck.swift */; };
 		AAE889992046CFEF002758DE /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE889982046CFEF002758DE /* Card.swift */; };
 		AAE8899B2046D1AD002758DE /* CognitiveModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE8899A2046D1AD002758DE /* CognitiveModel.swift */; };
@@ -42,7 +43,6 @@
 /* Begin PBXFileReference section */
 		42152C4B2057E2A6002FB92B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4259C502205BC29F00340E9D /* claimPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = claimPopUpViewController.swift; sourceTree = "<group>"; };
-		4259C506205BD4BC00340E9D /* bluffCallPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bluffCallPopUpViewController.swift; sourceTree = "<group>"; };
 		4259C508206A4CD900340E9D /* BufferAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BufferAction.swift; sourceTree = "<group>"; };
 		42D30C032056B1F70058F795 /* ViewControllerStart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerStart.swift; sourceTree = "<group>"; };
 		5B9EBEA420627F520086AAA0 /* bullshit.actr */ = {isa = PBXFileReference; lastKnownFileType = text; path = bullshit.actr; sourceTree = "<group>"; };
@@ -69,6 +69,7 @@
 		AA436C2C203D945F00F3DDF1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AA436C2F203D945F00F3DDF1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AA436C31203D945F00F3DDF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AAE5C5E0206D218100A7C4F5 /* bluffCallPopUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = bluffCallPopUpViewController.swift; sourceTree = "<group>"; };
 		AAE889962046CFE0002758DE /* Deck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
 		AAE889982046CFEF002758DE /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		AAE8899A2046D1AD002758DE /* CognitiveModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CognitiveModel.swift; sourceTree = "<group>"; };
@@ -149,8 +150,8 @@
 				AA35C9BB204FF2EC00DDEA21 /* MachineLearning.swift */,
 				AA436C29203D945F00F3DDF1 /* Main.storyboard */,
 				42152C4B2057E2A6002FB92B /* ViewController.swift */,
-				4259C506205BD4BC00340E9D /* bluffCallPopUpViewController.swift */,
 				4259C502205BC29F00340E9D /* claimPopUpViewController.swift */,
+				AAE5C5E0206D218100A7C4F5 /* bluffCallPopUpViewController.swift */,
 				42D30C032056B1F70058F795 /* ViewControllerStart.swift */,
 				42D30BC22056A9E40058F795 /* Supporting Files */,
 				AA436C31203D945F00F3DDF1 /* Info.plist */,
@@ -253,6 +254,7 @@
 				AA3BC48020626DC7005812D0 /* Temporal.swift in Sources */,
 				AA3BC47520626DC7005812D0 /* Declarative.swift in Sources */,
 				AA436C26203D945F00F3DDF1 /* AppDelegate.swift in Sources */,
+				AAE5C5E1206D218100A7C4F5 /* bluffCallPopUpViewController.swift in Sources */,
 				42D30C042056B1F70058F795 /* ViewControllerStart.swift in Sources */,
 				AA3BC47420626DC7005812D0 /* Chunk.swift in Sources */,
 				AA3BC47E20626DC7005812D0 /* SlotCondition.swift in Sources */,
@@ -395,8 +397,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 965T4LH8E7;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Bullshit/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = rug.s2408287.Bullshit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -412,8 +415,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 965T4LH8E7;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Bullshit/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = rug.s2408287.Bullshit;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -20,6 +20,8 @@ struct Card  {
     var tag_pyramid = 0
     var position_y = 0
     var position_x = 0
+    var pyramid_card_gone = false
+    var pyramid_card_played = false
     
     // Initialize a card with a identifier, value and symbol
     init(identifier: Int){
