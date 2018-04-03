@@ -64,14 +64,14 @@ class Game {
         print(ML.getChance(input2: input));
         
         if(ML.getChance(input2: input) > bullshit_threshold){
-            viewController?.update_AI_says(says: "AI Says: Bullshit!")
+            viewController?.update_AI_says(says: "AI says: Bullshit!")
             if(check_if_bullshit(claimed_value: claimed_value, claimed_amount: claimed_amount) == true){
                 viewController?.true_bullshit_called(player_or_AI: "AI")
             }else{
                 viewController?.false_bullshit_called(player_or_AI: "AI")
             }
         }else{
-            viewController?.update_AI_says(says: "AI Says: I believe you")
+            viewController?.update_AI_says(says: "AI says: I believe you")
             check_if_bullshit(claimed_value: claimed_value, claimed_amount: claimed_amount)
         }
         

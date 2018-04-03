@@ -49,6 +49,7 @@ class ViewController: UIViewController{
     var claimed_cards_player = [Int](repeating: 0, count: 9)
     var card_value_to_play = 0
     var amount_cards_to_play = 0
+    var numbers = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"]
     
     
     /// --- LOAD VIEW -----/////////////////////////////////////////////////
@@ -77,8 +78,8 @@ class ViewController: UIViewController{
             button.clipsToBounds = true;
         }
         
+    
 
-        
         // Show the cards of the player
         for i in 0..<game.cards_player.count{
             var card = game.cards_player[i]
@@ -375,9 +376,13 @@ class ViewController: UIViewController{
         add_table_card_button(index: current_pyramid_card!.tag_pyramid, amount: identified_cards_AI.count)
         
         if(bullshit_card_value_AI == nil){
-            AI_plays.text = "AI says: I am playing \(identified_cards_AI.count) \(card_value_to_play)'s"
+            if(identified_cards_AI.count > 1){
+                AI_plays.text = "AI says: I am playing \(numbers[identified_cards_AI.count]) \(card_value_to_play)'s"
+            }else{
+            AI_plays.text = "AI plays: I am playing \(numbers[identified_cards_AI.count]) \(card_value_to_play)"
+            }
         }else{
-            AI_plays.text = "AI plays: I am playing \(identified_cards_AI.count) \(bullshit_card_value_AI!)'s"
+            AI_plays.text = "AI plays: I am playing \(numbers[identified_cards_AI.count]) \(bullshit_card_value_AI!)'s"
         }
         
     }
@@ -402,9 +407,11 @@ class ViewController: UIViewController{
         add_table_card_button(index: current_pyramid_card!.tag_pyramid, amount: amount_cards_to_play)
         
         if(bullshit_card_value_AI == nil){
-            AI_plays.text = "AI Says: I am playing \(amount_cards_to_play) \(card_value_to_play)'s"
+            if(amount_cards_to_play > 1){
+            AI_plays.text = "AI plays: I am playing \(numbers[amount_cards_to_play]) \(card_value_to_play)'s"
+            }
         }else{
-            AI_plays.text = "AI Says: I am playing \(amount_cards_to_play) \(bullshit_card_value_AI!)'s"
+            AI_plays.text = "AI says: I am playing \(numbers[amount_cards_to_play]) \(bullshit_card_value_AI!)"
         }
     }
     
