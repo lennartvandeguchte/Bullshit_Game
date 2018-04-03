@@ -90,7 +90,7 @@ class ViewController: UIViewController{
         
         // Set the counters for number of cards AI and player
         num_cards_AI.text = "AI's Cards: \(game.cards_AI.count)"
-        num_cards_player.text = "Own Cards: \(game.cards_player.count)"
+        num_cards_player.text = "Your Cards: \(game.cards_player.count)"
         
         // Randomize which player starts the game
         if(Int(arc4random_uniform(UInt32(10))) > 5){
@@ -375,9 +375,9 @@ class ViewController: UIViewController{
         add_table_card_button(index: current_pyramid_card!.tag_pyramid, amount: identified_cards_AI.count)
         
         if(bullshit_card_value_AI == nil){
-            AI_plays.text = "AI Says: I am playing \(identified_cards_AI.count) \(card_value_to_play)'s"
+            AI_plays.text = "AI says: I am playing \(identified_cards_AI.count) \(card_value_to_play)'s"
         }else{
-            AI_plays.text = "AI Says: I am playing \(identified_cards_AI.count) \(bullshit_card_value_AI!)'s"
+            AI_plays.text = "AI plays: I am playing \(identified_cards_AI.count) \(bullshit_card_value_AI!)'s"
         }
         
     }
