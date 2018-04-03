@@ -232,6 +232,8 @@ class ViewController: UIViewController{
     
     
     ////////---- AI's TURN----///////////////////////////////////////////////////////
+    
+    // Store card amounts in the Cognitive model
 
     func AIs_turn(){
         var bullshit_card_value_AI: Int? = nil
@@ -244,9 +246,9 @@ class ViewController: UIViewController{
             }
         }
         
-        var AIs_decision = "play_random" // This needs to be changed to the decision of the cognitive model
+        
         var count_hist_AI = [Int](repeating: 0, count: 10)
-        for i in 0..<game.cards_AI.count{
+        for i in 0..<game.cards_AI.count {
             count_hist_AI[game.cards_AI[i].value-1] += 1
             print(game.cards_AI[i].value)
         }
@@ -257,7 +259,9 @@ class ViewController: UIViewController{
         var upper_boundary = current_pyramid_card!.value+current_pyramid_card!.index_pyramid
         if upper_boundary > 10{upper_boundary=10}
         
-        if AIs_decision == "play_truth"{
+        let AIs_decision = model.decideStrat(current_card: current_pyramid_card!) // This needs to be changed to the decision of the cognitive model
+        
+        if AIs_decision == "play_truth" {
             let tmp_count_hist_AI = count_hist_AI[lower_boundary-1...upper_boundary-1]
             card_value_to_play = tmp_count_hist_AI.index(of: tmp_count_hist_AI.max()!)!+1
             amount_cards_to_play = tmp_count_hist_AI.max()!
@@ -265,7 +269,7 @@ class ViewController: UIViewController{
             print(count_hist_AI.max()!)
             
             play_cards_AI(bullshit_card_value_AI: bullshit_card_value_AI)
-        }else if AIs_decision == "play_bullshit"{
+        }else if AIs_decision == "play_bullshit" {
             
         }else if AIs_decision == "play_random"{
             var keepgoing = true
