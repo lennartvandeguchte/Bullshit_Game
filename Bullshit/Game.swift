@@ -25,14 +25,8 @@ class Game {
     var ML = MachineLearning(start: true) // Needs to be changed if we want to play multiple games with the same ML
     
     init(){
-        // Test: print deck of cards
-        for i in 0..<playing_deck.deck_shuffled.count{
-            print("\(playing_deck.deck_shuffled[i])")
-        }
-        
         // Hand out cards to the AI and the player
         for _ in 0..<(cards_to_be_handed_out/2){
-            print("\(playing_deck.deck_shuffled.endIndex)")
             cards_AI.append(playing_deck.deck_shuffled[playing_deck.deck_shuffled.endIndex-1])
             playing_deck.deck_shuffled.remove(at: playing_deck.deck_shuffled.endIndex-1)
             cards_player.append(playing_deck.deck_shuffled[playing_deck.deck_shuffled.endIndex-1])
