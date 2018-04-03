@@ -33,7 +33,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qr4-jk-Zux">
-                                <rect key="frame" x="326" y="474" width="117" height="77"/>
+                                <rect key="frame" x="231" y="474" width="307" height="77"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="50"/>
                                 <state key="normal" title="Start">
@@ -52,6 +52,7 @@
                         <color key="backgroundColor" red="0.92726927999999997" green="0.68120235200000001" blue="0.36648660900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" red="0.92726927999999997" green="0.68120235200000001" blue="0.36648660900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="qr4-jk-Zux" firstAttribute="width" secondItem="SeB-Hy-Weg" secondAttribute="width" multiplier="0.4" id="MEP-8p-GWb"/>
                             <constraint firstItem="qr4-jk-Zux" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="h1q-5P-aYl"/>
                             <constraint firstItem="qr4-jk-Zux" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="siG-b0-eU4"/>
                         </constraints>
@@ -78,12 +79,17 @@
                                 <rect key="frame" x="20" y="20" width="728" height="984"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lRI-2L-NqS">
-                                        <rect key="frame" x="0.0" y="0.0" width="58" height="26"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="152.5" height="26"/>
                                         <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="24"/>
                                         <state key="normal" title="Reset">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <segue destination="BYZ-38-t0r" kind="show" id="qbb-Sg-6aG"/>
                                         </connections>
@@ -192,10 +198,10 @@
                                                         </connections>
                                                     </button>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Qhb-Jw-RUt">
-                                                        <rect key="frame" x="106.5" y="152.5" width="197.5" height="147"/>
+                                                        <rect key="frame" x="106.5" y="152.5" width="197.5" height="147.5"/>
                                                         <subviews>
                                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RGs-e3-Fg3">
-                                                                <rect key="frame" x="0.0" y="0.0" width="91.5" height="147"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="91.5" height="147.5"/>
                                                                 <accessibility key="accessibilityConfiguration" identifier="2"/>
                                                                 <state key="normal" image="back"/>
                                                                 <connections>
@@ -203,7 +209,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SlT-eH-ZtI">
-                                                                <rect key="frame" x="106.5" y="0.0" width="91" height="147"/>
+                                                                <rect key="frame" x="106.5" y="0.0" width="91" height="147.5"/>
                                                                 <accessibility key="accessibilityConfiguration" identifier="3"/>
                                                                 <state key="normal" image="back"/>
                                                                 <connections>
@@ -213,10 +219,10 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="PU5-n4-0A1">
-                                                        <rect key="frame" x="53" y="304.5" width="304.5" height="147.5"/>
+                                                        <rect key="frame" x="53" y="305" width="304.5" height="147"/>
                                                         <subviews>
                                                             <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hpu-T8-mMt">
-                                                                <rect key="frame" x="0.0" y="0.0" width="91.5" height="147.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="91.5" height="147"/>
                                                                 <accessibility key="accessibilityConfiguration" identifier="4"/>
                                                                 <state key="normal" image="back"/>
                                                                 <connections>
@@ -224,7 +230,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dfc-02-uUP">
-                                                                <rect key="frame" x="106.5" y="0.0" width="91.5" height="147.5"/>
+                                                                <rect key="frame" x="106.5" y="0.0" width="91.5" height="147"/>
                                                                 <accessibility key="accessibilityConfiguration" identifier="5"/>
                                                                 <state key="normal" image="back"/>
                                                                 <connections>
@@ -232,7 +238,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lMe-Dv-LFo">
-                                                                <rect key="frame" x="213" y="0.0" width="91.5" height="147.5"/>
+                                                                <rect key="frame" x="213" y="0.0" width="91.5" height="147"/>
                                                                 <accessibility key="accessibilityConfiguration" identifier="6"/>
                                                                 <state key="normal" image="back"/>
                                                                 <connections>
@@ -293,20 +299,20 @@
                                                     <constraint firstItem="dfc-02-uUP" firstAttribute="width" secondItem="QB9-0U-aZt" secondAttribute="width" id="xUN-J4-4IT"/>
                                                 </constraints>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" alignment="bottom" spacing="360" translatesAutoresizingMaskIntoConstraints="NO" id="4io-zW-oMg">
+                                            <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="fillProportionally" alignment="bottom" spacing="360" translatesAutoresizingMaskIntoConstraints="NO" id="4io-zW-oMg">
                                                 <rect key="frame" x="420.5" y="0.0" width="307.5" height="604"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="3bt-3R-HU6">
                                                         <rect key="frame" x="0.0" y="0.0" width="307.5" height="96"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AI's Cards: ...." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0jf-7M-z7W">
-                                                                <rect key="frame" x="0.0" y="0.0" width="307.5" height="29"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="307.5" height="26.5"/>
+                                                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="24"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="AI Says: " borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ujj-xH-3fL">
-                                                                <rect key="frame" x="0.0" y="29" width="307.5" height="34"/>
+                                                                <rect key="frame" x="0.0" y="26.5" width="307.5" height="36.5"/>
                                                                 <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                                 <textInputTraits key="textInputTraits"/>
@@ -319,11 +325,17 @@
                                                             </textField>
                                                         </subviews>
                                                     </stackView>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="FmR-eu-qXz">
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="FmR-eu-qXz">
                                                         <rect key="frame" x="155" y="456" width="152.5" height="148"/>
                                                         <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Own Cards: 13" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kcP-YS-wYg">
+                                                                <rect key="frame" x="0.0" y="0.0" width="152.5" height="0.0"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uDz-Dd-lDz">
-                                                                <rect key="frame" x="0.0" y="0.0" width="152.5" height="64"/>
+                                                                <rect key="frame" x="0.0" y="10" width="152.5" height="64"/>
                                                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="64" id="J2s-iB-8Bn"/>
@@ -341,7 +353,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IWG-qr-WHH">
-                                                                <rect key="frame" x="0.0" y="74" width="152.5" height="64"/>
+                                                                <rect key="frame" x="0.0" y="84" width="152.5" height="64"/>
                                                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="64" id="e4B-zQ-z1a"/>
@@ -359,12 +371,6 @@
                                                                     <action selector="claim_popup:" destination="321-XR-fvp" eventType="touchUpInside" id="AFC-tH-zje"/>
                                                                 </connections>
                                                             </button>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Own Cards: 13" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kcP-YS-wYg">
-                                                                <rect key="frame" x="0.0" y="148" width="152.5" height="0.0"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                                                <nil key="textColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
                                                         </subviews>
                                                     </stackView>
                                                 </subviews>
@@ -571,6 +577,7 @@
                                     <constraint firstItem="dPA-ST-ckv" firstAttribute="top" secondItem="shY-Hx-3S0" secondAttribute="top" constant="837" id="7SD-au-KBy"/>
                                     <constraint firstItem="slv-Zs-43g" firstAttribute="height" secondItem="QB9-0U-aZt" secondAttribute="height" id="GIU-Wm-adV"/>
                                     <constraint firstItem="Bio-Td-sln" firstAttribute="height" secondItem="QB9-0U-aZt" secondAttribute="height" id="LaR-l5-bSe"/>
+                                    <constraint firstItem="lRI-2L-NqS" firstAttribute="width" secondItem="uDz-Dd-lDz" secondAttribute="width" id="Ted-tc-L08"/>
                                     <constraint firstItem="lhb-B8-xth" firstAttribute="height" secondItem="QB9-0U-aZt" secondAttribute="height" id="XwZ-mW-1b5"/>
                                     <constraint firstItem="hkm-Vr-JSN" firstAttribute="height" secondItem="QB9-0U-aZt" secondAttribute="height" id="Zjy-Ds-msr"/>
                                     <constraint firstItem="jCI-a0-ojX" firstAttribute="height" secondItem="QB9-0U-aZt" secondAttribute="height" id="j2a-ch-S9L"/>
@@ -839,6 +846,6 @@
         <image name="background" width="667" height="621"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="E6r-8K-LS5"/>
+        <segue reference="qbb-Sg-6aG"/>
     </inferredMetricsTieBreakers>
 </document>
