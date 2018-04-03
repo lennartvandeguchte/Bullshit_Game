@@ -132,7 +132,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="50" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C5u-DD-QC6">
                                 <rect key="frame" x="20" y="116" width="728" height="888"/>
                                 <color key="backgroundColor" white="1" alpha="0.29999999999999999" colorSpace="calibratedWhite"/>
-                                <mutableString key="text">- When the game starts both you and your opponent wil have recieved 13 cards (the cards will have a value ranging from 2 tot 10) and there will be 10 face down cards in a pyramid shape in the center. 
+                                <string key="text">- When the game starts both you and your opponent wil have recieved 13 cards (the cards will have a value ranging from 2 tot 10) and there will be 10 face down cards in a pyramid shape in the center. 
 - When starting the game either you or the opponent will be randomly selected to start and be the first one to put down cards.
 - First the top card of the pyramid will be turned and both players can select cards from their hand, you can choose to play the truth (your claim will be the same as the cards that you selected), or you could choose to bluff. You do this by selecting your cards and then pressing the "Claim" button.
 - But be warned, if your opponent calls your bluff you will have to take all cards back in your hand including the ones your opponent put down!
@@ -140,7 +140,7 @@
 - The range of card values that you can put down becomes smaller on every level of the pyramid, so try to get rid of as many cards as soon as possible.
 - In order to win you'll need to have fewer cards than your opponent after the final card of the pyramid. 
 
-Good luck and don't forget to Bullshit!</mutableString>
+Good luck and don't forget to Bullshit!</string>
                                 <fontDescription key="fontDescription" name="GurmukhiMN" family="Gurmukhi MN" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -1028,12 +1028,12 @@ Good luck and don't forget to Bullshit!</mutableString>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f3F-yS-gVz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1410.9375" y="-251.36718749999997"/>
+            <point key="canvasLocation" x="1377" y="-682"/>
         </scene>
         <!--End Game Pop Up View Controller-->
         <scene sceneID="eML-Is-dxE">
             <objects>
-                <viewController storyboardIdentifier="bullshitPopUpID" id="FQi-VU-jut" userLabel="End Game Pop Up View Controller" customClass="bluffCallPopUpViewController" customModule="Bullshit" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="finalPopUpID" id="FQi-VU-jut" userLabel="End Game Pop Up View Controller" customClass="bluffCallPopUpViewController" customModule="Bullshit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BVy-gm-wbP">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1083,10 +1083,13 @@ Good luck and don't forget to Bullshit!</mutableString>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="sgP-lx-GbL"/>
                     </view>
+                    <connections>
+                        <outlet property="winner_label" destination="7ch-ZM-WMe" id="JFt-OL-Rc7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w3E-4Z-noN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1972.65625" y="-287.109375"/>
+            <point key="canvasLocation" x="1852" y="102"/>
         </scene>
     </scenes>
     <resources>
@@ -1095,6 +1098,6 @@ Good luck and don't forget to Bullshit!</mutableString>
         <image name="bullhead" width="400" height="400"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="qbb-Sg-6aG"/>
+        <segue reference="E6r-8K-LS5"/>
     </inferredMetricsTieBreakers>
 </document>
