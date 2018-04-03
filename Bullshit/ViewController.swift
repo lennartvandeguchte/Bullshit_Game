@@ -84,7 +84,7 @@ class ViewController: UIViewController{
         num_cards_player.text = "Own Cards: \(game.cards_player.count)"
         
         // Randomize which player starts the game
-        if(Int(arc4random_uniform(10)) > 5){
+        if(Int(arc4random_uniform(UInt32(10))) > 5){
             for i in 0..<pyramid_cards_buttons.count{
                 if pyramid_cards_buttons[i].tag == 1{
                     pyramid_cards_buttons[i].sendActions(for: .touchUpInside)
@@ -125,17 +125,18 @@ class ViewController: UIViewController{
             let positions: CGPoint
             switch current_pyramid_card!.index_pyramid{
             case 1:
-                positions = main_view.convert(sender.center, from:pyramid_stackView)
+                positions = main_view.convert(sender.center, from:pyramid_4_view)
+                
             case 2:
                 positions = main_view.convert(sender.center, from:pyramid_3_view)
             case 3:
                 positions = main_view.convert(sender.center, from:pyramid_2_view)
             case 4:
-                positions = main_view.convert(sender.center, from:pyramid_4_view)
+                positions = main_view.convert(sender.center, from:pyramid_stackView)
             default:
                 positions = main_view.convert(sender.center, from:pyramid_stackView)
             }
-        
+            print(positions)
             current_pyramid_card!.position_y = Int(positions.y)
             current_pyramid_card!.position_x = Int(positions.x)
         }
@@ -243,19 +244,27 @@ class ViewController: UIViewController{
                 }
             }
         }
-        
-        var AIs_decision = "play_random" // This needs to be changed to the decision of the cognitive model
-        var count_hist_AI = [Int](repeating: 0, count: 10)
-        for i in 0..<game.cards_AI.count{
-            count_hist_AI[game.cards_AI[i].value-1] += 1
-            print(game.cards_AI[i].value)
-        }
-        print("count hist \(count_hist_AI)")
-        
         var lower_boundary = current_pyramid_card!.value-current_pyramid_card!.index_pyramid
         if lower_boundary < 1{lower_boundary = 1}
         var upper_boundary = current_pyramid_card!.value+current_pyramid_card!.index_pyramid
         if upper_boundary > 10{upper_boundary=10}
+    
+        var count_hist_AI = [Int](repeating: 0, count: 10)
+        var cards_out_of_range = [Card]()
+        var cards_in_range = [Card]()
+        for i in 0..<game.cards_AI.count{
+            count_hist_AI[game.cards_AI[i].value-1] += 1
+            print(game.cards_AI[i].value)
+            
+            if game.cards_AI[i].value >= lower_boundary && game.cards_AI[i].value <= upper_boundary{
+                cards_in_range.append(game.cards_AI[i])
+            }else{
+                cards_out_of_range.append(game.cards_AI[i])
+            }
+        }
+        print("count hist \(count_hist_AI)")
+        
+        var AIs_decision = "play_bullshit" // This needs to be changed to the decision of the cognitive model
         
         if AIs_decision == "play_truth"{
             let tmp_count_hist_AI = count_hist_AI[lower_boundary-1...upper_boundary-1]
@@ -266,6 +275,29 @@ class ViewController: UIViewController{
             
             play_cards_AI(bullshit_card_value_AI: bullshit_card_value_AI)
         }else if AIs_decision == "play_bullshit"{
+            var identified_cards_AI = [Card]()
+            // If the AI has less cards than the player do a small bluff else do a big bluff
+
+            if(cards_out_of_range.isEmpty){
+                let randomIndex = Int(arc4random_uniform(UInt32(cards_in_range.count)))
+                identified_cards_AI.append(cards_in_range[randomIndex])
+            }else{
+                let randomIndex = Int(arc4random_uniform(UInt32(cards_out_of_range.count)))
+                bullshit_card_value_AI = Int(arc4random_uniform(UInt32(upper_boundary-lower_boundary)))+lower_boundary
+                identified_cards_AI.append(cards_out_of_range[randomIndex])
+                cards_out_of_range.remove(at: randomIndex)
+            }
+            
+            if(game.cards_AI.count > game.cards_player.count && cards_out_of_range.count >= 1){
+                let randomIndex = Int(arc4random_uniform(UInt32(cards_out_of_range.count)))
+                bullshit_card_value_AI = Int(arc4random_uniform(UInt32(upper_boundary-lower_boundary)))+lower_boundary
+                identified_cards_AI.append(cards_out_of_range[randomIndex])
+                cards_out_of_range.remove(at: randomIndex)
+            }
+            
+            play_identified_cards_AI(bullshit_card_value_AI: bullshit_card_value_AI, identified_cards_AI: identified_cards_AI)
+            
+             
             
         }else if AIs_decision == "play_random"{
             var keepgoing = true
@@ -287,6 +319,31 @@ class ViewController: UIViewController{
             }
         }
        
+    }
+    
+    func play_identified_cards_AI(bullshit_card_value_AI: Int?, identified_cards_AI: [Card]){
+        for i in 0..<identified_cards_AI.count{
+            for j in 0..<game.cards_AI.count{
+                if game.cards_AI[j].value == identified_cards_AI[i].value{
+                    current_cards_on_table.append(game.cards_AI[j])
+                    game.cards_AI.remove(at: j)
+                    num_cards_AI.text = "AI's Cards: \(game.cards_AI.count)"
+                    AI_cards_buttons![i].removeFromSuperview()
+                    AI_cards_buttons?.remove(at: i)
+                    break
+                    
+                }
+            }
+        }
+        
+        add_table_card_button(index: current_pyramid_card!.tag_pyramid, amount: identified_cards_AI.count)
+        
+        if(bullshit_card_value_AI == nil){
+            AI_plays.text = "AI Says: I am playing \(identified_cards_AI.count) \(card_value_to_play)'s"
+        }else{
+            AI_plays.text = "AI Says: I am playing \(identified_cards_AI.count) \(bullshit_card_value_AI!)'s"
+        }
+        
     }
     
     

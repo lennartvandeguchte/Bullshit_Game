@@ -162,7 +162,7 @@
                                         <rect key="frame" x="0.0" y="175.5" width="728" height="641.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="nhl-vU-MWg" userLabel="Stack View Pyramid">
-                                                <rect key="frame" x="0.0" y="0.0" width="410.5" height="638"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="410.5" height="637.5"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QB9-0U-aZt">
                                                         <rect key="frame" x="159.5" y="0.0" width="91.5" height="155.5"/>
@@ -178,10 +178,10 @@
                                                         </connections>
                                                     </button>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Qhb-Jw-RUt">
-                                                        <rect key="frame" x="106.5" y="160.5" width="197.5" height="156.5"/>
+                                                        <rect key="frame" x="106.5" y="160.5" width="197.5" height="156"/>
                                                         <subviews>
                                                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RGs-e3-Fg3">
-                                                                <rect key="frame" x="0.0" y="0.0" width="91.5" height="156.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="91.5" height="156"/>
                                                                 <accessibility key="accessibilityConfiguration" identifier="2"/>
                                                                 <state key="normal" image="back"/>
                                                                 <connections>
@@ -189,7 +189,7 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SlT-eH-ZtI">
-                                                                <rect key="frame" x="106.5" y="0.0" width="91" height="156.5"/>
+                                                                <rect key="frame" x="106.5" y="0.0" width="91" height="156"/>
                                                                 <accessibility key="accessibilityConfiguration" identifier="3"/>
                                                                 <state key="normal" image="back"/>
                                                                 <connections>
@@ -199,7 +199,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="PU5-n4-0A1">
-                                                        <rect key="frame" x="53" y="322" width="304.5" height="155.5"/>
+                                                        <rect key="frame" x="53" y="321.5" width="304.5" height="155.5"/>
                                                         <subviews>
                                                             <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hpu-T8-mMt">
                                                                 <rect key="frame" x="0.0" y="0.0" width="91.5" height="155.5"/>
@@ -228,7 +228,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" restorationIdentifier="pyramid_view_4" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Fu1-to-3jO">
-                                                        <rect key="frame" x="0.0" y="482.5" width="410.5" height="155.5"/>
+                                                        <rect key="frame" x="0.0" y="482" width="410.5" height="155.5"/>
                                                         <subviews>
                                                             <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5GU-MB-RZ2">
                                                                 <rect key="frame" x="0.0" y="0.0" width="91.5" height="155.5"/>
@@ -280,7 +280,7 @@
                                                 </constraints>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" alignment="bottom" spacing="360" translatesAutoresizingMaskIntoConstraints="NO" id="4io-zW-oMg">
-                                                <rect key="frame" x="420.5" y="0.0" width="307.5" height="638"/>
+                                                <rect key="frame" x="420.5" y="0.0" width="307.5" height="637.5"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="3bt-3R-HU6">
                                                         <rect key="frame" x="0.0" y="0.0" width="307.5" height="96"/>
@@ -306,7 +306,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="FmR-eu-qXz">
-                                                        <rect key="frame" x="155" y="456" width="152.5" height="182"/>
+                                                        <rect key="frame" x="155" y="456" width="152.5" height="181.5"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uDz-Dd-lDz">
                                                                 <rect key="frame" x="0.0" y="0.0" width="152.5" height="64"/>
@@ -346,7 +346,7 @@
                                                                 </connections>
                                                             </button>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Own Cards: 13" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kcP-YS-wYg">
-                                                                <rect key="frame" x="0.0" y="148" width="152.5" height="34"/>
+                                                                <rect key="frame" x="0.0" y="148" width="152.5" height="33.5"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
