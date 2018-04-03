@@ -17,12 +17,6 @@
             <string>GurmukhiMN</string>
             <string>GurmukhiMN-Bold</string>
         </array>
-        <array key="MarkerFeltThin.ttf">
-            <string>MarkerFelt-Thin</string>
-        </array>
-        <array key="MarkerFeltWide.ttf">
-            <string>MarkerFelt-Wide</string>
-        </array>
     </customFonts>
     <scenes>
         <!--View Controller Start-->
@@ -85,6 +79,10 @@
                                     <segue destination="leX-tw-Wfu" kind="show" id="x1C-FG-tZP"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bullhead" translatesAutoresizingMaskIntoConstraints="NO" id="fld-Kk-2d9">
+                                <rect key="frame" x="217" y="245" width="335" height="218"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.92726927999999997" green="0.68120235200000001" blue="0.36648660900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" red="0.92726927999999997" green="0.68120235200000001" blue="0.36648660900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -109,9 +107,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="8aL-uo-5rx">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="8aL-uo-5rx">
                                 <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rb8-eA-0Iy">
                                 <rect key="frame" x="20" y="20" width="57" height="57"/>
@@ -132,15 +129,15 @@
                                     <segue destination="BYZ-38-t0r" kind="show" id="Mbe-n1-fZ0"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" lineBreakMode="tailTruncation" numberOfLines="50" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C5u-DD-QC6">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="50" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C5u-DD-QC6">
                                 <rect key="frame" x="20" y="116" width="728" height="888"/>
                                 <color key="backgroundColor" white="1" alpha="0.29999999999999999" colorSpace="calibratedWhite"/>
                                 <string key="text">- When the game starts both you and your opponent wil have recieved 13 cards (the cards will have a value ranging from 2 tot 10) and there will be 10 face down cards in a pyramid shape in the center. 
 - When starting the game either you or the opponent will be randomly selected to start and be the first one to put down cards.
 - First the top card of the pyramid will be turned and both players can select cards from their hand, you can choose to play the truth (your claim will be the same as the cards that you selected), or you could choose to bluff.
 - But be warned, if your opponent calls your bluff you will have to take all cards back in your hand including the ones your opponent put down!
-- Of course you can also call your opponents bluff, but be careful, if your opponent played truthfully you will have to take all the cards!
-The range of cards that you can put down becomes smaller on every level of the pyramid, so try to get rid of as many cards as soon as possible.
+- Of course you can also call your opponent's bluff, but be careful, if your opponent played truthfully you will have to take all the cards!
+- The range of card values that you can put down becomes smaller on every level of the pyramid, so try to get rid of as many cards as soon as possible.
 - In order to win you'll need to have fewer cards than your opponent after the final card of the pyramid. 
 
 Good luck and don't forget to Bullshit!</string>
@@ -148,14 +145,33 @@ Good luck and don't forget to Bullshit!</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instructions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EIk-go-pB6">
+                                <rect key="frame" x="203.5" y="20" width="362.5" height="88"/>
+                                <fontDescription key="fontDescription" name="GurmukhiMN-Bold" family="Gurmukhi MN" pointSize="60"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <size key="shadowOffset" width="3" height="3"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Rb8-eA-0Iy" firstAttribute="leading" secondItem="C5u-DD-QC6" secondAttribute="leading" id="26c-kz-fAu"/>
+                            <constraint firstItem="8aL-uo-5rx" firstAttribute="leading" secondItem="Yly-RU-40h" secondAttribute="leading" id="3Ua-jp-1Ba"/>
                             <constraint firstItem="Rb8-eA-0Iy" firstAttribute="top" secondItem="5nq-zJ-Ctf" secondAttribute="top" id="7Tf-Gf-wJv"/>
+                            <constraint firstItem="EIk-go-pB6" firstAttribute="centerX" secondItem="8aL-uo-5rx" secondAttribute="centerX" id="9Bl-b3-BuA"/>
                             <constraint firstItem="5nq-zJ-Ctf" firstAttribute="trailing" secondItem="Rb8-eA-0Iy" secondAttribute="trailing" constant="691" id="Dch-br-yhf"/>
+                            <constraint firstItem="8aL-uo-5rx" firstAttribute="bottom" secondItem="5nq-zJ-Ctf" secondAttribute="bottom" id="Eq4-MZ-BeG"/>
+                            <constraint firstItem="EIk-go-pB6" firstAttribute="top" secondItem="Rb8-eA-0Iy" secondAttribute="top" id="LIn-Lh-Lr3"/>
                             <constraint firstItem="C5u-DD-QC6" firstAttribute="top" secondItem="Rb8-eA-0Iy" secondAttribute="bottom" constant="39" id="UsX-Ag-UcG"/>
+                            <constraint firstItem="EIk-go-pB6" firstAttribute="centerX" secondItem="Yly-RU-40h" secondAttribute="centerX" id="bLk-L0-8cE"/>
                             <constraint firstItem="Rb8-eA-0Iy" firstAttribute="leading" secondItem="Yly-RU-40h" secondAttribute="leadingMargin" id="d94-L3-taf"/>
+                            <constraint firstItem="8aL-uo-5rx" firstAttribute="top" secondItem="Yly-RU-40h" secondAttribute="top" id="ei0-4H-LqR"/>
+                            <constraint firstItem="5nq-zJ-Ctf" firstAttribute="bottom" secondItem="C5u-DD-QC6" secondAttribute="bottom" constant="20" id="kZT-i8-TEi"/>
+                            <constraint firstItem="5nq-zJ-Ctf" firstAttribute="trailing" secondItem="C5u-DD-QC6" secondAttribute="trailing" constant="20" id="nyC-iD-QAL"/>
+                            <constraint firstItem="C5u-DD-QC6" firstAttribute="top" secondItem="EIk-go-pB6" secondAttribute="bottom" constant="8" symbolic="YES" id="pXr-0i-2Oh"/>
+                            <constraint firstItem="C5u-DD-QC6" firstAttribute="leading" secondItem="5nq-zJ-Ctf" secondAttribute="leading" constant="20" id="rLs-RJ-qJm"/>
+                            <constraint firstItem="C5u-DD-QC6" firstAttribute="top" secondItem="Rb8-eA-0Iy" secondAttribute="bottom" constant="39" id="yeR-QR-UHW"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="5nq-zJ-Ctf"/>
                     </view>
@@ -900,15 +916,15 @@ Good luck and don't forget to Bullshit!</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="44F-xr-rxK">
-                                <rect key="frame" x="229" y="259" width="311" height="498"/>
+                                <rect key="frame" x="229" y="262.5" width="311" height="505"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="YRJ-Gq-j8O">
-                                        <rect key="frame" x="21" y="429" width="270" height="39"/>
+                                        <rect key="frame" x="21" y="429" width="270" height="46"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EeE-Kx-Ta2">
-                                                <rect key="frame" x="0.0" y="0.0" width="125" height="39"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="125" height="46"/>
                                                 <color key="backgroundColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="24"/>
+                                                <fontDescription key="fontDescription" name="GurmukhiMN" family="Gurmukhi MN" pointSize="24"/>
                                                 <state key="normal" title="Cancel">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
@@ -922,9 +938,9 @@ Good luck and don't forget to Bullshit!</string>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9g3-nB-d9Q">
-                                                <rect key="frame" x="145" y="0.0" width="125" height="39"/>
+                                                <rect key="frame" x="145" y="0.0" width="125" height="46"/>
                                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="24"/>
+                                                <fontDescription key="fontDescription" name="GurmukhiMN" family="Gurmukhi MN" pointSize="24"/>
                                                 <state key="normal" title="Claim">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
@@ -942,30 +958,30 @@ Good luck and don't forget to Bullshit!</string>
                                             <constraint firstItem="9g3-nB-d9Q" firstAttribute="width" secondItem="EeE-Kx-Ta2" secondAttribute="width" id="vLv-ad-k1v"/>
                                         </constraints>
                                     </stackView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of Cards:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wmh-DS-PaR">
-                                        <rect key="frame" x="72" y="78" width="167.5" height="27"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of Cards:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="wmh-DS-PaR">
+                                        <rect key="frame" x="88.5" y="78" width="135" height="27"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="27" id="ljc-DR-5cU"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="24"/>
+                                        <fontDescription key="fontDescription" name="GurmukhiMN" family="Gurmukhi MN" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Card Value Claim" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qCf-o9-Mqo">
-                                        <rect key="frame" x="75.5" y="133" width="160.5" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Card Value Claim" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="qCf-o9-Mqo">
+                                        <rect key="frame" x="91" y="133" width="129.5" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="21" id="nfx-UN-4ad"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="24"/>
+                                        <fontDescription key="fontDescription" name="GurmukhiMN" family="Gurmukhi MN" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Claim" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g6d-Oh-ULt">
-                                        <rect key="frame" x="60.5" y="8" width="190.5" height="62"/>
+                                        <rect key="frame" x="44" y="8" width="223.5" height="62"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="62" id="36k-nm-P7P"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="40"/>
+                                        <fontDescription key="fontDescription" name="GurmukhiMN-Bold" family="Gurmukhi MN" pointSize="40"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -1028,7 +1044,7 @@ Good luck and don't forget to Bullshit!</string>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ch-ZM-WMe">
                                         <rect key="frame" x="73" y="17" width="236" height="72"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="40"/>
+                                        <fontDescription key="fontDescription" name="GurmukhiMN-Bold" family="Gurmukhi MN" pointSize="40"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -1036,7 +1052,7 @@ Good luck and don't forget to Bullshit!</string>
                                         <rect key="frame" x="112" y="97" width="159" height="45"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="24"/>
+                                        <fontDescription key="fontDescription" name="GurmukhiMN-Bold" family="Gurmukhi MN" pointSize="24"/>
                                         <state key="normal" title="Play Again">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
@@ -1079,6 +1095,7 @@ Good luck and don't forget to Bullshit!</string>
     <resources>
         <image name="back" width="120" height="170"/>
         <image name="background" width="667" height="621"/>
+        <image name="bullhead" width="400" height="400"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="E6r-8K-LS5"/>

@@ -51,7 +51,8 @@ class ViewController: UIViewController{
     /// --- LOAD VIEW -----/////////////////////////////////////////////////
     override func viewDidLoad() {
         super.viewDidLoad()
-        //model.loadModel(fileName: "bullshit")
+        model.loadModel(fileName: "bullshit")
+        model.run()
         game.viewController = self
         
         // Change buttons
@@ -86,7 +87,7 @@ class ViewController: UIViewController{
         
         // Set the counters for number of cards AI and player
         num_cards_AI.text = "AI's Cards: \(game.cards_AI.count)"
-        num_cards_player.text = "Own Cards: \(game.cards_player.count)"
+        num_cards_player.text = "Your Cards: \(game.cards_player.count)"
         
         // Randomize which player starts the game
         if(Int(arc4random_uniform(UInt32(10))) > 5){
@@ -119,7 +120,6 @@ class ViewController: UIViewController{
             print(game.cards_pyramid[card_identifier!-1].tag_pyramid)
             current_pyramid_card = game.cards_pyramid[card_identifier!-1]
         }
-       
         // When a pyramid card is not yet touched, show the card
         if current_pyramid_card?.isFaceUp==false && current_pyramid_card?.isInPyramid==false && game.cards_pyramid[card_identifier!-1].tag_pyramid == should_be_current_pyramid_card {
             
@@ -306,10 +306,15 @@ class ViewController: UIViewController{
             }
             amount_cards_to_play = count_hist_AI.max()!
             print(card_value_to_play)
+            
+            model.storeCard(card_number: card_value_to_play)
+            model.retrieveCard()
+            
             print(count_hist_AI.max()!)
             
             play_cards_AI(bullshit_card_value_AI: bullshit_card_value_AI)
-        }else if AIs_decision == "play_bullshit"{
+            
+        } else if AIs_decision == "play_bullshit"{
             var identified_cards_AI = [Card]()
             // If the AI has less cards than the player do a small bluff else do a big bluff
 
@@ -375,9 +380,9 @@ class ViewController: UIViewController{
         add_table_card_button(index: current_pyramid_card!.tag_pyramid, amount: identified_cards_AI.count)
         
         if(bullshit_card_value_AI == nil){
-            AI_plays.text = "AI Says: I am playing \(identified_cards_AI.count) \(card_value_to_play)'s"
+            AI_plays.text = "AI says: I am playing \(identified_cards_AI.count) \(card_value_to_play)'s"
         }else{
-            AI_plays.text = "AI Says: I am playing \(identified_cards_AI.count) \(bullshit_card_value_AI!)'s"
+            AI_plays.text = "AI plays: I am playing \(identified_cards_AI.count) \(bullshit_card_value_AI!)'s"
         }
         
     }

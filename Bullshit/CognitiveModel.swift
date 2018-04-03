@@ -11,15 +11,18 @@ import UIKit
 // This class inherits from the ACT-R core file Model.swift and is therefore the head file for regulating the cognitive model.
 
 class CognitiveModel: Model {
+    
     var game = Game()
     
-    func moreCardsThanPlayer () -> Int {
-        if game.cards_player.count < game.cards_AI.count {
-            return 1
-        } else if game.cards_player.count == game.cards_AI.count {
-            return 0
-        } else {
-            return -1
+    func storeCard (card_number: Int) {
+        let ch = generateNewChunk(string: "playedCard")
+        ch.setSlot(slot: "num", value: String(card_number))
+        dm.addToDM(ch)
+    }
+    
+    func retrieveCard () {
+        for ch in dm.chunks{
+            print("retrieve \(ch.value.activation())")
         }
     }
     
@@ -32,7 +35,6 @@ class CognitiveModel: Model {
         let randVal = arc4random_uniform(100)
         
         if  randomDecision > randVal {
-            print("playing random! \(current_card.index_pyramid)")
             return "play_random"
         }
         
@@ -42,6 +44,7 @@ class CognitiveModel: Model {
             count_hist_AI[AI_cards[i].value-1] += 1
             print(AI_cards[i].value)
         }
+        
         //Make tmp_histogram that contains the frequencies of playable cards
         var lower_boundary = current_card.value-current_card.index_pyramid
         if lower_boundary < 1 { lower_boundary=1 }
@@ -68,18 +71,7 @@ class CognitiveModel: Model {
         } else {
             return "play_truth"
         }
-        
-        
-        
-        //TODO: Decrease bullshitprob per round, bullshit method
-        
-        
-        // Bullshitten met minimaal dan 2 kaarten??
-        // Bullshit met kaarten die volgens het spel kunnen
-        // Gespeelde kaarten opslaan
-        
     }
-    
-    
-    
 }
+
+
