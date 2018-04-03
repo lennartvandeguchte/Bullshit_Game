@@ -54,7 +54,8 @@ class ViewController: UIViewController{
     /// --- LOAD VIEW -----/////////////////////////////////////////////////
     override func viewDidLoad() {
         super.viewDidLoad()
-        //model.loadModel(fileName: "bullshit")
+        model.loadModel(fileName: "bullshit")
+        model.run()
         game.viewController = self
         
         // Change buttons
@@ -122,7 +123,6 @@ class ViewController: UIViewController{
             print(game.cards_pyramid[card_identifier!-1].tag_pyramid)
             current_pyramid_card = game.cards_pyramid[card_identifier!-1]
         }
-       
         // When a pyramid card is not yet touched, show the card
         if current_pyramid_card?.isFaceUp==false && current_pyramid_card?.isInPyramid==false && game.cards_pyramid[card_identifier!-1].tag_pyramid == should_be_current_pyramid_card {
             
@@ -301,10 +301,15 @@ class ViewController: UIViewController{
             card_value_to_play = tmp_count_hist_AI.index(of: tmp_count_hist_AI.max()!)!+2
             amount_cards_to_play = tmp_count_hist_AI.max()!
             print(card_value_to_play)
+            
+            model.storeCard(card_number: card_value_to_play)
+            model.retrieveCard()
+            
             print(count_hist_AI.max()!)
             
             play_cards_AI(bullshit_card_value_AI: bullshit_card_value_AI)
-        }else if AIs_decision == "play_bullshit"{
+            
+        } else if AIs_decision == "play_bullshit"{
             var identified_cards_AI = [Card]()
             // If the AI has less cards than the player do a small bluff else do a big bluff
 
