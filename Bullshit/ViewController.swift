@@ -402,8 +402,10 @@ class ViewController: UIViewController{
                     current_cards_on_table.append(game.cards_AI[j])
                     game.cards_AI.remove(at: j)
                     num_cards_AI.text = "AI's Cards: \(game.cards_AI.count)"
-                    AI_cards_buttons![i].removeFromSuperview()
-                    AI_cards_buttons?.remove(at: i)
+                    if(AI_cards_buttons!.endIndex != 0){
+                        AI_cards_buttons![i].removeFromSuperview()
+                        AI_cards_buttons?.remove(at: i)
+                    }
                     break
                 }
             }
@@ -554,7 +556,7 @@ class ViewController: UIViewController{
         
         if difference > 0{
             // AI wins
-            finalPopUp.winner_text = "YOU WIN"
+            finalPopUp.winner_text = "YOU WIN!"
         } else if difference < 0{
             // player wins
             finalPopUp.winner_text = "AI WINS"
@@ -606,13 +608,23 @@ class ViewController: UIViewController{
     // Add cards to the players hand
     func add_card_players_hand(number_of_cards: Int){
         for i in 0..<number_of_cards{
-            let button = player_cards_buttons?[player_cards_buttons!.endIndex-1].duplicate(forControlEvents: [.touchUpInside])
-            let card_name = "\(game.cards_player[game.cards_player.endIndex-i-1].value)_\(game.cards_player[game.cards_player.endIndex-i-1].symbol)"
-            button!.setImage(UIImage(named: card_name)!, for: [])
-            button!.layer.cornerRadius = 8;
-            button!.clipsToBounds = true;
-            player_cards_buttons?.append(button!)
-            players_cards_stackview.addArrangedSubview(button!)
+            if(!player_cards_buttons!.isEmpty){
+                let button = player_cards_buttons?[player_cards_buttons!.endIndex-1].duplicate(forControlEvents: [.touchUpInside])
+                let card_name = "\(game.cards_player[game.cards_player.endIndex-i-1].value)_\(game.cards_player[game.cards_player.endIndex-i-1].symbol)"
+                button!.setImage(UIImage(named: card_name)!, for: [])
+                button!.layer.cornerRadius = 8;
+                button!.clipsToBounds = true;
+                player_cards_buttons?.append(button!)
+                players_cards_stackview.addArrangedSubview(button!)
+            }else{
+                let button = player_cards_buttons?[player_cards_buttons!.endIndex].duplicate(forControlEvents: [.touchUpInside])
+                let card_name = "\(game.cards_player[game.cards_player.endIndex-i-1].value)_\(game.cards_player[game.cards_player.endIndex-i-1].symbol)"
+                button!.setImage(UIImage(named: card_name)!, for: [])
+                button!.layer.cornerRadius = 8;
+                button!.clipsToBounds = true;
+                player_cards_buttons?.append(button!)
+                players_cards_stackview.addArrangedSubview(button!)
+            }
         }
         num_cards_player.text = "Own Cards: \(game.cards_player.count)"
     }
@@ -620,8 +632,8 @@ class ViewController: UIViewController{
     // Add cards to the AI's hand
     func add_card_AI_hand(number_of_cards: Int){
         for _ in 0..<number_of_cards{
-            if(AI_cards_buttons!.endIndex > 0){
-            let button = AI_cards_buttons?[AI_cards_buttons!.endIndex-1].duplicate(forControlEvents: [.touchUpInside])
+            if(!AI_cards_buttons!.isEmpty){
+                let button = AI_cards_buttons?[AI_cards_buttons!.endIndex-1].duplicate(forControlEvents: [.touchUpInside])
                 button!.setImage(UIImage(named: "back")!, for: [])
                 button!.layer.cornerRadius = 8;
                 button!.clipsToBounds = true;
