@@ -48,6 +48,8 @@ class ViewController: UIViewController{
     var amount_cards_to_play = 0
     var should_be_current_pyramid_card = 1
     
+    let numbers = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"]
+    
     /// --- LOAD VIEW -----/////////////////////////////////////////////////
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -380,9 +382,13 @@ class ViewController: UIViewController{
         add_table_card_button(index: current_pyramid_card!.tag_pyramid, amount: identified_cards_AI.count)
         
         if(bullshit_card_value_AI == nil){
-            AI_plays.text = "AI says: I am playing \(identified_cards_AI.count) \(card_value_to_play)'s"
+            if(identified_cards_AI.count > 1 || identified_cards_AI.count < 1){
+            AI_plays.text = "AI plays: I am playing \(numbers[identified_cards_AI.count]) \(card_value_to_play)'s"
+            }else{
+                AI_plays.text = "AI plays: I am playing \(numbers[identified_cards_AI.count]) \(card_value_to_play)"
+            }
         }else{
-            AI_plays.text = "AI plays: I am playing \(identified_cards_AI.count) \(bullshit_card_value_AI!)'s"
+            AI_plays.text = "AI plays: I am playing \(numbers[identified_cards_AI.count]) \(bullshit_card_value_AI!)'s"
         }
         
     }
@@ -407,9 +413,13 @@ class ViewController: UIViewController{
         add_table_card_button(index: current_pyramid_card!.tag_pyramid, amount: amount_cards_to_play)
         
         if(bullshit_card_value_AI == nil){
-            AI_plays.text = "AI Says: I am playing \(amount_cards_to_play) \(card_value_to_play)'s"
+            if(amount_cards_to_play > 1 || amount_cards_to_play < 1){
+            AI_plays.text = "AI says: I am playing \(numbers[amount_cards_to_play]) \(card_value_to_play)'s"
+            }else{
+                AI_plays.text = "AI plays: I am playing \(numbers[amount_cards_to_play]) \(card_value_to_play)"
+            }
         }else{
-            AI_plays.text = "AI Says: I am playing \(amount_cards_to_play) \(bullshit_card_value_AI!)'s"
+            AI_plays.text = "AI plays: I am playing \(numbers[amount_cards_to_play]) \(bullshit_card_value_AI!)'s"
         }
     }
     
@@ -539,10 +549,10 @@ class ViewController: UIViewController{
         
         if difference > 0{
             // AI wins
-            finalPopUp.winner_text = "AI WINS"
+            finalPopUp.winner_text = "YOU WIN"
         } else if difference < 0{
             // player wins
-            finalPopUp.winner_text = "YOU WIN"
+            finalPopUp.winner_text = "AI WINS"
         } else {
             // draw
             finalPopUp.winner_text = "DRAW"
