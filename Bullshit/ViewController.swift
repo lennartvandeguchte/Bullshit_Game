@@ -470,7 +470,9 @@ class ViewController: UIViewController{
         current_pyramid_card!.pyramid_card_gone = true
         
         if player_or_AI == "player" {
-            should_be_current_pyramid_card += 1
+            if current_pyramid_card!.pyramid_card_played == false{
+                should_be_current_pyramid_card += 1
+            }
             let button = self.view.viewWithTag(should_be_current_pyramid_card) as! UIButton
             button.isEnabled = true
         }
@@ -521,7 +523,9 @@ class ViewController: UIViewController{
         current_pyramid_card!.pyramid_card_gone = true
         
         if player_or_AI == "player" {
-            should_be_current_pyramid_card += 1
+            if current_pyramid_card!.pyramid_card_played == false{
+                should_be_current_pyramid_card += 1
+            }
             let button = self.view.viewWithTag(should_be_current_pyramid_card) as! UIButton
             button.isEnabled = true
         }
