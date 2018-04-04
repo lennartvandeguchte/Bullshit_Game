@@ -421,6 +421,11 @@ class ViewController: UIViewController{
         }else{
             AI_plays.text = "AI plays: I am playing \(numbers[amount_cards_to_play]) \(bullshit_card_value_AI!)'s"
         }
+        
+        if current_pyramid_card!.tag_pyramid == 10 && current_pyramid_card!.pyramid_card_played == true{
+            print("FINZALIZE")
+            finalize_game()
+        }
     }
     
     ////////----- BULLSHIT OR NOT -----//////////////////////////////////////////////////////
@@ -615,14 +620,24 @@ class ViewController: UIViewController{
     // Add cards to the AI's hand
     func add_card_AI_hand(number_of_cards: Int){
         for _ in 0..<number_of_cards{
+            if(AI_cards_buttons!.endIndex > 0){
             let button = AI_cards_buttons?[AI_cards_buttons!.endIndex-1].duplicate(forControlEvents: [.touchUpInside])
-            button!.setImage(UIImage(named: "back")!, for: [])
-            button!.layer.cornerRadius = 8;
-            button!.clipsToBounds = true;
-            AI_cards_buttons?.append(button!)
-            AI_cards_stackview.addArrangedSubview(button!)
-        }
+                button!.setImage(UIImage(named: "back")!, for: [])
+                button!.layer.cornerRadius = 8;
+                button!.clipsToBounds = true;
+                AI_cards_buttons?.append(button!)
+                AI_cards_stackview.addArrangedSubview(button!)
+            }else{
+                let button = AI_cards_buttons?[AI_cards_buttons!.endIndex]//.duplicate(forControlEvents: [.touchUpInside])
+                button!.setImage(UIImage(named: "back")!, for: [])
+                button!.layer.cornerRadius = 8;
+                button!.clipsToBounds = true;
+                AI_cards_buttons?.append(button!)
+                AI_cards_stackview.addArrangedSubview(button!)
+            }
+            
         num_cards_AI.text = "Own Cards: \(game.cards_AI.count)"
+    }
     }
 }
 
