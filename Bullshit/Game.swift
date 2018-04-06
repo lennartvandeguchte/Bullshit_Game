@@ -72,7 +72,14 @@ class Game {
             }
         }else{
             viewController?.update_AI_says(says: "AI Says: I believe you")
-            check_if_bullshit(claimed_value: claimed_value, claimed_amount: claimed_amount)
+            let bullshit_check = check_if_bullshit(claimed_value: claimed_value, claimed_amount: claimed_amount)
+            if(cards_player.isEmpty && bullshit_check == true){
+                viewController?.update_AI_says(says: "AI Says: Bullshit")
+                viewController?.true_bullshit_called(player_or_AI: "AI")
+            }else if(cards_player.isEmpty && bullshit_check == true){
+                viewController?.update_AI_says(says: "AI Says: Bullshit")
+                viewController?.false_bullshit_called(player_or_AI: "AI")
+            }
         }
         
         print("update weights MLP")

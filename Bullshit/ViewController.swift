@@ -71,6 +71,9 @@ class ViewController: UIViewController{
             button.layer.cornerRadius = 8;
             button.clipsToBounds = true;
         }
+        
+        
+        
         for button in AI_cards_buttons!{
             button.layer.cornerRadius = 8;
             button.clipsToBounds = true;
@@ -403,8 +406,8 @@ class ViewController: UIViewController{
                     game.cards_AI.remove(at: j)
                     num_cards_AI.text = "AI's Cards: \(game.cards_AI.count)"
                     if(AI_cards_buttons!.endIndex != 0){
-                        AI_cards_buttons![i].removeFromSuperview()
-                        AI_cards_buttons?.remove(at: i)
+                        AI_cards_buttons![j].removeFromSuperview()
+                        AI_cards_buttons?.remove(at: j)
                     }
                     break
                 }
@@ -477,7 +480,7 @@ class ViewController: UIViewController{
             button.isEnabled = true
         }
         
-        if current_pyramid_card!.tag_pyramid == 10 && current_pyramid_card!.pyramid_card_played == true{
+        if (current_pyramid_card!.tag_pyramid == 10 && current_pyramid_card!.pyramid_card_played == true) {
             print("FINZALIZE")
             finalize_game()
         }
@@ -531,7 +534,7 @@ class ViewController: UIViewController{
         }
         
         
-        if current_pyramid_card!.tag_pyramid == 10{
+        if (current_pyramid_card!.tag_pyramid == 10 && current_pyramid_card!.pyramid_card_played == true) || game.cards_player.isEmpty{
             print("FINZALIZE")
             finalize_game()
         }
@@ -611,24 +614,19 @@ class ViewController: UIViewController{
     
     // Add cards to the players hand
     func add_card_players_hand(number_of_cards: Int){
+       
         for i in 0..<number_of_cards{
-            if(!player_cards_buttons!.isEmpty){
-                let button = player_cards_buttons?[player_cards_buttons!.endIndex-1].duplicate(forControlEvents: [.touchUpInside])
-                let card_name = "\(game.cards_player[game.cards_player.endIndex-i-1].value)_\(game.cards_player[game.cards_player.endIndex-i-1].symbol)"
-                button!.setImage(UIImage(named: card_name)!, for: [])
-                button!.layer.cornerRadius = 8;
-                button!.clipsToBounds = true;
-                player_cards_buttons?.append(button!)
-                players_cards_stackview.addArrangedSubview(button!)
-            }else{
-                let button = player_cards_buttons?[player_cards_buttons!.endIndex].duplicate(forControlEvents: [.touchUpInside])
-                let card_name = "\(game.cards_player[game.cards_player.endIndex-i-1].value)_\(game.cards_player[game.cards_player.endIndex-i-1].symbol)"
-                button!.setImage(UIImage(named: card_name)!, for: [])
-                button!.layer.cornerRadius = 8;
-                button!.clipsToBounds = true;
-                player_cards_buttons?.append(button!)
-                players_cards_stackview.addArrangedSubview(button!)
+            if player_cards_buttons!.isEmpty{
+                finalize_game()
+                break
             }
+            let button = player_cards_buttons?[player_cards_buttons!.endIndex-1].duplicate(forControlEvents: [.touchUpInside])
+            let card_name = "\(game.cards_player[game.cards_player.endIndex-i-1].value)_\(game.cards_player[game.cards_player.endIndex-i-1].symbol)"
+            button!.setImage(UIImage(named: card_name)!, for: [])
+            button!.layer.cornerRadius = 8;
+            button!.clipsToBounds = true;
+            player_cards_buttons?.append(button!)
+            players_cards_stackview.addArrangedSubview(button!)
         }
         num_cards_player.text = "Own Cards: \(game.cards_player.count)"
     }
