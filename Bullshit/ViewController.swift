@@ -50,7 +50,7 @@ class ViewController: UIViewController{
     
     let numbers = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"]
     
-    /// --- LOAD VIEW -----/////////////////////////////////////////////////
+    /// --- LOAD VIEW -----////////////////////////////////////////////////////////////////
     override func viewDidLoad() {
         super.viewDidLoad()
         model.loadModel(fileName: "bullshit")
@@ -108,17 +108,15 @@ class ViewController: UIViewController{
     }
     
 
-    //////////---START GAME ---//////////////////////////////////
+    //////////---START GAME ---/////////////////////////////////////////////////////////////
     
     // Put pyramid card upside down when touch and indicate it as the current pyramid card to play with
     @IBAction func touch_pyramid_card(_ sender: UIButton) {
         
         // Get identifier of touched card
         let card_identifier = Int(sender.accessibilityIdentifier!)
-        print("JOoooooo")
-        print(should_be_current_pyramid_card)
+    
         if game.cards_pyramid[card_identifier!-1].tag_pyramid == should_be_current_pyramid_card {
-            print(game.cards_pyramid[card_identifier!-1].tag_pyramid)
             current_pyramid_card = game.cards_pyramid[card_identifier!-1]
         }
         // When a pyramid card is not yet touched, show the card
@@ -150,7 +148,7 @@ class ViewController: UIViewController{
             default:
                 positions = main_view.convert(sender.center, from:pyramid_stackView)
             }
-            print(positions)
+          
             current_pyramid_card!.position_y = Int(positions.y)
             current_pyramid_card!.position_x = Int(positions.x)
             current_cards_on_table = []
@@ -248,7 +246,7 @@ class ViewController: UIViewController{
     }
     
     
-    ////////---- AI's TURN----///////////////////////////////////////////////////////
+    ////////---- AI's TURN----///////////////////////////////////////////////////////////////
     
     // Store card amounts in the Cognitive model
 
@@ -285,7 +283,6 @@ class ViewController: UIViewController{
         var cards_in_range = [Card]()
         for i in 0..<game.cards_AI.count{
             count_hist_AI[game.cards_AI[i].value-2] += 1
-            print(game.cards_AI[i].value)
             
             if game.cards_AI[i].value >= lower_boundary && game.cards_AI[i].value <= upper_boundary{
                 cards_in_range.append(game.cards_AI[i])
@@ -293,7 +290,6 @@ class ViewController: UIViewController{
                 cards_out_of_range.append(game.cards_AI[i])
             }
         }
-        print("count hist \(count_hist_AI)")
         
         let AIs_decision = model.decideStrat(current_card: current_pyramid_card!) // This needs to be changed to the decision of the cognitive model
         print("Decisioin of AI: \(AIs_decision)")
@@ -306,12 +302,9 @@ class ViewController: UIViewController{
                 bullshit_card_value_AI = Int(arc4random_uniform(UInt32(upper_boundary-lower_boundary)))+lower_boundary
             }
             amount_cards_to_play = count_hist_AI.max()!
-            print(card_value_to_play)
             
             model.storeCard(card_number: card_value_to_play)
             model.retrieveCard()
-            
-            print(count_hist_AI.max()!)
             
             play_cards_AI(bullshit_card_value_AI: bullshit_card_value_AI)
             
@@ -344,7 +337,6 @@ class ViewController: UIViewController{
             var keepgoing = true
             while keepgoing == true{
                 let random_index = Int(arc4random_uniform(9))
-                print(random_index)
                 if(count_hist_AI[random_index] > 0){
                     card_value_to_play = random_index+2
                     amount_cards_to_play = count_hist_AI[random_index]
@@ -442,22 +434,18 @@ class ViewController: UIViewController{
             current_cards_on_table.remove(at: current_cards_on_table.endIndex-1)
             counter += 1
         }
-        print("counter: \(counter)")
         
         if player_or_AI == "AI"{
             game.cards_player.append(current_pyramid_card!)
         }else{
             game.cards_AI.append(current_pyramid_card!)
         }
-        print(current_pyramid_card!.tag_pyramid)
       
         for i in 0..<pyramid_cards_buttons.count{
-            print(pyramid_cards_buttons[i].tag)
             if pyramid_cards_buttons[i].tag == current_pyramid_card!.tag_pyramid{
                 //pyramid_cards_buttons[i].isHidden = true
                 pyramid_cards_buttons[i].alpha = 0
                 current_count_button!.isHidden = true
-                print(pyramid_cards_buttons[i].tag)
             }
         }
         
@@ -504,12 +492,9 @@ class ViewController: UIViewController{
         }
         
         for i in 0..<pyramid_cards_buttons.count{
-            print("TAG")
-            print(pyramid_cards_buttons[i].tag)
             if pyramid_cards_buttons[i].tag == current_pyramid_card!.tag_pyramid{
                 pyramid_cards_buttons[i].alpha = 0
                 current_count_button!.isHidden = true
-                print(pyramid_cards_buttons[i].tag)
             }
         }
         
@@ -551,7 +536,7 @@ class ViewController: UIViewController{
         }
     }
     
-    ///////---Finalize Game---/////////////////////////////////
+    ///////---FINALIZE GAME---//////////////////////////////////////////////////////////////////
     
     func finalize_game(){
         let difference = game.cards_AI.count - game.cards_player.count
@@ -578,7 +563,7 @@ class ViewController: UIViewController{
     }
     
     
-    /////// ADDITIONAL FUNCTIONS //////////////////////////////////////////////
+    /////// ADDITIONAL FUNCTIONS ///////////////////////////////////////////////////////////////
     
     // Update the AI says text window
     func update_AI_says(says: String){
@@ -654,7 +639,7 @@ class ViewController: UIViewController{
     }
 }
 
-
+    //////--EXTENSIONS--///////////////////////////////////////////////////////////////////////
 extension UIButton {
     
     /// Creates a duplicate of the terget UIButton
