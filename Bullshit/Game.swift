@@ -91,7 +91,7 @@ class Game {
         var counter = 0
         var counter_2 = 0
         var lower_boundary = current_pyramid_card!.value-current_pyramid_card!.index_pyramid
-        if lower_boundary < 1{lower_boundary = 1}
+        if lower_boundary < 2{lower_boundary = 2}
         var upper_boundary = current_pyramid_card!.value+current_pyramid_card!.index_pyramid
         if upper_boundary > 10{upper_boundary=10}
         print(current_cards_on_table.count)

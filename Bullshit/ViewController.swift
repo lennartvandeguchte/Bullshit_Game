@@ -199,6 +199,11 @@ class ViewController: UIViewController{
         var index: Array<Int>
         index = []
         
+        for i in 0..<game.cards_player.count{
+            print("value cards player: \(game.cards_player[i].value), \(player_cards_buttons![i].tag)")
+            
+        }
+        
         // Count the amount of cards the player selected
         for i in 0..<player_cards_buttons!.count{
             if player_cards_buttons![i].isSelected == true {
@@ -208,10 +213,15 @@ class ViewController: UIViewController{
             }
         }
         
+        print("amount player card buttons \(player_cards_buttons!.count)")
+        print("amount player cards \(game.cards_player.count)")
         // Remove the selected cards from players hand and update amount of cards of player
         for i in index{
             current_cards_on_table.append(game.cards_player[i])
         }
+        
+        print("amount cards on table: \(current_cards_on_table.count)")
+        print("CURRENT CARDS ON TABLE AFTER Player played: \(current_cards_on_table)")
         
         for i in index.reversed(){
             game.cards_player.remove(at: i)
@@ -291,7 +301,7 @@ class ViewController: UIViewController{
             }
         }
         
-        let AIs_decision = model.decideStrat(current_card: current_pyramid_card!) // This needs to be changed to the decision of the cognitive model
+        let AIs_decision = model.decideStrat(current_card: current_pyramid_card!)
         print("Decisioin of AI: \(AIs_decision)")
         
         if AIs_decision == "play_truth" {
