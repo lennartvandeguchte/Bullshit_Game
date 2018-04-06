@@ -72,14 +72,10 @@ class ViewController: UIViewController{
             button.clipsToBounds = true;
         }
         
-        
-        
         for button in AI_cards_buttons!{
             button.layer.cornerRadius = 8;
             button.clipsToBounds = true;
         }
-        
-
         
         // Show the cards of the player
         for i in 0..<game.cards_player.count{
@@ -374,8 +370,8 @@ class ViewController: UIViewController{
                     current_cards_on_table.append(game.cards_AI[j])
                     game.cards_AI.remove(at: j)
                     num_cards_AI.text = "AI's Cards: \(game.cards_AI.count)"
-                    AI_cards_buttons![i].removeFromSuperview()
-                    AI_cards_buttons?.remove(at: i)
+                    AI_cards_buttons![j].removeFromSuperview()
+                    AI_cards_buttons?.remove(at: j)
                     break
                     
                 }
@@ -399,7 +395,7 @@ class ViewController: UIViewController{
     
     func play_cards_AI(bullshit_card_value_AI: Int?){
      
-        for i in 0..<amount_cards_to_play{
+        for _ in 0..<amount_cards_to_play{
             for j in 0..<game.cards_AI.count{
                 if game.cards_AI[j].value == card_value_to_play{
                     current_cards_on_table.append(game.cards_AI[j])
@@ -543,6 +539,9 @@ class ViewController: UIViewController{
     
     @IBAction func player_called_bullshit(_ sender: UIButton) {
         
+        if amount_cards_to_play == 0 {
+            return
+        }
         let bullshit = game.check_if_bullshit(claimed_value: card_value_to_play, claimed_amount: amount_cards_to_play)
         
         if bullshit{
