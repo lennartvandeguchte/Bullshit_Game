@@ -19,6 +19,13 @@ class MachineLearning{
     var nOutputN: Int;
     var hiddenWeights: [[Double]];
     var outputWeights: [[Double]];
+    var deltaOutputB: [[Double]];
+    var deltaHiddenB: [[Double]];
+    var deltaOutputT: [[Double]];
+    var deltaHiddenT: [[Double]];
+    
+    var cBull: Int;
+    var cTruth: Int;
     
     var input: [Int];
     var hiddenOutput: [Double];
@@ -32,7 +39,7 @@ class MachineLearning{
         // Parameters ------------------------------------------------------------------------------------------
         self.nHiddenN = 10;
         self.nHiddenLayers = 1; // only 1 layer possible
-        self.learnRate = 0.3;
+        self.learnRate = 0.5;
         self.meanWeight = 0.0;
         self.weightSpread = 0.1;
         self.maxEpoch = 10;
@@ -44,6 +51,13 @@ class MachineLearning{
         self.nOutputN = 1;
         self.hiddenWeights = [[Double]](repeating:[Double] (repeating:0.0, count:nHiddenN), count:nInputN)
         self.outputWeights = [[Double]](repeating:[Double] (repeating:0.0, count:nOutputN), count:nHiddenN)
+        self.deltaOutputB = [[Double]](repeating:[Double] (repeating:0.0, count:nOutputN), count:nHiddenN)
+        self.deltaHiddenB = [[Double]](repeating:[Double] (repeating:0.0, count:nHiddenN), count:nInputN);
+        self.deltaOutputT = [[Double]](repeating:[Double] (repeating:0.0, count:nOutputN), count:nHiddenN)
+        self.deltaHiddenT = [[Double]](repeating:[Double] (repeating:0.0, count:nHiddenN), count:nInputN);
+        
+        self.cBull = 0;
+        self.cTruth = 0;
         
         self.input = [Int](repeating:0, count: nInputN-1)
         self.hiddenOutput = [Double](repeating:0.0, count:nHiddenN-1)
@@ -156,11 +170,13 @@ class MachineLearning{
                     self.msError.append((substr as NSString).doubleValue);
                     substr = "";
                     j = j + 1;
+                    
                 }
                 else{
                     substr.append(ch);
                 }
             }
+            epoch = msError.count;
         }
         // -----------------------------------------------------------------------------------------------------
     }
@@ -198,7 +214,8 @@ class MachineLearning{
         return output[0]
     }
     
-    func updateWeights(target: Int){
+    func calcDeltas(target: Int){
+        
         // compute output error
         var outputError = [Double](repeating:0.0, count:nOutputN);
         for i in 0...nOutputN-1{
@@ -215,29 +232,62 @@ class MachineLearning{
             }
             hiddenError[i] = hiddenOutput[i] * (1.0 - hiddenOutput[i]) * hiddenTemp;
         }
-        // update output weight matrices
-        var deltaOutput = [[Double]](repeating:[Double] (repeating:0.0, count:nOutputN), count:nHiddenN)
-        for i in 0...nOutputN-1{
-            for j in 0...nHiddenN-1{
-                deltaOutput[j][i] = learnRate * outputError[i] * hiddenOutput[j];
-                outputWeights[j][i] = outputWeights[j][i] + deltaOutput[j][i];
+        
+        if (target == 1){
+            cBull += 1;
+            // update output weight matrices
+            for i in 0...nOutputN-1{
+                for j in 0...nHiddenN-1{
+                    deltaOutputB[j][i] += learnRate * outputError[i] * hiddenOutput[j];
+                    //outputWeights[j][i] = outputWeights[j][i] + deltaOutput[j][i];
+                }
+            }
+            
+            // update hidden weight matrices
+            for i in 0...nInputN-1{
+                for j in 0...nHiddenN-1{
+                    deltaHiddenB[i][j] += learnRate * hiddenError[j] * Double(input[i]);
+                    //hiddenWeights[i][j] = hiddenWeights[i][j] + deltaHidden[i][j];
+                }
             }
         }
-        // update hidden weight matrices
-        var deltaHidden = [[Double]](repeating:[Double] (repeating:0.0, count:nHiddenN), count:nInputN);
-        for i in 0...nInputN-1{
-            for j in 0...nHiddenN-1{
-                deltaHidden[i][j] = learnRate * hiddenError[j] * Double(input[i]);
-                hiddenWeights[i][j] = hiddenWeights[i][j] + deltaHidden[i][j];
+        else{
+            cTruth += 1;
+            // update output weight matrices
+            for i in 0...nOutputN-1{
+                for j in 0...nHiddenN-1{
+                    deltaOutputT[j][i] += learnRate * outputError[i] * hiddenOutput[j];
+                    //outputWeights[j][i] = outputWeights[j][i] + deltaOutput[j][i];
+                }
+            }
+            
+            // update hidden weight matrices
+            for i in 0...nInputN-1{
+                for j in 0...nHiddenN-1{
+                    deltaHiddenT[i][j] += learnRate * hiddenError[j] * Double(input[i]);
+                    //hiddenWeights[i][j] = hiddenWeights[i][j] + deltaHidden[i][j];
+                }
             }
         }
+        
         // calculate mean square error of round
         error += pow(outputError[0],2.0);
     }
     
     func saveWeights(){
+        // make sure that outputs of bullshit and truth are normalized
+        let pTruth = Double(cBull)/Double(cBull+cTruth);
+        let pBull = Double(cTruth)/Double(cBull+cTruth);
+        for i in 0...nOutputN-1{
+            for j in 0...nHiddenN-1{
+                outputWeights[j][i] = outputWeights[j][i] + pTruth * deltaOutputT[j][i];
+                outputWeights[j][i] = outputWeights[j][i] + pBull * deltaOutputB[j][i];
+            }
+        }
         // save weights after end of game (one game = one epoch)
         epoch += 1;
+        print("Epoch:");
+        print(epoch)
         msError.append(error);
         // save weight hidden
         var documentsDirectory: NSURL?
@@ -291,3 +341,5 @@ class MachineLearning{
     }
     
 }
+
+
