@@ -83,7 +83,7 @@ class Game {
         }
         
         print("update weights MLP")
-        ML.updateWeights(target: target);
+        ML.calcDeltas(target: target);
     }
     
     // Determine if it is really bullshit or not
@@ -113,6 +113,10 @@ class Game {
             print("Bullshit")
             return true
         }
+    }
+    
+    func save_ML_weights(){
+        ML.saveWeights();
     }
     
     

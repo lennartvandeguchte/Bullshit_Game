@@ -566,11 +566,14 @@ class ViewController: UIViewController{
             finalPopUp.winner_text = "DRAW"
         }
         
+        game.save_ML_weights();
+        
         self.addChildViewController(finalPopUp)
         finalPopUp.view.frame = self.view.frame
         self.view.addSubview(finalPopUp.view)
         finalPopUp.didMove(toParentViewController: self)
     }
+    
     
     
     /////// ADDITIONAL FUNCTIONS ///////////////////////////////////////////////////////////////
